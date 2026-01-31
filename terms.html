@@ -1,0 +1,1580 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Terms of Service | Glorious Leather - Premium Safety PPE Manufacturer
+    </title>
+
+    <!-- Fonts & Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Import base styles */
+      :root {
+        /* Colors */
+        --primary-dark: #0a1f44;
+        --primary-blue: #1a365d;
+        --accent-orange: #ff6b35;
+        --accent-yellow: #ffb347;
+        --accent-red: #ff3b30;
+        --accent-green: #10b981;
+        --light-bg: #f7f9fc;
+        --white: #ffffff;
+        --card-bg: #ffffff;
+        --text-dark: #2d3748;
+        --text-light: #718096;
+        --border-light: #e2e8f0;
+
+        /* Shadows */
+        --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+        --shadow-medium: 0 6px 30px rgba(0, 0, 0, 0.12);
+        --shadow-hard: 0 10px 40px rgba(0, 0, 0, 0.15);
+        --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.2);
+
+        /* Gradients */
+        --gradient-orange: linear-gradient(135deg, #ff6b35, #ffb347);
+        --gradient-blue: linear-gradient(135deg, #1a365d, #2c5282);
+        --gradient-dark: linear-gradient(135deg, #0a1f44, #1a365d);
+        --gradient-green: linear-gradient(135deg, #10b981, #34d399);
+
+        /* Spacing */
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 1.5rem;
+        --space-lg: 2rem;
+        --space-xl: 3rem;
+        --space-2xl: 5rem;
+
+        /* Border Radius */
+        --radius-sm: 0.5rem;
+        --radius-md: 1rem;
+        --radius-lg: 1.5rem;
+        --radius-xl: 2rem;
+
+        /* Transitions */
+        --transition-fast: 0.2s ease;
+        --transition-normal: 0.3s ease;
+        --transition-slow: 0.5s ease;
+      }
+
+      /* Dark Mode */
+      .dark-mode {
+        --primary-dark: #0f172a;
+        --primary-blue: #1e293b;
+        --light-bg: #0f172a;
+        --card-bg: #1e293b;
+        --text-dark: #f1f5f9;
+        --text-light: #94a3b8;
+        --border-light: #334155;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--light-bg);
+        color: var(--text-dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+        transition:
+          background-color var(--transition-normal),
+          color var(--transition-normal);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--primary-dark);
+      }
+
+      .dark-mode h1,
+      .dark-mode h2,
+      .dark-mode h3,
+      .dark-mode h4,
+      .dark-mode h5,
+      .dark-mode h6 {
+        color: var(--white);
+      }
+
+      h1 {
+        font-size: 3.75rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        color: var(--text-light);
+        font-size: 1.125rem;
+        margin-bottom: var(--space-md);
+      }
+
+      .dark-mode p {
+        color: var(--text-light);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: all var(--transition-fast);
+        cursor: pointer;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+      }
+
+      section {
+        padding: var(--space-2xl) 0;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .text-orange {
+        color: var(--accent-orange);
+      }
+      .text-gradient {
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ===== MISSING STYLES ===== */
+      .section-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        cursor: pointer;
+        z-index: 100;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all var(--transition-normal);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .scroll-to-top.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scroll-to-top:hover {
+        transform: translateY(-5px);
+      }
+
+      /* ===== TERMS HERO ===== */
+      .terms-hero {
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark) 0%,
+          var(--primary-blue) 100%
+        );
+        color: var(--white);
+        margin-top: 70px;
+        text-align: center;
+      }
+
+      .terms-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 107, 53, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 179, 71, 0.1) 0%,
+            transparent 50%
+          );
+      }
+
+      .terms-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: var(--space-2xl) 0;
+      }
+
+      .terms-hero h1 {
+        font-size: 3.5rem;
+        color: var(--white);
+        margin-bottom: var(--space-lg);
+      }
+
+      .terms-hero p {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 700px;
+        margin: 0 auto var(--space-xl);
+        line-height: 1.8;
+      }
+
+      /* ===== TERMS CONTENT ===== */
+      .terms-content-section {
+        background: var(--white);
+        padding: var(--space-2xl) 0;
+      }
+
+      .dark-mode .terms-content-section {
+        background: var(--light-bg);
+      }
+
+      .terms-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--card-bg);
+        border-radius: var(--radius-xl);
+        padding: var(--space-2xl);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .terms-header {
+        text-align: center;
+        margin-bottom: var(--space-2xl);
+        padding-bottom: var(--space-xl);
+        border-bottom: 2px solid var(--border-light);
+      }
+
+      .last-updated {
+        color: var(--accent-orange);
+        font-weight: 600;
+        margin-top: var(--space-sm);
+        font-size: 1rem;
+      }
+
+      .terms-section {
+        margin-bottom: var(--space-2xl);
+      }
+
+      .terms-section h2 {
+        color: var(--primary-dark);
+        margin-bottom: var(--space-lg);
+        padding-bottom: var(--space-sm);
+        border-bottom: 3px solid var(--gradient-orange);
+        display: inline-block;
+      }
+
+      .dark-mode .terms-section h2 {
+        color: var(--white);
+      }
+
+      .terms-section h3 {
+        color: var(--primary-blue);
+        margin: var(--space-xl) 0 var(--space-md);
+        font-size: 1.5rem;
+      }
+
+      .dark-mode .terms-section h3 {
+        color: var(--accent-orange);
+      }
+
+      .terms-list {
+        margin-left: var(--space-lg);
+        margin-bottom: var(--space-md);
+      }
+
+      .terms-list li {
+        margin-bottom: var(--space-sm);
+        color: var(--text-light);
+        line-height: 1.7;
+      }
+
+      .important-note {
+        background: rgba(255, 107, 53, 0.1);
+        border-left: 4px solid var(--accent-orange);
+        padding: var(--space-lg);
+        border-radius: var(--radius-md);
+        margin: var(--space-xl) 0;
+      }
+
+      .important-note h4 {
+        color: var(--accent-orange);
+        margin-bottom: var(--space-sm);
+      }
+
+      .contact-info {
+        background: var(--gradient-blue);
+        color: var(--white);
+        padding: var(--space-xl);
+        border-radius: var(--radius-lg);
+        margin-top: var(--space-xl);
+        text-align: center;
+      }
+
+      .contact-info h3 {
+        color: var(--white);
+        margin-bottom: var(--space-md);
+      }
+
+      /* ===== HEADER & FOOTER STYLES ===== */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all var(--transition-normal);
+        padding: 0.5rem 0;
+      }
+
+      .dark-mode .header {
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .header.scrolled {
+        box-shadow: var(--shadow-soft);
+        padding: 0.25rem 0;
+      }
+
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        position: relative;
+      }
+
+      .logo-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--gradient-orange);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateY(-10deg);
+        box-shadow: 5px 5px 20px rgba(255, 107, 53, 0.3);
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo-main {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .logo-sub {
+        font-size: 0.7rem;
+        color: var(--text-light);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .nav-main {
+        display: flex;
+        gap: var(--space-xl);
+        align-items: center;
+      }
+
+      .nav-link {
+        position: relative;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.5rem 0;
+        color: var(--text-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .dark-mode .nav-link {
+        color: var(--white);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: var(--gradient-orange);
+        border-radius: 1.5px;
+        transition: width var(--transition-normal);
+      }
+
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--accent-orange);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+      }
+
+      .theme-toggle {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        background: var(--light-bg);
+        border: 1px solid var(--border-light);
+        color: var(--text-dark);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .dark-mode .theme-toggle {
+        background: var(--card-bg);
+        border-color: var(--border-light);
+        color: var(--white);
+      }
+
+      .theme-toggle:hover {
+        background: var(--accent-orange);
+        color: var(--white);
+        transform: rotate(15deg) scale(1.1);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .theme-toggle i {
+        transition: transform 0.3s ease;
+      }
+
+      .theme-toggle:hover i {
+        transform: rotate(180deg);
+      }
+
+      .cta-button {
+        padding: 0.75rem 1.75rem;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .cta-button:hover::before {
+        left: 100%;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-dark);
+        font-size: 1.5rem;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        align-items: center;
+        justify-content: center;
+        transition: all var(--transition-fast);
+      }
+
+      .dark-mode .mobile-toggle {
+        color: var(--white);
+      }
+
+      .mobile-toggle:hover {
+        background: var(--border-light);
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: var(--space-lg);
+        border-top: 1px solid var(--border-light);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+        z-index: 999;
+        box-shadow: var(--shadow-hard);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+      }
+
+      .mobile-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+
+      .mobile-nav a {
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+        background: var(--light-bg);
+        color: var(--text-dark);
+        font-weight: 600;
+        transition: all var(--transition-fast);
+        text-align: center;
+      }
+
+      .dark-mode .mobile-nav a {
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .mobile-nav a:hover,
+      .mobile-nav a.active {
+        background: var(--gradient-orange);
+        color: var(--white);
+        transform: translateX(10px);
+      }
+
+      /* Footer Styles */
+      .footer {
+        background: var(--gradient-dark);
+        color: var(--white);
+        padding: var(--space-2xl) 0 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .footer-wave {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%230a1f44'%3E%3C/path%3E%3C/svg%3E");
+        background-size: 1200px 100px;
+      }
+
+      .dark-mode .footer-wave {
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%231e293b'%3E%3C/path%3E%3C/svg%3E");
+      }
+
+      .footer-content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: var(--space-2xl);
+        margin-bottom: var(--space-2xl);
+      }
+
+      .footer-brand {
+        max-width: 350px;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+      }
+
+      .footer-logo-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--gradient-orange);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        color: var(--white);
+      }
+
+      .footer-logo-text {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--white);
+      }
+
+      .footer-about {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.8;
+        margin-bottom: var(--space-lg);
+        font-size: 1rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: var(--space-md);
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1.125rem;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .social-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--gradient-orange);
+        opacity: 0;
+        transition: opacity var(--transition-normal);
+      }
+
+      .social-link:hover::before {
+        opacity: 1;
+      }
+
+      .social-link i {
+        position: relative;
+        z-index: 1;
+      }
+
+      .social-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+      }
+
+      .footer-column h3 {
+        color: var(--white);
+        font-size: 1.25rem;
+        margin-bottom: var(--space-lg);
+        position: relative;
+        padding-bottom: var(--space-sm);
+      }
+
+      .footer-column h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--accent-orange);
+        border-radius: 1.5px;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: var(--space-sm);
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: all var(--transition-fast);
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        font-size: 0.9375rem;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-orange);
+        transform: translateX(5px);
+      }
+
+      .footer-links i {
+        font-size: 0.75rem;
+        opacity: 0.7;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: var(--space-xl) 0;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-certs {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-lg);
+        flex-wrap: wrap;
+      }
+
+      .cert-badge {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+      }
+
+      .cert-badge:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .footer-copyright {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.875rem;
+      }
+
+      .footer-copyright a {
+        color: var(--accent-yellow);
+        text-decoration: none;
+        transition: color var(--transition-fast);
+      }
+
+      .footer-copyright a:hover {
+        color: var(--white);
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .footer-content {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .terms-container {
+          padding: var(--space-xl);
+        }
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+
+        .terms-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .nav-main {
+          display: none;
+        }
+        .mobile-toggle {
+          display: flex;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 2.25rem;
+        }
+        h2 {
+          font-size: 1.75rem;
+        }
+
+        .terms-hero h1 {
+          font-size: 2.25rem;
+        }
+
+        .terms-container {
+          padding: var(--space-lg);
+        }
+
+        .scroll-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+        }
+      }
+
+      /* Animations */
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="logo-text">
+              <div class="logo-main">Glorious Leather</div>
+              <div class="logo-sub">Safety PPE Manufacturer</div>
+            </div>
+          </a>
+
+          <nav class="nav-main">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="certifications.html" class="nav-link">Certifications</a>
+          </nav>
+
+          <div class="header-actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle dark mode"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <a href="contact.html" class="cta-button">
+              <i class="fas fa-quote-left"></i>
+              Get Quote
+            </a>
+            <button
+              class="mobile-toggle"
+              id="mobileToggle"
+              aria-label="Toggle mobile menu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
+          <a href="certifications.html">Certifications</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Terms Hero -->
+    <section class="terms-hero">
+      <div class="container">
+        <div class="terms-hero-content">
+          <h1>Terms of Service</h1>
+          <p>
+            Please read these terms carefully before using our website or
+            purchasing our products. By accessing or using our services, you
+            agree to be bound by these terms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="terms-content-section">
+      <div class="container">
+        <div class="terms-container">
+          <div class="terms-header">
+            <h2>Glorious Leather Terms of Service</h2>
+            <p class="section-subtitle">
+              Last Updated: <span class="last-updated">January 1, 2024</span>
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h2>1. Acceptance of Terms</h2>
+            <p>
+              By accessing and using the Glorious Leather website (the "Site")
+              or purchasing products from us, you accept and agree to be bound
+              by the terms and provision of this agreement. These Terms of
+              Service ("Terms") govern your access to and use of our website,
+              products, and services.
+            </p>
+            <p>
+              If you do not agree to these Terms, you must not access or use our
+              Site or purchase our products. We reserve the right to update or
+              modify these Terms at any time without prior notice.
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h2>2. Products and Services</h2>
+            <h3>2.1 Product Descriptions</h3>
+            <p>
+              We strive to ensure that all product descriptions, specifications,
+              and images on our Site are accurate. However, we do not warrant
+              that product descriptions, colors, or other content are accurate,
+              complete, reliable, current, or error-free.
+            </p>
+
+            <h3>2.2 Pricing and Payment</h3>
+            <p>
+              All prices are subject to change without notice. We reserve the
+              right to modify or discontinue products at any time. Payment must
+              be made in full before order processing and shipment.
+            </p>
+
+            <h3>2.3 Orders and Acceptance</h3>
+            <p>
+              Your order constitutes an offer to purchase our products. We
+              reserve the right to accept or decline your order for any reason,
+              including but not limited to product availability, errors in
+              product or pricing information, or issues identified by our fraud
+              prevention team.
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h2>3. Shipping and Delivery</h2>
+            <p>
+              We ship products worldwide. Delivery times are estimates and not
+              guaranteed. We are not responsible for delays caused by customs,
+              weather, carrier delays, or other unforeseen circumstances.
+            </p>
+
+            <div class="important-note">
+              <h4>Important Shipping Note</h4>
+              <p>
+                International shipments may be subject to customs duties, taxes,
+                and fees which are the responsibility of the recipient. Please
+                check with your local customs office for regulations before
+                ordering.
+              </p>
+            </div>
+          </div>
+
+          <div class="terms-section">
+            <h2>4. Returns and Refunds</h2>
+            <h3>4.1 Return Policy</h3>
+            <p>
+              We accept returns within 30 days of delivery for unused products
+              in original packaging. Return shipping costs are the
+              responsibility of the customer unless the return is due to our
+              error.
+            </p>
+
+            <h3>4.2 Refund Process</h3>
+            <p>
+              Refunds will be processed within 14 business days of receiving the
+              returned items. Refunds will be issued to the original payment
+              method used for purchase.
+            </p>
+
+            <h3>4.3 Non-Returnable Items</h3>
+            <ul class="terms-list">
+              <li>Custom manufactured products</li>
+              <li>Products with custom branding or logos</li>
+              <li>Products that have been used or damaged</li>
+              <li>Clearance or discounted items marked as final sale</li>
+            </ul>
+          </div>
+
+          <div class="terms-section">
+            <h2>5. Warranties and Liability</h2>
+            <h3>5.1 Product Warranty</h3>
+            <p>
+              Our products come with a manufacturer's warranty against defects
+              in materials and workmanship. The warranty period varies by
+              product and is specified in product documentation.
+            </p>
+
+            <h3>5.2 Limitation of Liability</h3>
+            <p>
+              To the maximum extent permitted by law, Glorious Leather shall not
+              be liable for any indirect, incidental, special, consequential, or
+              punitive damages resulting from your use of or inability to use
+              our products.
+            </p>
+
+            <h3>5.3 Safety Compliance</h3>
+            <p>
+              While our products meet international safety standards, ultimate
+              responsibility for proper usage and compliance with local safety
+              regulations rests with the end user.
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h2>6. Intellectual Property</h2>
+            <p>
+              All content on this Site, including text, graphics, logos, images,
+              and software, is the property of Glorious Leather and is protected
+              by international copyright laws. You may not reproduce,
+              distribute, modify, or create derivative works without our express
+              written permission.
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h2>7. Privacy and Data Protection</h2>
+            <p>
+              Your privacy is important to us. Please review our
+              <a href="privacy.html" class="text-orange">Privacy Policy</a> to
+              understand how we collect, use, and protect your personal
+              information.
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h2>8. Governing Law</h2>
+            <p>
+              These Terms shall be governed by and construed in accordance with
+              the laws of the State of California, United States, without regard
+              to its conflict of law provisions.
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h2>9. Changes to Terms</h2>
+            <p>
+              We reserve the right to update or modify these Terms at any time.
+              The "Last Updated" date at the top of this page will indicate when
+              changes were made. Your continued use of our Site or services
+              after any changes constitutes acceptance of the modified Terms.
+            </p>
+          </div>
+
+          <div class="contact-info">
+            <h3>Questions About Our Terms?</h3>
+            <p>
+              If you have any questions about these Terms of Service, please
+              contact our legal department:
+            </p>
+            <p style="margin-top: var(--space-md)">
+              <strong>Email:</strong> legal@gloriousleather.com<br />
+              <strong>Phone:</strong> +1 (555) 123-4567 ext. 2
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-wave"></div>
+
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <div class="footer-logo-icon">
+                <i class="fas fa-hard-hat"></i>
+              </div>
+              <div class="footer-logo-text">Glorious Leather</div>
+            </a>
+            <p class="footer-about">
+              Manufacturing certified safety gloves and jackets for industrial,
+              construction, oil & gas, and road safety sectors with
+              uncompromising quality and international standards.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://linkedin.com"
+                class="social-link"
+                aria-label="LinkedIn"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                class="social-link"
+                aria-label="Twitter"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://facebook.com"
+                class="social-link"
+                aria-label="Facebook"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                class="social-link"
+                aria-label="Instagram"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> Products</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+              <li>
+                <a href="certifications.html"
+                  ><i class="fas fa-chevron-right"></i> Certifications</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Our Products</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="products.html#gloves"
+                  ><i class="fas fa-hand-paper"></i> Safety Gloves</a
+                >
+              </li>
+              <li>
+                <a href="products.html#jackets"
+                  ><i class="fas fa-vest"></i> Safety Jackets</a
+                >
+              </li>
+              <li>
+                <a href="products.html#flame"
+                  ><i class="fas fa-fire"></i> Flame-Resistant</a
+                >
+              </li>
+              <li>
+                <a href="products.html#highvis"
+                  ><i class="fas fa-eye"></i> High-Visibility</a
+                >
+              </li>
+              <li>
+                <a href="products.html#chemical"
+                  ><i class="fas fa-flask"></i> Chemical-Resistant</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="tel:+15551234567"
+                  ><i class="fas fa-phone"></i> +1 (555) 123-4567</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@gloriousleather.com"
+                  ><i class="fas fa-envelope"></i> sales@gloriousleather.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://maps.google.com/?q=123+Industrial+Safety+Park+Safety+City"
+                  target="_blank"
+                  ><i class="fas fa-map-marker-alt"></i> 123 Industrial Safety
+                  Park</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-certs">
+            <div class="cert-badge">
+              <i class="fas fa-certificate"></i> ISO 9001:2015
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-shield-alt"></i> ANSI/ISEA 107
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-award"></i> EN ISO 20471
+            </div>
+          </div>
+
+          <div class="footer-copyright">
+            &copy; <span id="currentYear"></span> Glorious Leather Industries.
+            All rights reserved. |
+            <a href="privacy.html" class="active">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+      // ===== HEADER SCROLL EFFECT =====
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+
+        const scrollToTop = document.getElementById("scrollToTop");
+        if (window.scrollY > 300) {
+          scrollToTop.classList.add("visible");
+        } else {
+          scrollToTop.classList.remove("visible");
+        }
+      });
+
+      // Theme Toggle
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = themeToggle.querySelector("i");
+      const body = document.body;
+
+      // Check for saved theme or prefer-color-scheme
+      const prefersDarkScheme = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      );
+      const savedTheme = localStorage.getItem("theme");
+
+      // Set initial theme
+      if (savedTheme === "dark" || (!savedTheme && prefersDarkScheme.matches)) {
+        body.classList.add("dark-mode");
+        themeIcon.className = "fas fa-sun";
+        localStorage.setItem("theme", "dark");
+      } else {
+        body.classList.remove("dark-mode");
+        themeIcon.className = "fas fa-moon";
+        localStorage.setItem("theme", "light");
+      }
+
+      // Theme toggle functionality
+      themeToggle.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          themeIcon.className = "fas fa-sun";
+          localStorage.setItem("theme", "dark");
+
+          // Add animation effect
+          themeToggle.style.transform = "rotate(360deg) scale(1.2)";
+          setTimeout(() => {
+            themeToggle.style.transform = "";
+          }, 300);
+        } else {
+          themeIcon.className = "fas fa-moon";
+          localStorage.setItem("theme", "light");
+
+          // Add animation effect
+          themeToggle.style.transform = "rotate(-360deg) scale(1.2)";
+          setTimeout(() => {
+            themeToggle.style.transform = "";
+          }, 300);
+        }
+      });
+
+      // ===== MOBILE MENU =====
+      const mobileToggle = document.getElementById("mobileToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileIcon = mobileToggle.querySelector("i");
+
+      mobileToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("active");
+
+        if (mobileMenu.classList.contains("active")) {
+          mobileIcon.className = "fas fa-times";
+          mobileToggle.setAttribute("aria-expanded", "true");
+        } else {
+          mobileIcon.className = "fas fa-bars";
+          mobileToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (e) {
+        if (
+          !mobileToggle.contains(e.target) &&
+          !mobileMenu.contains(e.target)
+        ) {
+          mobileMenu.classList.remove("active");
+          mobileIcon.className = "fas fa-bars";
+          mobileToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Close menu when clicking on a link
+      document.querySelectorAll(".mobile-nav a").forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+          mobileIcon.className = "fas fa-bars";
+          mobileToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // ===== SMOOTH SCROLLING =====
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+
+          // Skip if it's just "#"
+          if (href === "#") return;
+
+          const targetElement = document.querySelector(href);
+
+          if (targetElement) {
+            e.preventDefault();
+
+            // Update active nav link
+            document
+              .querySelectorAll(".nav-link, .mobile-nav a")
+              .forEach((link) => {
+                link.classList.remove("active");
+              });
+            this.classList.add("active");
+
+            // Scroll to target
+            const headerHeight = document.querySelector(".header").offsetHeight;
+            const targetPosition = targetElement.offsetTop - headerHeight - 20;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // ===== PAGE LINKS =====
+      document.querySelectorAll('a[href*=".html"]').forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+
+          // Check if it's a page link
+          if (href.includes(".html") && !href.includes("#")) {
+            // Check if the page exists (simplified check)
+            const validPages = [
+              "index.html",
+              "about.html",
+              "products.html",
+              "contact.html",
+              "certifications.html",
+              "privacy.html",
+              "terms.html",
+            ];
+
+            if (!validPages.includes(href.split("/").pop())) {
+              e.preventDefault();
+              showMessage(
+                "This page is under construction. Please check back soon!",
+              );
+            }
+            // Allow navigation for valid pages
+          }
+        });
+      });
+
+      // Scroll to Top
+      document.getElementById("scrollToTop").addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Set current year
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // ===== SHOW MESSAGE FUNCTION =====
+      function showMessage(text) {
+        const message = document.createElement("div");
+        message.style.cssText = `
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: var(--card-bg);
+          color: var(--text-dark);
+          padding: 2rem;
+          border-radius: var(--radius-lg);
+          text-align: center;
+          z-index: 10000;
+          box-shadow: var(--shadow-hard);
+          max-width: 400px;
+          width: 90%;
+          border: 2px solid var(--accent-orange);
+          font-family: 'Inter', sans-serif;
+        `;
+        message.innerHTML = `
+          <h3 style="color: var(--accent-orange); margin-bottom: 1rem; font-family: 'Montserrat', sans-serif;">
+            Page Under Construction
+          </h3>
+          <p style="margin-bottom: 1.5rem;">${text}</p>
+          <button onclick="this.parentElement.remove()" style="
+            margin-top: 1rem;
+            padding: 0.75rem 2rem;
+            background: var(--gradient-orange);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.transform='translateY(-2px)'" 
+             onmouseout="this.style.transform='translateY(0)'">
+            Close
+          </button>
+        `;
+        document.body.appendChild(message);
+      }
+    </script>
+  </body>
+</html>

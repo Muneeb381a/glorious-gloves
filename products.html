@@ -1,0 +1,3110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | Glorious Leather - Premium Safety PPE Manufacturer</title>
+
+    <!-- Fonts & Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Import base styles */
+      :root {
+        /* Colors */
+        --primary-dark: #0a1f44;
+        --primary-blue: #1a365d;
+        --accent-orange: #ff6b35;
+        --accent-yellow: #ffb347;
+        --accent-red: #ff3b30;
+        --accent-green: #10b981;
+        --accent-purple: #8b5cf6;
+        --light-bg: #f7f9fc;
+        --white: #ffffff;
+        --card-bg: #ffffff;
+        --text-dark: #2d3748;
+        --text-light: #718096;
+        --border-light: #e2e8f0;
+
+        /* Shadows */
+        --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+        --shadow-medium: 0 6px 30px rgba(0, 0, 0, 0.12);
+        --shadow-hard: 0 10px 40px rgba(0, 0, 0, 0.15);
+        --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.2);
+        --shadow-glow-blue: 0 0 20px rgba(26, 54, 93, 0.2);
+        --shadow-glow-green: 0 0 20px rgba(16, 185, 129, 0.2);
+
+        /* Gradients */
+        --gradient-orange: linear-gradient(135deg, #ff6b35, #ffb347);
+        --gradient-blue: linear-gradient(135deg, #1a365d, #2c5282);
+        --gradient-dark: linear-gradient(135deg, #0a1f44, #1a365d);
+        --gradient-green: linear-gradient(135deg, #10b981, #34d399);
+        --gradient-purple: linear-gradient(135deg, #8b5cf6, #a78bfa);
+        --gradient-gold: linear-gradient(135deg, #f59e0b, #fbbf24);
+
+        /* Spacing */
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 1.5rem;
+        --space-lg: 2rem;
+        --space-xl: 3rem;
+        --space-2xl: 5rem;
+
+        /* Border Radius */
+        --radius-sm: 0.5rem;
+        --radius-md: 1rem;
+        --radius-lg: 1.5rem;
+        --radius-xl: 2rem;
+
+        /* Transitions */
+        --transition-fast: 0.2s ease;
+        --transition-normal: 0.3s ease;
+        --transition-slow: 0.5s ease;
+      }
+
+      /* Dark Mode */
+      .dark-mode {
+        --primary-dark: #0f172a;
+        --primary-blue: #1e293b;
+        --light-bg: #0f172a;
+        --card-bg: #1e293b;
+        --text-dark: #f1f5f9;
+        --text-light: #94a3b8;
+        --border-light: #334155;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--light-bg);
+        color: var(--text-dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+        transition:
+          background-color var(--transition-normal),
+          color var(--transition-normal);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--primary-dark);
+      }
+
+      .dark-mode h1,
+      .dark-mode h2,
+      .dark-mode h3,
+      .dark-mode h4,
+      .dark-mode h5,
+      .dark-mode h6 {
+        color: var(--white);
+      }
+
+      h1 {
+        font-size: 3.75rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        color: var(--text-light);
+        font-size: 1.125rem;
+        margin-bottom: var(--space-md);
+      }
+
+      .dark-mode p {
+        color: var(--text-light);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: all var(--transition-fast);
+        cursor: pointer;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+      }
+
+      section {
+        padding: var(--space-2xl) 0;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .text-orange {
+        color: var(--accent-orange);
+      }
+      .text-gradient {
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ===== IMPROVED PRODUCT POPUP MODAL ===== */
+      .product-popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 20px;
+      }
+
+      .product-popup-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .product-popup {
+        background: var(--card-bg);
+        border-radius: 28px;
+        width: 100%;
+        max-width: 1100px;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        transform: translateY(60px) scale(0.95);
+        opacity: 0;
+        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        box-shadow:
+          0 30px 60px -12px rgba(0, 0, 0, 0.5),
+          0 0 0 1px rgba(255, 255, 255, 0.1);
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+      }
+
+      .product-popup-overlay.active .product-popup {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+
+      .popup-close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 48px;
+        height: 48px;
+        background: var(--gradient-orange);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1.25rem;
+        cursor: pointer;
+        z-index: 100;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: none;
+        box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+      }
+
+      .popup-close:hover {
+        transform: rotate(90deg) scale(1.15);
+        box-shadow: 0 15px 30px rgba(255, 107, 53, 0.6);
+      }
+
+      .popup-image-container {
+        position: relative;
+        height: 100%;
+        min-height: 550px;
+        background: linear-gradient(145deg, #1a365d 0%, #2c5282 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 28px 0 0 28px;
+        overflow: hidden;
+        padding: 40px;
+      }
+
+      .popup-image-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            circle at 30% 30%,
+            rgba(255, 107, 53, 0.25) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 70% 70%,
+            rgba(255, 179, 71, 0.2) 0%,
+            transparent 50%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(26, 54, 93, 0.9) 0%,
+            rgba(44, 82, 130, 0.7) 100%
+          );
+        animation: gradientFloat 20s ease infinite;
+      }
+
+      @keyframes gradientFloat {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .popup-icon {
+        font-size: 8rem;
+        color: rgba(255, 255, 255, 0.95);
+        z-index: 2;
+        filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4));
+        transition: transform 0.5s ease;
+        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .popup-image-container:hover .popup-icon {
+        transform: scale(1.15) rotate(-8deg);
+      }
+
+      .popup-badges-container {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 3;
+      }
+
+      .popup-badge {
+        background: var(--accent-orange);
+        color: var(--white);
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+        animation: badgeFloat 3s ease-in-out infinite;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .popup-badge:nth-child(2) {
+        animation-delay: 0.5s;
+        background: var(--gradient-green);
+      }
+
+      .popup-badge:nth-child(3) {
+        animation-delay: 1s;
+        background: var(--gradient-gold);
+      }
+
+      @keyframes badgeFloat {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-5px) rotate(2deg);
+        }
+      }
+
+      .popup-content-container {
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .popup-content-container::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        right: -100%;
+        width: 300%;
+        height: 300%;
+        background: radial-gradient(
+          circle at center,
+          rgba(255, 107, 53, 0.08) 0%,
+          transparent 60%
+        );
+        z-index: 0;
+      }
+
+      .popup-header {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 32px;
+      }
+
+      .popup-sku {
+        color: var(--accent-orange);
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .popup-sku::before {
+        content: "";
+        width: 30px;
+        height: 3px;
+        background: var(--accent-orange);
+        border-radius: 2px;
+      }
+
+      .popup-title {
+        font-size: 2.8rem;
+        margin-bottom: 24px;
+        color: var(--primary-dark);
+        line-height: 1.15;
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark) 0%,
+          var(--accent-orange) 50%,
+          var(--accent-yellow) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
+      }
+
+      .dark-mode .popup-title {
+        background: linear-gradient(
+          135deg,
+          #ffffff 0%,
+          var(--accent-yellow) 50%,
+          #ffb347 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .popup-description {
+        color: var(--text-light);
+        font-size: 1.125rem;
+        line-height: 1.8;
+        margin-bottom: 32px;
+        position: relative;
+        z-index: 1;
+        padding-right: 10px;
+      }
+
+      .popup-specs-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 32px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .spec-card-popup {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 24px;
+        border: 1px solid rgba(255, 107, 53, 0.15);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(15px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .spec-card-popup::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-orange);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+      }
+
+      .spec-card-popup:hover::before {
+        transform: scaleX(1);
+      }
+
+      .dark-mode .spec-card-popup {
+        background: rgba(0, 0, 0, 0.25);
+      }
+
+      .spec-card-popup:hover {
+        transform: translateY(-8px) scale(1.02);
+        background: rgba(255, 107, 53, 0.12);
+        border-color: var(--accent-orange);
+        box-shadow:
+          0 15px 35px rgba(255, 107, 53, 0.2),
+          0 0 0 1px rgba(255, 107, 53, 0.3);
+      }
+
+      .spec-icon-popup {
+        width: 56px;
+        height: 56px;
+        background: var(--gradient-orange);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1.75rem;
+        margin-bottom: 18px;
+        box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+        transition: all 0.3s ease;
+      }
+
+      .spec-card-popup:hover .spec-icon-popup {
+        transform: scale(1.1) rotate(10deg);
+        box-shadow: 0 15px 30px rgba(255, 107, 53, 0.6);
+      }
+
+      .spec-label-popup {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+
+      .spec-value-popup {
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: var(--accent-orange);
+        line-height: 1.3;
+        text-shadow: 0 2px 10px rgba(255, 107, 53, 0.2);
+      }
+
+      .popup-price-section {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 107, 53, 0.08) 0%,
+          rgba(26, 54, 93, 0.08) 100%
+        );
+        border-radius: 22px;
+        padding: 32px;
+        margin-top: 24px;
+        position: relative;
+        z-index: 1;
+        border: 1px solid rgba(255, 107, 53, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .price-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .popup-price {
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: var(--accent-orange);
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        text-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        line-height: 1;
+      }
+
+      .popup-price-currency {
+        font-size: 1.8rem;
+        color: var(--text-light);
+        font-weight: 700;
+        opacity: 0.9;
+      }
+
+      .price-tag {
+        background: var(--gradient-orange);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 14px;
+        font-size: 0.95rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+        animation: priceTagPulse 2s ease-in-out infinite;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      @keyframes priceTagPulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .popup-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .popup-btn {
+        padding: 18px 28px;
+        border-radius: 16px;
+        font-weight: 800;
+        font-size: 1.125rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+
+      .popup-btn-primary {
+        background: var(--gradient-orange);
+        color: var(--white);
+        box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+      }
+
+      .popup-btn-secondary {
+        background: var(--gradient-blue);
+        color: var(--white);
+        box-shadow: 0 10px 30px rgba(26, 54, 93, 0.4);
+      }
+
+      .popup-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        transition: left 0.8s ease;
+      }
+
+      .popup-btn:hover::before {
+        left: 100%;
+      }
+
+      .popup-btn:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .popup-btn:active {
+        transform: translateY(-2px) scale(1.01);
+      }
+
+      /* ===== PRODUCTS HERO ===== */
+      .products-hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark) 0%,
+          var(--primary-blue) 100%
+        );
+        color: var(--white);
+        margin-top: 70px;
+        text-align: center;
+      }
+
+      .products-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 107, 53, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 179, 71, 0.15) 0%,
+            transparent 50%
+          );
+        animation: gradientShift 15s ease infinite;
+      }
+
+      @keyframes gradientShift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .products-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: var(--space-2xl) 0;
+      }
+
+      .products-hero h1 {
+        font-size: 3.5rem;
+        color: var(--white);
+        margin-bottom: var(--space-lg);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        animation: fadeUp 1s ease 0.2s forwards;
+        opacity: 0;
+      }
+
+      .products-hero h1 span {
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: inline-block;
+      }
+
+      .products-hero p {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 700px;
+        margin: 0 auto var(--space-xl);
+        line-height: 1.8;
+        animation: fadeUp 1s ease 0.4s forwards;
+        opacity: 0;
+      }
+
+      .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-xl);
+        margin-bottom: var(--space-xl);
+        flex-wrap: wrap;
+        animation: fadeUp 1s ease 0.6s forwards;
+        opacity: 0;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: var(--space-md);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        min-width: 150px;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--accent-yellow);
+        margin-bottom: var(--space-xs);
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      }
+
+      /* ===== PRODUCT CATEGORIES ===== */
+      .categories-section {
+        background: var(--white);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .dark-mode .categories-section {
+        background: var(--light-bg);
+      }
+
+      .categories-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-orange);
+      }
+
+      .categories-header {
+        text-align: center;
+        margin-bottom: var(--space-2xl);
+        position: relative;
+      }
+
+      .categories-header h2 {
+        margin-bottom: var(--space-md);
+        position: relative;
+        display: inline-block;
+      }
+
+      .categories-header h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--gradient-orange);
+        border-radius: 2px;
+      }
+
+      .section-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-xl);
+      }
+
+      .category-card {
+        background: var(--card-bg);
+        border-radius: var(--radius-xl);
+        padding: var(--space-xl);
+        text-align: center;
+        transition: all var(--transition-normal);
+        border: 1px solid var(--border-light);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .category-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-blue);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform var(--transition-normal);
+      }
+
+      .category-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .category-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: var(--shadow-hard);
+        border-color: var(--accent-orange);
+      }
+
+      .category-icon {
+        width: 90px;
+        height: 90px;
+        background: var(--gradient-blue);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        color: var(--white);
+        margin: 0 auto var(--space-lg);
+        position: relative;
+        box-shadow: 0 8px 25px rgba(26, 54, 93, 0.2);
+        transition: all var(--transition-normal);
+      }
+
+      .category-card:hover .category-icon {
+        transform: scale(1.1) rotate(5deg);
+        background: var(--gradient-orange);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .category-card h3 {
+        margin-bottom: var(--space-sm);
+        color: var(--primary-dark);
+        font-size: 1.5rem;
+      }
+
+      .dark-mode .category-card h3 {
+        color: var(--white);
+      }
+
+      .category-count {
+        color: var(--accent-orange);
+        font-weight: 700;
+        font-size: 1.125rem;
+        margin-bottom: var(--space-sm);
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+        justify-content: center;
+      }
+
+      .category-count::before {
+        content: "•";
+        color: var(--accent-orange);
+      }
+
+      .category-description {
+        color: var(--text-light);
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin-bottom: var(--space-lg);
+        flex-grow: 1;
+      }
+
+      /* ===== PRODUCTS GRID ===== */
+      .products-main-section {
+        background: var(--light-bg);
+        position: relative;
+      }
+
+      .dark-mode .products-main-section {
+        background: var(--primary-dark);
+      }
+
+      .product-category-header {
+        margin-bottom: var(--space-2xl);
+        text-align: center;
+        position: relative;
+      }
+
+      .category-indicator {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: var(--radius-xl);
+        font-weight: 700;
+        margin-bottom: var(--space-md);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: var(--shadow-glow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .category-indicator::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .category-indicator:hover::before {
+        left: 100%;
+      }
+
+      .products-grid-detailed {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: var(--space-xl);
+        margin-bottom: var(--space-2xl);
+      }
+
+      .product-card-detailed {
+        background: var(--card-bg);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        transition: all var(--transition-normal);
+        border: 1px solid var(--border-light);
+        position: relative;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+      }
+
+      .product-card-detailed::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          transparent 0%,
+          rgba(255, 107, 53, 0.05) 100%
+        );
+        opacity: 0;
+        transition: opacity var(--transition-normal);
+      }
+
+      .product-card-detailed:hover::before {
+        opacity: 1;
+      }
+
+      .product-card-detailed:hover {
+        transform: translateY(-12px) rotateX(2deg);
+        box-shadow: var(--shadow-hard);
+        border-color: var(--accent-orange);
+      }
+
+      .product-image-detailed {
+        height: 280px;
+        background: var(--gradient-blue);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .product-image-detailed::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+        transition: all var(--transition-normal);
+      }
+
+      .product-card-detailed:hover .product-image-detailed::before {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 107, 53, 0.2) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+      }
+
+      .product-image-detailed i {
+        font-size: 5rem;
+        color: rgba(255, 255, 255, 0.95);
+        z-index: 1;
+        transition: all var(--transition-normal);
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+      }
+
+      .product-card-detailed:hover .product-image-detailed i {
+        transform: scale(1.1) rotate(-5deg);
+        color: var(--accent-yellow);
+      }
+
+      .product-badges {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+        z-index: 2;
+      }
+
+      .product-badge {
+        background: var(--accent-orange);
+        color: var(--white);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-sm);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        transition: all var(--transition-normal);
+      }
+
+      .product-card-detailed:hover .product-badge {
+        transform: translateX(-5px);
+      }
+
+      .product-badge.new {
+        background: var(--gradient-green);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+
+      .product-badge.best {
+        background: var(--gradient-gold);
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+      }
+
+      .product-content-detailed {
+        padding: var(--space-xl);
+        position: relative;
+        z-index: 1;
+      }
+
+      .product-sku {
+        color: var(--text-light);
+        font-size: 0.875rem;
+        margin-bottom: var(--space-xs);
+        font-family: "Courier New", monospace;
+        font-weight: 600;
+      }
+
+      .product-card-detailed h3 {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-sm);
+        color: var(--primary-dark);
+        line-height: 1.3;
+      }
+
+      .dark-mode .product-card-detailed h3 {
+        color: var(--white);
+      }
+
+      .product-description-detailed {
+        color: var(--text-light);
+        font-size: 0.9375rem;
+        margin-bottom: var(--space-lg);
+        line-height: 1.6;
+        height: 60px;
+        overflow: hidden;
+      }
+
+      .product-specs {
+        margin-bottom: var(--space-lg);
+        background: rgba(255, 107, 53, 0.05);
+        border-radius: var(--radius-md);
+        padding: var(--space-md);
+      }
+
+      .spec-item {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--space-xs) 0;
+        border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+        font-size: 0.875rem;
+      }
+
+      .spec-item:last-child {
+        border-bottom: none;
+      }
+
+      .spec-label {
+        color: var(--text-dark);
+        font-weight: 600;
+      }
+
+      .dark-mode .spec-label {
+        color: var(--white);
+      }
+
+      .spec-value {
+        color: var(--accent-orange);
+        font-weight: 700;
+        text-align: right;
+      }
+
+      .product-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-md);
+      }
+
+      .product-price-large {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: var(--accent-orange);
+        text-shadow: 0 2px 4px rgba(255, 107, 53, 0.2);
+      }
+
+      .product-quote-btn {
+        padding: 0.875rem 1.75rem;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 0.9375rem;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+      }
+
+      .product-quote-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .product-quote-btn:hover::before {
+        left: 100%;
+      }
+
+      .product-quote-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-glow);
+      }
+
+      /* View Product Button */
+      .view-product-btn {
+        padding: 0.875rem 1.75rem;
+        background: transparent;
+        color: var(--accent-orange);
+        border: 2px solid var(--accent-orange);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 0.9375rem;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .view-product-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-orange);
+        transition: left 0.7s ease;
+        z-index: -1;
+      }
+
+      .view-product-btn:hover::before {
+        left: 0;
+      }
+
+      .view-product-btn:hover {
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-glow);
+      }
+
+      /* ===== HEADER & FOOTER STYLES ===== */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all var(--transition-normal);
+        padding: 0.5rem 0;
+      }
+
+      .dark-mode .header {
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .header.scrolled {
+        box-shadow: var(--shadow-hard);
+        padding: 0.25rem 0;
+        background: var(--white);
+      }
+
+      .dark-mode .header.scrolled {
+        background: var(--primary-dark);
+      }
+
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        position: relative;
+      }
+
+      .logo-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--gradient-orange);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateY(-10deg);
+        box-shadow: 5px 5px 20px rgba(255, 107, 53, 0.3);
+        animation: floatLogo 6s ease-in-out infinite;
+      }
+
+      @keyframes floatLogo {
+        0%,
+        100% {
+          transform: perspective(1000px) rotateY(-10deg) translateY(0);
+        }
+        50% {
+          transform: perspective(1000px) rotateY(-10deg) translateY(-5px);
+        }
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo-main {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .logo-sub {
+        font-size: 0.7rem;
+        color: var(--text-light);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      /* Navigation */
+      .nav-main {
+        display: flex;
+        gap: var(--space-xl);
+        align-items: center;
+      }
+
+      .nav-link {
+        position: relative;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.5rem 0;
+        color: var(--text-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .dark-mode .nav-link {
+        color: var(--white);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: var(--gradient-orange);
+        border-radius: 1.5px;
+        transition: width var(--transition-normal);
+      }
+
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--accent-orange);
+      }
+
+      /* Header Actions */
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+      }
+
+      .theme-toggle {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        background: var(--light-bg);
+        border: 1px solid var(--border-light);
+        color: var(--text-dark);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .dark-mode .theme-toggle {
+        background: var(--card-bg);
+        border-color: var(--border-light);
+        color: var(--white);
+      }
+
+      .theme-toggle:hover {
+        background: var(--accent-orange);
+        color: var(--white);
+        transform: rotate(15deg) scale(1.1);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .theme-toggle i {
+        transition: transform 0.3s ease;
+      }
+
+      .theme-toggle:hover i {
+        transform: rotate(180deg);
+      }
+
+      .cta-button {
+        padding: 0.75rem 1.75rem;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .cta-button:hover::before {
+        left: 100%;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-glow);
+      }
+
+      /* Mobile Menu */
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-dark);
+        font-size: 1.5rem;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        align-items: center;
+        justify-content: center;
+        transition: all var(--transition-fast);
+      }
+
+      .dark-mode .mobile-toggle {
+        color: var(--white);
+      }
+
+      .mobile-toggle:hover {
+        background: var(--border-light);
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: var(--space-lg);
+        border-top: 1px solid var(--border-light);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+        z-index: 999;
+        box-shadow: var(--shadow-hard);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+      }
+
+      .mobile-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+
+      .mobile-nav a {
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+        background: var(--light-bg);
+        color: var(--text-dark);
+        font-weight: 600;
+        transition: all var(--transition-fast);
+        text-align: center;
+      }
+
+      .dark-mode .mobile-nav a {
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .mobile-nav a:hover,
+      .mobile-nav a.active {
+        background: var(--gradient-orange);
+        color: var(--white);
+        transform: translateX(10px);
+      }
+
+      /* Footer Styles */
+      .footer {
+        background: var(--gradient-dark);
+        color: var(--white);
+        padding: var(--space-2xl) 0 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .footer-wave {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%230a1f44'%3E%3C/path%3E%3C/svg%3E");
+        background-size: 1200px 100px;
+      }
+
+      .dark-mode .footer-wave {
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%231e293b'%3E%3C/path%3E%3C/svg%3E");
+      }
+
+      .footer-content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: var(--space-2xl);
+        margin-bottom: var(--space-2xl);
+      }
+
+      .footer-brand {
+        max-width: 350px;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+      }
+
+      .footer-logo-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--gradient-orange);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        color: var(--white);
+      }
+
+      .footer-logo-text {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--white);
+      }
+
+      .footer-about {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.8;
+        margin-bottom: var(--space-lg);
+        font-size: 1rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: var(--space-md);
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1.125rem;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .social-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--gradient-orange);
+        opacity: 0;
+        transition: opacity var(--transition-normal);
+      }
+
+      .social-link:hover::before {
+        opacity: 1;
+      }
+
+      .social-link i {
+        position: relative;
+        z-index: 1;
+      }
+
+      .social-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+      }
+
+      .footer-column h3 {
+        color: var(--white);
+        font-size: 1.25rem;
+        margin-bottom: var(--space-lg);
+        position: relative;
+        padding-bottom: var(--space-sm);
+      }
+
+      .footer-column h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--accent-orange);
+        border-radius: 1.5px;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: var(--space-sm);
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: all var(--transition-fast);
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        font-size: 0.9375rem;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-orange);
+        transform: translateX(5px);
+      }
+
+      .footer-links i {
+        font-size: 0.75rem;
+        opacity: 0.7;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: var(--space-xl) 0;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-certs {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-lg);
+        flex-wrap: wrap;
+      }
+
+      .cert-badge {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+      }
+
+      .cert-badge:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .footer-copyright {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.875rem;
+      }
+
+      .footer-copyright a {
+        color: var(--accent-yellow);
+        text-decoration: none;
+        transition: color var(--transition-fast);
+      }
+
+      .footer-copyright a:hover {
+        color: var(--white);
+      }
+
+      /* Responsive Modal */
+      @media (max-width: 1024px) {
+        .product-popup {
+          grid-template-columns: 1fr;
+          max-width: 700px;
+        }
+
+        .popup-image-container {
+          border-radius: 28px 28px 0 0;
+          min-height: 350px;
+        }
+
+        .popup-icon {
+          font-size: 6rem;
+        }
+
+        .popup-title {
+          font-size: 2.4rem;
+        }
+
+        .popup-price {
+          font-size: 3rem;
+        }
+
+        .popup-content-container {
+          padding: 36px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .product-popup {
+          max-height: 95vh;
+          border-radius: 24px;
+        }
+
+        .popup-image-container {
+          min-height: 280px;
+          padding: 30px;
+        }
+
+        .popup-content-container {
+          padding: 28px;
+        }
+
+        .popup-specs-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .popup-actions {
+          grid-template-columns: 1fr;
+        }
+
+        .popup-title {
+          font-size: 2rem;
+        }
+
+        .popup-price {
+          font-size: 2.5rem;
+        }
+
+        .popup-btn {
+          padding: 16px 24px;
+        }
+
+        .nav-main {
+          display: none;
+        }
+        .mobile-toggle {
+          display: flex;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+
+        .product-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .products-grid-detailed {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .product-popup-overlay {
+          padding: 10px;
+        }
+
+        .popup-title {
+          font-size: 1.8rem;
+        }
+
+        .popup-description {
+          font-size: 1rem;
+        }
+
+        .popup-price {
+          font-size: 2.2rem;
+        }
+
+        .price-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .popup-btn {
+          padding: 14px 20px;
+          font-size: 1rem;
+        }
+
+        .popup-icon {
+          font-size: 5rem;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .products-grid-detailed {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-content {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .popup-price-section {
+          flex-direction: column;
+          gap: var(--space-md);
+        }
+
+        .popup-price {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Product Popup Modal -->
+    <div class="product-popup-overlay" id="productPopup">
+      <div class="product-popup">
+        <button
+          class="popup-close"
+          id="closePopup"
+          aria-label="Close product details"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="popup-image-container">
+          <div class="popup-image-bg"></div>
+          <i class="popup-icon" id="popupIcon"></i>
+          <div class="popup-badges-container" id="popupBadges"></div>
+        </div>
+
+        <div class="popup-content-container">
+          <div class="popup-header">
+            <div class="popup-sku" id="popupSku"></div>
+            <h2 class="popup-title" id="popupTitle"></h2>
+            <p class="popup-description" id="popupDescription"></p>
+          </div>
+
+          <div class="popup-specs-grid" id="popupSpecs"></div>
+
+          <div class="popup-price-section">
+            <div class="price-container">
+              <div class="popup-price">
+                <span class="popup-price-currency">$</span>
+                <span id="popupPrice"></span>
+              </div>
+              <div class="price-tag">
+                <i class="fas fa-tag"></i>
+                Best Price Guaranteed
+              </div>
+            </div>
+
+            <div class="popup-actions">
+              <a href="contact.html" class="popup-btn popup-btn-primary">
+                <i class="fas fa-file-alt"></i>
+                Request Quote
+              </a>
+              <a href="tel:+15551234567" class="popup-btn popup-btn-secondary">
+                <i class="fas fa-phone-alt"></i>
+                Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="logo-text">
+              <div class="logo-main">Glorious Leather</div>
+              <div class="logo-sub">Safety PPE Manufacturer</div>
+            </div>
+          </a>
+
+          <nav class="nav-main">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link active">Products</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="certifications.html" class="nav-link">Certifications</a>
+          </nav>
+
+          <div class="header-actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle dark mode"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <a href="contact.html" class="cta-button">
+              <i class="fas fa-quote-left"></i>
+              Get Quote
+            </a>
+            <button
+              class="mobile-toggle"
+              id="mobileToggle"
+              aria-label="Toggle mobile menu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="products.html" class="active">Products</a>
+          <a href="contact.html">Contact</a>
+          <a href="certifications.html">Certifications</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Products Hero -->
+    <section class="products-hero">
+      <div class="container">
+        <div class="products-hero-content">
+          <h1><span>Premium</span> Safety Products</h1>
+          <p>
+            Explore our comprehensive range of certified safety gloves and
+            jackets designed for maximum protection across industries. Each
+            product undergoes rigorous testing to ensure superior quality and
+            performance.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <div class="stat-label">Products</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <div class="stat-label">Years Warranty</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <div class="stat-label">Certified</div>
+            </div>
+          </div>
+
+          <a href="#categories" class="cta-button">
+            <i class="fas fa-boxes"></i>
+            Browse Categories
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="categories-header">
+          <h2>Product Categories</h2>
+          <p class="section-subtitle">
+            Specialized safety solutions for every industry requirement
+          </p>
+        </div>
+        <div class="categories-grid">
+          <div class="category-card animate-on-scroll">
+            <div class="category-icon">
+              <i class="fas fa-hand-paper"></i>
+            </div>
+            <h3>Safety Gloves</h3>
+            <div class="category-count">15+ Products</div>
+            <p class="category-description">
+              Leather, cut-resistant, chemical-resistant, and specialized gloves
+              for industrial applications.
+            </p>
+            <button
+              class="cta-button view-category-btn"
+              data-category="gloves"
+              style="
+                margin-top: var(--space-md);
+                padding: 0.75rem 1.5rem;
+                font-size: 0.875rem;
+              "
+            >
+              <i class="fas fa-eye"></i>
+              View Products
+            </button>
+          </div>
+          <div class="category-card animate-on-scroll">
+            <div class="category-icon">
+              <i class="fas fa-vest"></i>
+            </div>
+            <h3>Safety Jackets</h3>
+            <div class="category-count">12+ Products</div>
+            <p class="category-description">
+              High-visibility, weather-resistant, flame-retardant jackets for
+              outdoor and industrial use.
+            </p>
+            <button
+              class="cta-button view-category-btn"
+              data-category="jackets"
+              style="
+                margin-top: var(--space-md);
+                padding: 0.75rem 1.5rem;
+                font-size: 0.875rem;
+              "
+            >
+              <i class="fas fa-eye"></i>
+              View Products
+            </button>
+          </div>
+          <div class="category-card animate-on-scroll">
+            <div class="category-icon">
+              <i class="fas fa-fire"></i>
+            </div>
+            <h3>Flame-Resistant PPE</h3>
+            <div class="category-count">8+ Products</div>
+            <p class="category-description">
+              NFPA certified gear for welding, foundry work, and
+              high-temperature environments.
+            </p>
+            <button
+              class="cta-button view-category-btn"
+              data-category="flame-resistant"
+              style="
+                margin-top: var(--space-md);
+                padding: 0.75rem 1.5rem;
+                font-size: 0.875rem;
+              "
+            >
+              <i class="fas fa-eye"></i>
+              View Products
+            </button>
+          </div>
+          <div class="category-card animate-on-scroll">
+            <div class="category-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3>Chemical Protection</h3>
+            <div class="category-count">10+ Products</div>
+            <p class="category-description">
+              Chemical-resistant gloves and aprons for laboratory and industrial
+              chemical handling.
+            </p>
+            <button
+              class="cta-button view-category-btn"
+              data-category="chemical"
+              style="
+                margin-top: var(--space-md);
+                padding: 0.75rem 1.5rem;
+                font-size: 0.875rem;
+              "
+            >
+              <i class="fas fa-eye"></i>
+              View Products
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety Gloves Products -->
+    <section class="products-main-section" id="gloves">
+      <div class="container">
+        <div class="product-category-header">
+          <div class="category-indicator">Safety Gloves</div>
+          <h2>Hand Protection Solutions</h2>
+          <p class="section-subtitle">
+            Engineered for dexterity, comfort, and maximum hand protection
+          </p>
+        </div>
+
+        <div class="products-grid-detailed">
+          <!-- Product 1 -->
+          <div class="product-card-detailed animate-on-scroll">
+            <div class="product-image-detailed">
+              <i class="fas fa-hand-rock"></i>
+              <div class="product-badges">
+                <div class="product-badge best">BEST SELLER</div>
+                <div class="product-badge">ANSI A4</div>
+              </div>
+            </div>
+            <div class="product-content-detailed">
+              <div class="product-sku">SKU: GL-1001</div>
+              <h3>Premium Leather Work Gloves</h3>
+              <p class="product-description-detailed">
+                Heavy-duty split leather gloves with reinforced palms and
+                knuckle protection. Perfect for construction and material
+                handling.
+              </p>
+
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-label">Material</span>
+                  <span class="spec-value">Premium Split Leather</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Cut Level</span>
+                  <span class="spec-value">ANSI A4</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Sizes</span>
+                  <span class="spec-value">S-XXL</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Certifications</span>
+                  <span class="spec-value">ISO, ANSI</span>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <div class="product-price-large">$24.99</div>
+                <button class="view-product-btn" data-product-id="1">
+                  <i class="fas fa-eye"></i>
+                  View Product
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card-detailed animate-on-scroll">
+            <div class="product-image-detailed">
+              <i class="fas fa-cut"></i>
+              <div class="product-badges">
+                <div class="product-badge new">NEW</div>
+                <div class="product-badge">ANSI A9</div>
+              </div>
+            </div>
+            <div class="product-content-detailed">
+              <div class="product-sku">SKU: GL-2005</div>
+              <h3>Cut-Resistant Kevlar Gloves</h3>
+              <p class="product-description-detailed">
+                Level 5 cut resistance with Kevlar and stainless steel blend.
+                Lightweight and flexible for precision work.
+              </p>
+
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-label">Material</span>
+                  <span class="spec-value">Kevlar + Stainless Steel</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Cut Level</span>
+                  <span class="spec-value">ANSI A9</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Sizes</span>
+                  <span class="spec-value">M-XXL</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Certifications</span>
+                  <span class="spec-value">EN388, ANSI</span>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <div class="product-price-large">$32.99</div>
+                <button class="view-product-btn" data-product-id="2">
+                  <i class="fas fa-eye"></i>
+                  View Product
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card-detailed animate-on-scroll">
+            <div class="product-image-detailed">
+              <i class="fas fa-temperature-high"></i>
+              <div class="product-badges">
+                <div class="product-badge">HEAT PROOF</div>
+                <div class="product-badge">NFPA 2112</div>
+              </div>
+            </div>
+            <div class="product-content-detailed">
+              <div class="product-sku">SKU: GL-3008</div>
+              <h3>Heat-Resistant Welding Gloves</h3>
+              <p class="product-description-detailed">
+                Heavy-duty heat and spark resistance up to 932°F (500°C).
+                Extra-long cuff for forearm protection.
+              </p>
+
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-label">Material</span>
+                  <span class="spec-value">Fire-Retardant Leather</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Heat Resistance</span>
+                  <span class="spec-value">Up to 500°C</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Sizes</span>
+                  <span class="spec-value">One Size</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Certifications</span>
+                  <span class="spec-value">NFPA 2112</span>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <div class="product-price-large">$38.99</div>
+                <button class="view-product-btn" data-product-id="3">
+                  <i class="fas fa-eye"></i>
+                  View Product
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card-detailed animate-on-scroll">
+            <div class="product-image-detailed">
+              <i class="fas fa-flask"></i>
+              <div class="product-badges">
+                <div class="product-badge new">NEW</div>
+                <div class="product-badge">CHEMICAL PROOF</div>
+              </div>
+            </div>
+            <div class="product-content-detailed">
+              <div class="product-sku">SKU: GL-4012</div>
+              <h3>Chemical-Resistant Nitrile Gloves</h3>
+              <p class="product-description-detailed">
+                Nitrile-coated gloves offering superior protection against
+                chemicals, oils, and solvents in laboratory and industrial
+                settings.
+              </p>
+
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-label">Material</span>
+                  <span class="spec-value">Nitrile Coated</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Chemical Resistance</span>
+                  <span class="spec-value">Level A</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Sizes</span>
+                  <span class="spec-value">S-XXL</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Certifications</span>
+                  <span class="spec-value">EN374, ISO</span>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <div class="product-price-large">$29.99</div>
+                <button class="view-product-btn" data-product-id="4">
+                  <i class="fas fa-eye"></i>
+                  View Product
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-banner">
+      <div class="cta-container">
+        <h2 class="cta-title">Need Custom Safety Solutions?</h2>
+        <p class="cta-description">
+          We specialize in custom PPE manufacturing for specific industry
+          requirements. Contact our team for personalized solutions.
+        </p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="cta-button-primary">
+            <i class="fas fa-tools"></i>
+            Request Custom Quote
+          </a>
+          <a href="tel:+15551234567" class="cta-button-secondary">
+            <i class="fas fa-phone-alt"></i>
+            Call: +1 (555) 123-4567
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-wave"></div>
+
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="footer-logo-icon">
+                <i class="fas fa-hard-hat"></i>
+              </div>
+              <div class="footer-logo-text">Glorious Leather</div>
+            </div>
+            <p class="footer-about">
+              Manufacturing certified safety gloves and jackets for industrial,
+              construction, oil & gas, and road safety sectors with
+              uncompromising quality and international standards.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> Products</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+              <li>
+                <a href="certifications.html"
+                  ><i class="fas fa-chevron-right"></i> Certifications</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Our Products</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#gloves"
+                  ><i class="fas fa-hand-paper"></i> Safety Gloves</a
+                >
+              </li>
+              <li>
+                <a href="#jackets"
+                  ><i class="fas fa-vest"></i> Safety Jackets</a
+                >
+              </li>
+              <li>
+                <a href="#flame-resistant"
+                  ><i class="fas fa-fire"></i> Flame-Resistant</a
+                >
+              </li>
+              <li>
+                <a href="#chemical"
+                  ><i class="fas fa-flask"></i> Chemical-Resistant</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="tel:+15551234567"
+                  ><i class="fas fa-phone"></i> +1 (555) 123-4567</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@gloriousleather.com"
+                  ><i class="fas fa-envelope"></i> sales@gloriousleather.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://maps.google.com/?q=123+Industrial+Safety+Park+Safety+City"
+                  target="_blank"
+                  ><i class="fas fa-map-marker-alt"></i> 123 Industrial Safety
+                  Park, Safety City</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-certs">
+            <div class="cert-badge">
+              <i class="fas fa-certificate"></i>
+              ISO 9001:2015
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-shield-alt"></i>
+              ANSI/ISEA 107
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-award"></i>
+              EN ISO 20471
+            </div>
+          </div>
+
+          <div class="footer-copyright">
+            &copy; <span id="currentYear"></span> Glorious Leather Industries.
+            All rights reserved. |
+            <a
+              href="#"
+              onclick="showMessage('Privacy Policy page is under construction')"
+              >Privacy Policy</a
+            >
+            |
+            <a
+              href="#"
+              onclick="
+                showMessage('Terms of Service page is under construction')
+              "
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Product Data and Manager Script (Integrated) -->
+    <script>
+      // ===== PRODUCTS DATA =====
+      window.productsData = {
+        categories: [
+          {
+            id: "gloves",
+            name: "Safety Gloves",
+            icon: "fas fa-hand-paper",
+            count: 15,
+            description:
+              "Leather, cut-resistant, chemical-resistant, and specialized gloves for industrial applications.",
+            color: "linear-gradient(135deg, #1a365d, #2c5282)",
+          },
+          {
+            id: "jackets",
+            name: "Safety Jackets",
+            icon: "fas fa-vest",
+            count: 12,
+            description:
+              "High-visibility, weather-resistant, flame-retardant jackets for outdoor and industrial use.",
+            color: "linear-gradient(135deg, #ff6b35, #ffb347)",
+          },
+          {
+            id: "flame-resistant",
+            name: "Flame-Resistant PPE",
+            icon: "fas fa-fire",
+            count: 8,
+            description:
+              "NFPA certified gear for welding, foundry work, and high-temperature environments.",
+            color: "linear-gradient(135deg, #ff3b30, #ff6b35)",
+          },
+          {
+            id: "chemical",
+            name: "Chemical Protection",
+            icon: "fas fa-flask",
+            count: 10,
+            description:
+              "Chemical-resistant gloves and aprons for laboratory and industrial chemical handling.",
+            color: "linear-gradient(135deg, #10b981, #34d399)",
+          },
+        ],
+
+        products: [
+          {
+            id: 1,
+            sku: "GL-1001",
+            name: "Premium Leather Work Gloves",
+            icon: "fas fa-hand-rock",
+            badges: ["BEST SELLER", "ANSI A4", "HEAVY DUTY"],
+            description:
+              "Heavy-duty split leather gloves with reinforced palms and knuckle protection. Perfect for construction and material handling. Features double stitching, enhanced grip, and breathable design for all-day comfort.",
+            specs: {
+              material: "Premium Split Leather",
+              protection: "ANSI A4 Cut Level",
+              sizes: "S - XXL (7 Sizes)",
+              certifications: "ISO 9001, ANSI 105",
+              thickness: "1.8mm",
+              lining: "Knit Wrist",
+            },
+            price: "24.99",
+            category: "gloves",
+          },
+          {
+            id: 2,
+            sku: "GL-2005",
+            name: "Cut-Resistant Kevlar Gloves",
+            icon: "fas fa-cut",
+            badges: ["NEW ARRIVAL", "ANSI A9", "LEVEL 5"],
+            description:
+              "Level 5 cut resistance with Kevlar and stainless steel blend. Lightweight and flexible for precision work. Ideal for metal handling, glass manufacturing, and food processing industries.",
+            specs: {
+              material: "Kevlar + Stainless Steel",
+              protection: "ANSI A9 Cut Level",
+              sizes: "M - XXL (5 Sizes)",
+              certifications: "EN388, ANSI 105, CE",
+              cutLevel: "Level 5",
+              dexterity: "High",
+            },
+            price: "32.99",
+            category: "gloves",
+          },
+          {
+            id: 3,
+            sku: "GL-3008",
+            name: "Heat-Resistant Welding Gloves",
+            icon: "fas fa-temperature-high",
+            badges: ["HEAT PROOF", "NFPA 2112", "WELDING"],
+            description:
+              "Heavy-duty heat and spark resistance up to 932°F (500°C). Extra-long cuff for forearm protection. Designed for welding, foundry work, and high-temperature applications with reinforced stitching.",
+            specs: {
+              material: "Fire-Retardant Leather",
+              protection: "Up to 500°C (932°F)",
+              sizes: "One Size Adjustable",
+              certifications: "NFPA 2112, ISO 11611",
+              cuffLength: "14 inches",
+              lining: "Heat-Resistant",
+            },
+            price: "38.99",
+            category: "gloves",
+          },
+          {
+            id: 4,
+            sku: "GL-4012",
+            name: "Chemical-Resistant Nitrile Gloves",
+            icon: "fas fa-flask",
+            badges: ["CHEMICAL PROOF", "OIL RESISTANT", "GRIP ENHANCED"],
+            description:
+              "Nitrile-coated gloves offering superior protection against chemicals, oils, and solvents in laboratory and industrial settings. Features textured grip pattern and comfort lining for extended wear.",
+            specs: {
+              material: "Nitrile Coated Polyester",
+              protection: "Level A Chemical",
+              sizes: "S - XXL (6 Sizes)",
+              certifications: "EN374, ISO 9001",
+              coating: "Full Palm Nitrile",
+              grip: "Textured Diamond",
+            },
+            price: "29.99",
+            category: "gloves",
+          },
+        ],
+
+        getProductsByCategory: function (categoryId) {
+          return this.products.filter(
+            (product) => product.category === categoryId,
+          );
+        },
+
+        getProductById: function (productId) {
+          return this.products.find((product) => product.id === productId);
+        },
+
+        getCategoryById: function (categoryId) {
+          return this.categories.find((category) => category.id === categoryId);
+        },
+      };
+
+      // ===== PRODUCT MANAGER =====
+      class ProductManager {
+        constructor() {
+          this.currentCategory = "gloves";
+          this.productsData = window.productsData;
+          this.init();
+        }
+
+        init() {
+          console.log("Product Manager initialized");
+          this.setupModal();
+          this.setupCategoryButtons();
+          this.setupProductButtons();
+          this.setupEventListeners();
+        }
+
+        setupModal() {
+          console.log("Setting up modal...");
+          this.productPopup = document.getElementById("productPopup");
+          this.closePopupBtn = document.getElementById("closePopup");
+
+          if (!this.productPopup) {
+            console.error("Product popup element not found!");
+            return;
+          }
+
+          // Close popup when clicking outside
+          this.productPopup.addEventListener("click", (e) => {
+            if (e.target === this.productPopup) {
+              this.closeProductPopup();
+            }
+          });
+
+          // Close popup with Escape key
+          document.addEventListener("keydown", (e) => {
+            if (
+              e.key === "Escape" &&
+              this.productPopup.classList.contains("active")
+            ) {
+              this.closeProductPopup();
+            }
+          });
+        }
+
+        setupCategoryButtons() {
+          console.log("Setting up category buttons...");
+          const categoryButtons =
+            document.querySelectorAll(".view-category-btn");
+
+          categoryButtons.forEach((button) => {
+            button.addEventListener("click", (e) => {
+              e.preventDefault();
+              const categoryId = button.getAttribute("data-category");
+              console.log("Category button clicked:", categoryId);
+              this.handleCategoryClick(categoryId);
+            });
+          });
+        }
+
+        setupProductButtons() {
+          console.log("Setting up product buttons...");
+          const productButtons = document.querySelectorAll(".view-product-btn");
+
+          productButtons.forEach((button) => {
+            button.addEventListener("click", (e) => {
+              e.preventDefault();
+              const productId = button.getAttribute("data-product-id");
+              console.log("Product button clicked:", productId);
+              this.openProductPopup(parseInt(productId));
+            });
+          });
+        }
+
+        handleCategoryClick(categoryId) {
+          console.log("Handling category click:", categoryId);
+          // For now, just show an alert - you can implement more functionality later
+          alert(
+            `Loading products for category: ${categoryId}\n\nThis feature will filter products by category when fully implemented.`,
+          );
+
+          // Update active buttons
+          this.updateActiveCategoryButtons(categoryId);
+
+          // Scroll to products section
+          setTimeout(() => {
+            const productsSection = document.getElementById("gloves");
+            if (productsSection) {
+              const headerHeight =
+                document.querySelector(".header").offsetHeight;
+              const targetPosition =
+                productsSection.offsetTop - headerHeight - 20;
+
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+            }
+          }, 100);
+        }
+
+        updateActiveCategoryButtons(activeCategoryId) {
+          const buttons = document.querySelectorAll(".view-category-btn");
+          buttons.forEach((btn) => {
+            const categoryId = btn.getAttribute("data-category");
+            if (categoryId === activeCategoryId) {
+              btn.classList.add("active");
+              btn.innerHTML = '<i class="fas fa-check"></i> Viewing Products';
+            } else {
+              btn.classList.remove("active");
+              btn.innerHTML = '<i class="fas fa-eye"></i> View Products';
+            }
+          });
+        }
+
+        openProductPopup(productId) {
+          console.log("Opening product popup for ID:", productId);
+          const product = this.productsData.getProductById(productId);
+
+          if (!product) {
+            console.error("Product not found:", productId);
+            return;
+          }
+
+          console.log("Found product:", product.name);
+
+          // Update popup content
+          this.updatePopupContent(product);
+
+          // Show popup with animation
+          if (this.productPopup) {
+            this.productPopup.classList.add("active");
+            document.body.style.overflow = "hidden";
+            console.log("Modal shown");
+
+            // Focus close button for accessibility
+            setTimeout(() => {
+              if (this.closePopupBtn) {
+                this.closePopupBtn.focus();
+              }
+            }, 100);
+          } else {
+            console.error("Product popup element not found!");
+          }
+        }
+
+        updatePopupContent(product) {
+          console.log("Updating popup content for:", product.name);
+
+          // Update icon
+          const popupIcon = document.getElementById("popupIcon");
+          if (popupIcon) {
+            popupIcon.className = `popup-icon ${product.icon}`;
+          }
+
+          // Update badges
+          const badgesContainer = document.getElementById("popupBadges");
+          if (badgesContainer) {
+            badgesContainer.innerHTML = product.badges
+              .map((badge) => `<div class="popup-badge">${badge}</div>`)
+              .join("");
+          }
+
+          // Update basic info
+          const skuElement = document.getElementById("popupSku");
+          const titleElement = document.getElementById("popupTitle");
+          const descElement = document.getElementById("popupDescription");
+          const priceElement = document.getElementById("popupPrice");
+
+          if (skuElement) skuElement.textContent = product.sku;
+          if (titleElement) titleElement.textContent = product.name;
+          if (descElement) descElement.textContent = product.description;
+          if (priceElement) priceElement.textContent = product.price;
+
+          // Update specs
+          const specsContainer = document.getElementById("popupSpecs");
+          if (specsContainer) {
+            specsContainer.innerHTML = Object.entries(product.specs)
+              .map(
+                ([key, value]) => `
+              <div class="spec-card-popup">
+                <div class="spec-icon-popup">
+                  <i class="${this.getSpecIcon(key)}"></i>
+                </div>
+                <div class="spec-label-popup">${this.formatSpecKey(key)}</div>
+                <div class="spec-value-popup">${value}</div>
+              </div>
+            `,
+              )
+              .join("");
+          }
+        }
+
+        getSpecIcon(specKey) {
+          const icons = {
+            material: "fas fa-layer-group",
+            protection: "fas fa-shield-alt",
+            sizes: "fas fa-ruler-combined",
+            certifications: "fas fa-certificate",
+            thickness: "fas fa-ruler-vertical",
+            lining: "fas fa-layer-group",
+            cutLevel: "fas fa-cut",
+            dexterity: "fas fa-hand-paper",
+            cuffLength: "fas fa-ruler-vertical",
+            coating: "fas fa-paint-roller",
+            grip: "fas fa-hand-rock",
+          };
+          return icons[specKey] || "fas fa-info-circle";
+        }
+
+        formatSpecKey(key) {
+          return (
+            key.charAt(0).toUpperCase() +
+            key.slice(1).replace(/([A-Z])/g, " $1")
+          );
+        }
+
+        closeProductPopup() {
+          if (this.productPopup) {
+            this.productPopup.classList.remove("active");
+            document.body.style.overflow = "auto";
+            console.log("Modal closed");
+          }
+        }
+
+        setupEventListeners() {
+          console.log("Setting up event listeners...");
+
+          // Close popup button
+          if (this.closePopupBtn) {
+            this.closePopupBtn.addEventListener("click", () => {
+              console.log("Close button clicked");
+              this.closeProductPopup();
+            });
+          }
+        }
+      }
+
+      // ===== MAIN SCRIPT =====
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM fully loaded");
+
+        // Initialize Product Manager
+        window.productManager = new ProductManager();
+
+        // ===== THEME TOGGLE =====
+        const themeToggle = document.getElementById("themeToggle");
+        const themeIcon = themeToggle.querySelector("i");
+        const body = document.body;
+
+        // Check for saved theme or prefer-color-scheme
+        const prefersDarkScheme = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        );
+        const savedTheme = localStorage.getItem("theme");
+
+        // Set initial theme
+        if (
+          savedTheme === "dark" ||
+          (!savedTheme && prefersDarkScheme.matches)
+        ) {
+          body.classList.add("dark-mode");
+          themeIcon.className = "fas fa-sun";
+          localStorage.setItem("theme", "dark");
+        } else {
+          body.classList.remove("dark-mode");
+          themeIcon.className = "fas fa-moon";
+          localStorage.setItem("theme", "light");
+        }
+
+        // Theme toggle functionality
+        themeToggle.addEventListener("click", function () {
+          body.classList.toggle("dark-mode");
+
+          if (body.classList.contains("dark-mode")) {
+            themeIcon.className = "fas fa-sun";
+            localStorage.setItem("theme", "dark");
+            themeToggle.style.transform = "rotate(360deg) scale(1.2)";
+          } else {
+            themeIcon.className = "fas fa-moon";
+            localStorage.setItem("theme", "light");
+            themeToggle.style.transform = "rotate(-360deg) scale(1.2)";
+          }
+
+          setTimeout(() => {
+            themeToggle.style.transform = "";
+          }, 300);
+        });
+
+        // ===== MOBILE MENU =====
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileIcon = mobileToggle.querySelector("i");
+
+        mobileToggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          mobileMenu.classList.toggle("active");
+          mobileIcon.className = mobileMenu.classList.contains("active")
+            ? "fas fa-times"
+            : "fas fa-bars";
+          mobileToggle.setAttribute(
+            "aria-expanded",
+            mobileMenu.classList.contains("active"),
+          );
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (
+            !mobileToggle.contains(e.target) &&
+            !mobileMenu.contains(e.target)
+          ) {
+            mobileMenu.classList.remove("active");
+            mobileIcon.className = "fas fa-bars";
+            mobileToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        // ===== HEADER SCROLL EFFECT =====
+        window.addEventListener("scroll", () => {
+          const header = document.querySelector(".header");
+          header.classList.toggle("scrolled", window.scrollY > 50);
+        });
+
+        // ===== SET CURRENT YEAR =====
+        document.getElementById("currentYear").textContent =
+          new Date().getFullYear();
+
+        // ===== SCROLL ANIMATIONS =====
+        function checkScroll() {
+          const elements = document.querySelectorAll(".animate-on-scroll");
+          const windowHeight = window.innerHeight;
+
+          elements.forEach((element) => {
+            const elementPosition = element.getBoundingClientRect().top;
+
+            if (elementPosition < windowHeight - 100) {
+              element.classList.add("visible");
+            }
+          });
+        }
+
+        // Initial check
+        checkScroll();
+        window.addEventListener("scroll", checkScroll);
+
+        // ===== UTILITY FUNCTION =====
+        window.showMessage = function (text) {
+          const message = document.createElement("div");
+          message.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--card-bg);
+            color: var(--text-dark);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            z-index: 10000;
+            box-shadow: var(--shadow-hard);
+            max-width: 400px;
+            width: 90%;
+            border: 2px solid var(--accent-orange);
+          `;
+          message.innerHTML = `
+            <h3 style="color: var(--accent-orange); margin-bottom: 1rem;">Notice</h3>
+            <p>${text}</p>
+            <button onclick="this.parentElement.remove()" style="
+              margin-top: 1rem;
+              padding: 0.5rem 1.5rem;
+              background: var(--gradient-orange);
+              color: white;
+              border: none;
+              border-radius: var(--radius-md);
+              cursor: pointer;
+            ">Close</button>
+          `;
+          document.body.appendChild(message);
+        };
+
+        // ===== RESPONSIVE HANDLING =====
+        function handleResponsive() {
+          const isMobile = window.innerWidth <= 768;
+          const stats = document.querySelector(".hero-stats");
+
+          if (isMobile && stats) {
+            stats.style.flexDirection = "column";
+            stats.style.alignItems = "center";
+          } else if (stats) {
+            stats.style.flexDirection = "row";
+          }
+        }
+
+        handleResponsive();
+        window.addEventListener("resize", handleResponsive);
+
+        console.log("All scripts loaded successfully");
+      });
+    </script>
+  </body>
+</html>

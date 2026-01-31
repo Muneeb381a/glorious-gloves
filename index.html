@@ -1,0 +1,3318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glorious Leather | Premium Safety PPE Manufacturer</title>
+
+    <!-- Fonts & Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===== PRELOADER ===== */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-dark);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition:
+          opacity 0.8s ease-out,
+          visibility 0.8s ease-out;
+      }
+
+      .loader {
+        width: 120px;
+        height: 120px;
+        position: relative;
+      }
+
+      .loader-circle {
+        position: absolute;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      .loader-circle:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        border: 5px solid transparent;
+        border-top: 5px solid var(--accent-orange);
+        animation-duration: 1s;
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+      }
+
+      .loader-circle:nth-child(2) {
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        border: 4px solid transparent;
+        border-top: 4px solid var(--accent-yellow);
+        animation-duration: 0.8s;
+        animation-direction: reverse;
+        box-shadow: 0 0 15px rgba(255, 179, 71, 0.2);
+      }
+
+      .loader-circle:nth-child(3) {
+        width: 60%;
+        height: 60%;
+        top: 20%;
+        left: 20%;
+        border: 3px solid transparent;
+        border-top: 3px solid var(--white);
+        animation-duration: 0.6s;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+
+      .loader-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Montserrat", sans-serif;
+        font-size: 2rem;
+        font-weight: 900;
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+      }
+
+      .loader-text {
+        margin-top: var(--space-lg);
+        color: var(--white);
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        animation: pulse 2s infinite;
+        font-weight: 600;
+      }
+
+      .loader-progress {
+        width: 200px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        margin-top: var(--space-md);
+        overflow: hidden;
+      }
+
+      .loader-progress-bar {
+        height: 100%;
+        background: var(--gradient-orange);
+        width: 0%;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+        box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+      }
+
+     @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      /* ===== NEW: INDUSTRY CLIENTS SECTION ===== */
+      .clients-section {
+        background: var(--light-bg);
+        padding: var(--space-xl) 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .dark-mode .clients-section {
+        background: var(--primary-dark);
+      }
+
+      .clients-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+      }
+
+      .clients-header {
+        text-align: center;
+        margin-bottom: var(--space-xl);
+      }
+
+      .clients-title {
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        margin-bottom: var(--space-md);
+      }
+
+      .dark-mode .clients-title {
+        color: var(--white);
+      }
+
+      .clients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--space-xl);
+        align-items: center;
+        justify-items: center;
+      }
+
+      .client-item {
+        background: var(--card-bg);
+        padding: var(--space-lg);
+        border-radius: var(--radius-md);
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all var(--transition-normal);
+        border: 1px solid var(--border-light);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .client-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 107, 53, 0.1),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .client-item:hover::before {
+        left: 100%;
+      }
+
+      .client-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-medium);
+        border-color: var(--accent-orange);
+      }
+
+      .client-icon {
+        font-size: 2.5rem;
+        color: var(--text-light);
+        transition: all var(--transition-normal);
+      }
+
+      .client-item:hover .client-icon {
+        color: var(--accent-orange);
+        transform: scale(1.1);
+      }
+
+      /* ===== NEW: TESTIMONIALS SECTION ===== */
+      .testimonials-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue) 0%,
+          var(--primary-dark) 100%
+        );
+        padding: var(--space-2xl) 0;
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+      }
+
+      .testimonials-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            circle at 10% 20%,
+            rgba(255, 107, 53, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 90% 80%,
+            rgba(255, 179, 71, 0.1) 0%,
+            transparent 50%
+          );
+      }
+
+      .testimonials-container {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+      }
+
+      .testimonials-header {
+        text-align: center;
+        margin-bottom: var(--space-2xl);
+      }
+
+      .testimonials-title {
+        font-size: 2.5rem;
+        color: var(--white);
+        margin-bottom: var(--space-md);
+      }
+
+      .testimonials-subtitle {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.125rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--space-xl);
+      }
+
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius-lg);
+        padding: var(--space-xl);
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all var(--transition-normal);
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .testimonial-content {
+        margin-bottom: var(--space-lg);
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.8;
+        position: relative;
+        padding-left: var(--space-lg);
+      }
+
+      .testimonial-content::before {
+        content: "“";
+        position: absolute;
+        left: 0;
+        top: -10px;
+        font-size: 3rem;
+        color: var(--accent-orange);
+        font-family: Georgia, serif;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        background: var(--gradient-orange);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        color: var(--white);
+      }
+
+      .author-info h4 {
+        color: var(--white);
+        margin-bottom: var(--space-xs);
+      }
+
+      .author-role {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.875rem;
+      }
+
+      .testimonial-rating {
+        color: var(--accent-yellow);
+        margin-bottom: var(--space-sm);
+      }
+
+       .theme-toggle {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        background: var(--light-bg);
+        border: 1px solid var(--border-light);
+        color: var(--text-dark);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .dark-mode .theme-toggle {
+        background: var(--card-bg);
+        border-color: var(--border-light);
+        color: var(--white);
+      }
+
+      .theme-toggle:hover {
+        background: var(--accent-orange);
+        color: var(--white);
+        transform: rotate(15deg) scale(1.1);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .theme-toggle i {
+        transition: transform 0.3s ease;
+      }
+
+      .theme-toggle:hover i {
+        transform: rotate(180deg);
+      }
+
+      /* ===== NEW: PROCESS SECTION ===== */
+      .process-section {
+        background: var(--white);
+        padding: var(--space-2xl) 0;
+      }
+
+      .dark-mode .process-section {
+        background: var(--light-bg);
+      }
+
+      .process-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+      }
+
+      .process-header {
+        text-align: center;
+        margin-bottom: var(--space-2xl);
+      }
+
+      .process-title {
+        font-size: 2.5rem;
+        color: var(--primary-dark);
+        margin-bottom: var(--space-md);
+      }
+
+      .dark-mode .process-title {
+        color: var(--white);
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--space-xl);
+        position: relative;
+      }
+
+      .process-step {
+        text-align: center;
+        position: relative;
+        padding: var(--space-xl);
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        transition: all var(--transition-normal);
+        border: 1px solid var(--border-light);
+      }
+
+      .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-medium);
+        border-color: var(--accent-orange);
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto var(--space-lg);
+        position: relative;
+        z-index: 2;
+      }
+
+      .step-icon {
+        font-size: 2rem;
+        color: var(--accent-orange);
+        margin-bottom: var(--space-md);
+      }
+
+      .step-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: var(--space-sm);
+        color: var(--primary-dark);
+      }
+
+      .dark-mode .step-content h3 {
+        color: var(--white);
+      }
+
+      .step-content p {
+        color: var(--text-light);
+        font-size: 0.9375rem;
+      }
+
+      /* ===== NEW: CTA BANNER ===== */
+      .cta-banner {
+        background: linear-gradient(
+          135deg,
+          var(--accent-orange) 0%,
+          var(--accent-yellow) 100%
+        );
+        padding: var(--space-2xl) 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            circle at 30% 50%,
+            rgba(255, 255, 255, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 70% 30%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%
+          );
+      }
+
+      .cta-container {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+        text-align: center;
+        color: var(--white);
+      }
+
+      .cta-title {
+        font-size: 2.5rem;
+        margin-bottom: var(--space-md);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .cta-description {
+        font-size: 1.125rem;
+        margin-bottom: var(--space-xl);
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: var(--space-md);
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cta-button-primary {
+        padding: 1rem 2rem;
+        background: var(--primary-dark);
+        color: var(--white);
+        border-radius: var(--radius-lg);
+        font-weight: 600;
+        font-size: 1.125rem;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button-secondary {
+        padding: 1rem 2rem;
+        background: rgba(255, 255, 255, 0.2);
+        color: var(--white);
+        border-radius: var(--radius-lg);
+        font-weight: 600;
+        font-size: 1.125rem;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+
+      .cta-button-primary:hover,
+      .cta-button-secondary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      /* ===== ENHANCED HERO SECTION ===== */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark) 0%,
+          var(--primary-blue) 100%
+        );
+        color: var(--white);
+        margin-top: 70px;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 107, 53, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 179, 71, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 80%,
+            rgba(59, 130, 246, 0.05) 0%,
+            transparent 50%
+          );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        padding: var(--space-2xl) 0;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: var(--space-lg);
+        color: var(--white);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        animation: fadeUp 1s ease 0.2s forwards;
+        opacity: 0;
+        line-height: 1.1;
+      }
+
+      .hero h1 span {
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: inline-block;
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: var(--space-xl);
+        opacity: 0;
+        animation: fadeUp 1s ease 0.4s forwards;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+      }
+       a {
+        text-decoration: none;
+        color: inherit;
+        transition: all var(--transition-fast);
+        cursor: pointer;
+      }
+
+      .nav-link,
+      .mobile-nav a,
+      .footer-links a,
+      .cta-button,
+      .view-product,
+      .explore-button {
+        cursor: pointer !important;
+      }
+
+      /* Fix broken link colors */
+      .dark-mode a:not(.cta-button):not(.view-product):not(.explore-button) {
+        color: var(--text-light);
+      }
+
+      .dark-mode a:hover:not(.cta-button):not(.view-product):not(.explore-button) {
+        color: var(--accent-orange);
+      }
+
+      /* ===== FIXED MOBILE MENU ===== */
+      .mobile-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: var(--space-lg);
+        border-top: 1px solid var(--border-light);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+        z-index: 999;
+        box-shadow: var(--shadow-hard);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+      }
+
+      .mobile-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-15px) rotate(3deg);
+        }
+      }
+
+      @keyframes floatLogo {
+        0%,
+        100% {
+          transform: perspective(1000px) rotateY(-10deg) translateY(0);
+        }
+        50% {
+          transform: perspective(1000px) rotateY(-10deg) translateY(-5px);
+        }
+      }
+
+      /* ===== RESPONSIVE ENHANCEMENTS ===== */
+      @media (max-width: 992px) {
+        .hero h1 {
+          font-size: 3rem;
+        }
+
+        .testimonials-grid,
+        .process-steps,
+        .clients-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .testimonials-grid,
+        .process-steps,
+        .clients-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-subtitle,
+        .testimonials-subtitle,
+        .cta-description {
+          font-size: 1rem;
+        }
+      }
+
+      /* ===== RESET & BASE ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        /* Colors */
+        --primary-dark: #0a1f44;
+        --primary-blue: #1a365d;
+        --accent-orange: #ff6b35;
+        --accent-yellow: #ffb347;
+        --accent-red: #ff3b30;
+        --accent-green: #10b981;
+        --light-bg: #f7f9fc;
+        --white: #ffffff;
+        --card-bg: #ffffff;
+        --text-dark: #2d3748;
+        --text-light: #718096;
+        --border-light: #e2e8f0;
+
+        /* Shadows */
+        --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+        --shadow-medium: 0 6px 30px rgba(0, 0, 0, 0.12);
+        --shadow-hard: 0 10px 40px rgba(0, 0, 0, 0.15);
+        --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.2);
+
+        /* Gradients */
+        --gradient-orange: linear-gradient(135deg, #ff6b35, #ffb347);
+        --gradient-blue: linear-gradient(135deg, #1a365d, #2c5282);
+        --gradient-dark: linear-gradient(135deg, #0a1f44, #1a365d);
+        --gradient-green: linear-gradient(135deg, #10b981, #34d399);
+
+        /* Spacing */
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 1.5rem;
+        --space-lg: 2rem;
+        --space-xl: 3rem;
+        --space-2xl: 5rem;
+
+        /* Border Radius */
+        --radius-sm: 0.5rem;
+        --radius-md: 1rem;
+        --radius-lg: 1.5rem;
+        --radius-xl: 2rem;
+
+        /* Transitions */
+        --transition-fast: 0.2s ease;
+        --transition-normal: 0.3s ease;
+        --transition-slow: 0.5s ease;
+      }
+
+      /* Dark Mode */
+      .dark-mode {
+        --primary-dark: #0f172a;
+        --primary-blue: #1e293b;
+        --light-bg: #0f172a;
+        --card-bg: #1e293b;
+        --text-dark: #f1f5f9;
+        --text-light: #94a3b8;
+        --border-light: #334155;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--light-bg);
+        color: var(--text-dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+        transition:
+          background-color var(--transition-normal),
+          color var(--transition-normal);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--primary-dark);
+      }
+
+      .dark-mode h1,
+      .dark-mode h2,
+      .dark-mode h3,
+      .dark-mode h4,
+      .dark-mode h5,
+      .dark-mode h6 {
+        color: var(--white);
+      }
+
+      h1 {
+        font-size: 3.75rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        color: var(--text-light);
+        font-size: 1.125rem;
+        margin-bottom: var(--space-md);
+      }
+
+      .dark-mode p {
+        color: var(--text-light);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: color var(--transition-fast);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+      }
+
+      section {
+        padding: var(--space-2xl) 0;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .text-orange {
+        color: var(--accent-orange);
+      }
+      .text-gradient {
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ===== IMPROVED HEADER ===== */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all var(--transition-normal);
+        padding: 0.5rem 0;
+      }
+
+      .dark-mode .header {
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .header.scrolled {
+        box-shadow: var(--shadow-soft);
+        padding: 0.25rem 0;
+      }
+
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+      }
+
+      /* Logo with 3D Effect */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        position: relative;
+      }
+
+      .logo-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--gradient-orange);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateY(-10deg);
+        box-shadow: 5px 5px 20px rgba(255, 107, 53, 0.3);
+        animation: floatLogo 6s ease-in-out infinite;
+      }
+
+      @keyframes floatLogo {
+        0%,
+        100% {
+          transform: perspective(1000px) rotateY(-10deg) translateY(0);
+        }
+        50% {
+          transform: perspective(1000px) rotateY(-10deg) translateY(-5px);
+        }
+      }
+
+      .logo-icon::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: calc(var(--radius-md) - 2px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .logo-icon i {
+        font-size: 1.5rem;
+        color: var(--white);
+        z-index: 1;
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo-main {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .logo-sub {
+        font-size: 0.7rem;
+        color: var(--text-light);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      /* Navigation */
+      .nav-main {
+        display: flex;
+        gap: var(--space-xl);
+        align-items: center;
+      }
+
+      .nav-link {
+        position: relative;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.5rem 0;
+        color: var(--text-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .dark-mode .nav-link {
+        color: var(--white);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: var(--gradient-orange);
+        border-radius: 1.5px;
+        transition: width var(--transition-normal);
+      }
+
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--accent-orange);
+      }
+
+      /* Header Actions */
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+      }
+
+      .theme-toggle {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-sm);
+        background: var(--light-bg);
+        border: 1px solid var(--border-light);
+        color: var(--text-dark);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        transition: all var(--transition-normal);
+      }
+
+      .dark-mode .theme-toggle {
+        background: var(--card-bg);
+        border-color: var(--border-light);
+        color: var(--white);
+      }
+
+      .theme-toggle:hover {
+        background: var(--accent-orange);
+        color: var(--white);
+        transform: rotate(15deg);
+      }
+
+      .cta-button {
+        padding: 0.75rem 1.75rem;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .cta-button:hover::before {
+        left: 100%;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-glow);
+      }
+
+      /* Mobile Menu */
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-dark);
+        font-size: 1.5rem;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        align-items: center;
+        justify-content: center;
+        transition: all var(--transition-fast);
+      }
+
+      .dark-mode .mobile-toggle {
+        color: var(--white);
+      }
+
+      .mobile-toggle:hover {
+        background: var(--border-light);
+      }
+
+      /* ===== ENHANCED HERO SECTION ===== */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark) 0%,
+          var(--primary-blue) 100%
+        );
+        color: var(--white);
+        margin-top: 70px;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 107, 53, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 179, 71, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 80%,
+            rgba(59, 130, 246, 0.05) 0%,
+            transparent 50%
+          );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        padding: var(--space-2xl) 0;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: var(--space-lg);
+        color: var(--white);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        animation: fadeUp 1s ease 0.2s forwards;
+        opacity: 0;
+        line-height: 1.1;
+      }
+
+      .hero h1 span {
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: inline-block;
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: var(--space-xl);
+        opacity: 0;
+        animation: fadeUp 1s ease 0.4s forwards;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+      }
+
+      .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-2xl);
+        margin-bottom: var(--space-2xl);
+        opacity: 0;
+        animation: fadeUp 1s ease 0.6s forwards;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--accent-yellow);
+        margin-bottom: var(--space-xs);
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: var(--space-md);
+        justify-content: center;
+        opacity: 0;
+        animation: fadeUp 1s ease 0.8s forwards;
+      }
+
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      }
+
+      /* Floating Elements in Hero */
+      .floating-element {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius-lg);
+        padding: var(--space-md);
+        animation: float 3s ease-in-out infinite;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 1;
+      }
+
+      .floating-element:nth-child(1) {
+        top: 20%;
+        left: 5%;
+        animation-delay: 0s;
+      }
+
+      .floating-element:nth-child(2) {
+        top: 60%;
+        right: 5%;
+        animation-delay: 1s;
+      }
+
+      .floating-element:nth-child(3) {
+        bottom: 20%;
+        left: 15%;
+        animation-delay: 2s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-15px) rotate(3deg);
+        }
+      }
+
+      /* ===== FEATURES SECTION ===== */
+      .features {
+        background-color: var(--white);
+        position: relative;
+      }
+
+      .dark-mode .features {
+        background-color: var(--light-bg);
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: var(--space-2xl);
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: var(--space-md);
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--gradient-orange);
+        border-radius: 2px;
+      }
+
+      .section-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      /* ENHANCED FEATURE CARDS */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--space-xl);
+        margin-top: var(--space-xl);
+      }
+
+      .feature-card {
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        padding: var(--space-xl);
+        position: relative;
+        overflow: hidden;
+        transition: all var(--transition-normal);
+        border: 1px solid var(--border-light);
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        height: 100%;
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-orange);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform var(--transition-normal);
+      }
+
+      .feature-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-hard);
+      }
+
+      .feature-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        margin-bottom: var(--space-lg);
+        position: relative;
+      }
+
+      .feature-icon {
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-orange);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        color: var(--white);
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+      }
+
+      .feature-icon::after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        background: var(--gradient-orange);
+        border-radius: calc(var(--radius-md) + 5px);
+        opacity: 0.3;
+        z-index: 0;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 0.2;
+        }
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-sm);
+        color: var(--primary-dark);
+      }
+
+      .dark-mode .feature-card h3 {
+        color: var(--white);
+      }
+
+      .feature-card p {
+        color: var(--text-light);
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      /* ===== NEW PRODUCTS SECTION ===== */
+      .products-section {
+        background: linear-gradient(135deg, #f7f9fc 0%, #edf2f7 100%);
+        padding: var(--space-2xl) 0;
+        position: relative;
+      }
+
+      .dark-mode .products-section {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      }
+
+      .products-section .section-title {
+        margin-bottom: var(--space-lg);
+      }
+
+      .products-section .section-subtitle {
+        margin-bottom: var(--space-2xl);
+      }
+
+      /* Products Grid */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-xl);
+        margin-bottom: var(--space-2xl);
+      }
+
+      .product-card {
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: all var(--transition-normal);
+        border: 1px solid var(--border-light);
+        position: relative;
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-hard);
+        border-color: var(--accent-orange);
+      }
+
+      .product-image {
+        height: 200px;
+        background: var(--gradient-blue);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .product-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .product-image i {
+        font-size: 4rem;
+        color: rgba(255, 255, 255, 0.9);
+        z-index: 1;
+      }
+
+      .product-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--accent-red);
+        color: var(--white);
+        padding: 0.25rem 0.75rem;
+        border-radius: var(--radius-sm);
+        font-size: 0.75rem;
+        font-weight: 600;
+        z-index: 2;
+      }
+
+      .product-content {
+        padding: var(--space-xl);
+      }
+
+      .product-category {
+        color: var(--accent-orange);
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: var(--space-xs);
+      }
+
+      .product-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: var(--space-sm);
+        color: var(--primary-dark);
+      }
+
+      .dark-mode .product-card h3 {
+        color: var(--white);
+      }
+
+      .product-description {
+        color: var(--text-light);
+        font-size: 0.9375rem;
+        margin-bottom: var(--space-lg);
+        line-height: 1.5;
+      }
+
+      .product-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+      }
+
+      .feature-tag {
+        background: var(--light-bg);
+        padding: 0.25rem 0.75rem;
+        border-radius: var(--radius-sm);
+        font-size: 0.75rem;
+        color: var(--text-dark);
+        font-weight: 500;
+      }
+
+      .dark-mode .feature-tag {
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .product-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+      }
+
+      .price {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--accent-orange);
+      }
+
+      .view-product {
+        padding: 0.5rem 1.25rem;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: var(--radius-sm);
+        font-size: 0.875rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+        transition: all var(--transition-normal);
+      }
+
+      .view-product:hover {
+        transform: translateX(5px);
+        box-shadow: var(--shadow-glow);
+      }
+
+      /* Explore More Button */
+      .explore-more {
+        text-align: center;
+        margin-top: var(--space-xl);
+      }
+
+      .explore-button {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-sm);
+        padding: 1rem 2.5rem;
+        background: var(--gradient-blue);
+        color: var(--white);
+        border-radius: var(--radius-lg);
+        font-size: 1.125rem;
+        font-weight: 600;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .explore-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .explore-button:hover::before {
+        left: 100%;
+      }
+
+      .explore-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(26, 54, 93, 0.3);
+      }
+
+      /* ===== IMPROVED FOOTER ===== */
+      .footer {
+        background: var(--gradient-dark);
+        color: var(--white);
+        padding: var(--space-2xl) 0 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--accent-orange),
+          transparent
+        );
+      }
+
+      .footer-wave {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%230a1f44'%3E%3C/path%3E%3C/svg%3E");
+        background-size: 1200px 100px;
+      }
+
+      .dark-mode .footer-wave {
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%231e293b'%3E%3C/path%3E%3C/svg%3E");
+      }
+
+      .footer-content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: var(--space-2xl);
+        margin-bottom: var(--space-2xl);
+      }
+
+      .footer-brand {
+        max-width: 350px;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+      }
+
+      .footer-logo-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--gradient-orange);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        color: var(--white);
+      }
+
+      .footer-logo-text {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--white);
+      }
+
+      .footer-about {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.8;
+        margin-bottom: var(--space-lg);
+        font-size: 1rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: var(--space-md);
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1.125rem;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .social-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--gradient-orange);
+        opacity: 0;
+        transition: opacity var(--transition-normal);
+      }
+
+      .social-link:hover::before {
+        opacity: 1;
+      }
+
+      .social-link i {
+        position: relative;
+        z-index: 1;
+      }
+
+      .social-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+      }
+
+      .footer-column h3 {
+        color: var(--white);
+        font-size: 1.25rem;
+        margin-bottom: var(--space-lg);
+        position: relative;
+        padding-bottom: var(--space-sm);
+      }
+
+      .footer-column h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--accent-orange);
+        border-radius: 1.5px;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: var(--space-sm);
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: all var(--transition-fast);
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        font-size: 0.9375rem;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-orange);
+        transform: translateX(5px);
+      }
+
+      .footer-links i {
+        font-size: 0.75rem;
+        opacity: 0.7;
+      }
+
+      /* Footer Bottom */
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: var(--space-xl) 0;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-certs {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-lg);
+        flex-wrap: wrap;
+      }
+
+      .cert-badge {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+      }
+
+      .cert-badge:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .footer-copyright {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.875rem;
+      }
+
+      .footer-copyright a {
+        color: var(--accent-yellow);
+        text-decoration: none;
+        transition: color var(--transition-fast);
+      }
+
+      .footer-copyright a:hover {
+        color: var(--white);
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 1200px) {
+        h1 {
+          font-size: 3.25rem;
+        }
+        h2 {
+          font-size: 2.25rem;
+        }
+
+        .hero h1 {
+          font-size: 3.5rem;
+        }
+
+        .footer-content {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 992px) {
+        h1 {
+          font-size: 2.75rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+
+        .hero h1 {
+          font-size: 3rem;
+        }
+        .hero-subtitle {
+          font-size: 1.25rem;
+        }
+
+        .hero-stats {
+          gap: var(--space-xl);
+        }
+
+        .nav-main {
+          display: none;
+        }
+        .mobile-toggle {
+          display: flex;
+        }
+
+        .features-grid,
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding-top: 70px;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+
+        .hero {
+          min-height: 90vh;
+          margin-top: 70px;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .hero-subtitle {
+          font-size: 1.125rem;
+        }
+
+        .hero-stats {
+          flex-direction: column;
+          gap: var(--space-lg);
+        }
+
+        .container {
+          padding: 0 var(--space-md);
+        }
+
+        section {
+          padding: var(--space-xl) 0;
+        }
+
+        .features-grid,
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .floating-element {
+          display: none;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 2.25rem;
+        }
+        h2 {
+          font-size: 1.75rem;
+        }
+
+        .hero h1 {
+          font-size: 2.25rem;
+        }
+
+        .logo-main {
+          font-size: 1.25rem;
+        }
+
+        .logo-icon {
+          width: 48px;
+          height: 48px;
+        }
+
+        .footer-certs {
+          flex-direction: column;
+          align-items: center;
+          gap: var(--space-md);
+        }
+      }
+
+      /* Mobile Menu */
+      .mobile-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        padding: var(--space-lg);
+        border-top: 1px solid var(--border-light);
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all var(--transition-normal);
+        z-index: 999;
+        box-shadow: var(--shadow-hard);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+      }
+
+      .mobile-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+
+      .mobile-nav a {
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+        background: var(--light-bg);
+        color: var(--text-dark);
+        font-weight: 600;
+        transition: all var(--transition-fast);
+        text-align: center;
+      }
+
+      .dark-mode .mobile-nav a {
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .mobile-nav a:hover,
+      .mobile-nav a.active {
+        background: var(--gradient-orange);
+        color: var(--white);
+        transform: translateX(10px);
+      }
+
+      /* Animations */
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ===== SCROLL TO TOP BUTTON ===== */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        cursor: pointer;
+        z-index: 100;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all var(--transition-normal);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .scroll-to-top.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scroll-to-top:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+        <div class="loader-logo">GL</div>
+      </div>
+    </div>
+
+    <!-- Improved Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <!-- Logo with 3D Effect -->
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="logo-text">
+              <div class="logo-main">Glorious Leather</div>
+              <div class="logo-sub">Safety PPE Manufacturer</div>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-main">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="certifications.html" class="nav-link">Certifications</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle">
+              <i class="fas fa-moon"></i>
+            </button>
+            <a href="contact.html" class="cta-button">
+              <i class="fas fa-quote-left"></i>
+              Get Quote
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
+          <a href="certifications.html">Certifications</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero">
+      <div class="floating-element">
+        <div style="text-align: center">
+          <i
+            class="fas fa-certificate"
+            style="font-size: 1.75rem; margin-bottom: 0.5rem"
+          ></i>
+          <div style="font-size: 0.75rem; font-weight: 600">ISO 9001:2015</div>
+        </div>
+      </div>
+
+      <div class="floating-element">
+        <div style="text-align: center">
+          <i
+            class="fas fa-shield-alt"
+            style="font-size: 1.75rem; margin-bottom: 0.5rem"
+          ></i>
+          <div style="font-size: 0.75rem; font-weight: 600">ANSI Certified</div>
+        </div>
+      </div>
+
+      <div class="floating-element">
+        <div style="text-align: center">
+          <i
+            class="fas fa-award"
+            style="font-size: 1.75rem; margin-bottom: 0.5rem"
+          ></i>
+          <div style="font-size: 0.75rem; font-weight: 600">
+            Quality Assured
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <h1>Protecting Lives with <span>Premium</span> Safety Gear</h1>
+          <p class="hero-subtitle">
+            Industry-leading safety gloves and jackets engineered for maximum
+            protection, durability, and comfort. Trusted by Fortune 500
+            companies worldwide.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">25+</span>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5000+</span>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <div class="stat-label">Countries Served</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1M+</span>
+              <div class="stat-label">Products Delivered</div>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#products" class="cta-button">
+              <i class="fas fa-helmet-safety"></i>
+              View Products
+            </a>
+            <a
+              href="contact.html"
+              class="cta-button"
+              style="
+                background: transparent;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+              "
+            >
+              <i class="fas fa-video"></i>
+              Request Demo
+            </a>
+            <a
+              href="catalog.html"
+              class="cta-button"
+              style="
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+              "
+            >
+              <i class="fas fa-download"></i>
+              Download Catalog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New: Industry Clients Section -->
+    <section class="clients-section">
+      <div class="clients-container">
+        <div class="clients-header">
+          <h2 class="clients-title">Trusted By Industry Leaders</h2>
+          <p class="section-subtitle">
+            Serving top companies across diverse sectors with premium safety
+            solutions
+          </p>
+        </div>
+        <div class="clients-grid">
+          <div class="client-item">
+            <i class="fas fa-industry client-icon"></i>
+            <span class="client-name">Heavy Industries</span>
+          </div>
+          <div class="client-item">
+            <i class="fas fa-oil-can client-icon"></i>
+            <span class="client-name">Oil & Gas</span>
+          </div>
+          <div class="client-item">
+            <i class="fas fa-hard-hat client-icon"></i>
+            <span class="client-name">Construction</span>
+          </div>
+          <div class="client-item">
+            <i class="fas fa-tools client-icon"></i>
+            <span class="client-name">Manufacturing</span>
+          </div>
+          <div class="client-item">
+            <i class="fas fa-fire client-icon"></i>
+            <span class="client-name">Fire Departments</span>
+          </div>
+          <div class="client-item">
+            <i class="fas fa-truck client-icon"></i>
+            <span class="client-name">Logistics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Choose Our Safety PPE</h2>
+          <p class="section-subtitle">
+            Engineered with precision, tested with rigor, and trusted by
+            industries worldwide for uncompromising safety and quality.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature Card 1 -->
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+            </div>
+            <h3>Internationally Certified</h3>
+            <p>
+              All products meet ISO, EN, and ANSI standards with comprehensive
+              testing and quality assurance protocols for global compliance.
+            </p>
+          </div>
+
+          <!-- Feature Card 2 -->
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+            </div>
+            <h3>Maximum Protection</h3>
+            <p>
+              Engineered with advanced materials to provide superior protection
+              against cuts, heat, chemicals, impacts, and harsh environments.
+            </p>
+          </div>
+
+          <!-- Feature Card 3 -->
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon">
+                <i class="fas fa-industry"></i>
+              </div>
+            </div>
+            <h3>Industry Specific</h3>
+            <p>
+              Customized solutions for construction, oil & gas, manufacturing,
+              road safety, emergency services, and specialized industries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <div class="process-container">
+        <div class="process-header">
+          <h2 class="process-title">Our Quality Manufacturing Process</h2>
+          <p class="section-subtitle">
+            Every product undergoes rigorous quality checks to ensure maximum
+            safety and durability
+          </p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step animate-on-scroll">
+            <div class="step-number">1</div>
+            <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+            <div class="step-content">
+              <h3>Material Selection</h3>
+              <p>
+                Premium-grade leather and advanced synthetic materials sourced
+                from certified suppliers with full traceability.
+              </p>
+            </div>
+          </div>
+          <div class="process-step animate-on-scroll">
+            <div class="step-number">2</div>
+            <div class="step-icon"><i class="fas fa-cut"></i></div>
+            <div class="step-content">
+              <h3>Precision Cutting</h3>
+              <p>
+                Computer-guided cutting ensures perfect patterns and minimizes
+                waste while maintaining material integrity.
+              </p>
+            </div>
+          </div>
+          <div class="process-step animate-on-scroll">
+            <div class="step-number">3</div>
+            <div class="step-icon"><i class="fas fa-people-carry"></i></div>
+            <div class="step-content">
+              <h3>Expert Craftsmanship</h3>
+              <p>
+                Skilled artisans with 10+ years experience assemble products
+                with reinforced stitching and precision finishing.
+              </p>
+            </div>
+          </div>
+          <div class="process-step animate-on-scroll">
+            <div class="step-number">4</div>
+            <div class="step-icon"><i class="fas fa-search"></i></div>
+            <div class="step-content">
+              <h3>Quality Testing</h3>
+              <p>
+                Each batch undergoes 15-point quality inspection and performance
+                testing before certification.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Products Section -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-subtitle">
+            Explore our premium range of safety gloves and jackets designed for
+            maximum protection and comfort.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card animate-on-scroll">
+            <div class="product-image">
+              <i class="fas fa-hand-paper"></i>
+              <div class="product-badge">Best Seller</div>
+            </div>
+            <div class="product-content">
+              <div class="product-category">Safety Gloves</div>
+              <h3>Premium Leather Work Gloves</h3>
+              <p class="product-description">
+                Heavy-duty leather gloves with reinforced palms and knuckle
+                protection for construction and industrial use.
+              </p>
+              <div class="product-features">
+                <span class="feature-tag">Cut Resistant</span>
+                <span class="feature-tag">Heat Protection</span>
+                <span class="feature-tag">Enhanced Grip</span>
+              </div>
+              <div class="product-price">
+                <div class="price">$24.99</div>
+                <a href="products.html#gloves" class="view-product">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card animate-on-scroll">
+            <div class="product-image">
+              <i class="fas fa-vest"></i>
+              <div class="product-badge">New</div>
+            </div>
+            <div class="product-content">
+              <div class="product-category">Safety Jackets</div>
+              <h3>High-Visibility Safety Jacket</h3>
+              <p class="product-description">
+                ANSI/ISEA 107 certified high-visibility jacket with reflective
+                stripes for maximum visibility in low-light conditions.
+              </p>
+              <div class="product-features">
+                <span class="feature-tag">ANSI Certified</span>
+                <span class="feature-tag">Water Resistant</span>
+                <span class="feature-tag">Reflective</span>
+              </div>
+              <div class="product-price">
+                <div class="price">$49.99</div>
+                <a href="products.html#jackets" class="view-product">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card animate-on-scroll">
+            <div class="product-image">
+              <i class="fas fa-fire"></i>
+            </div>
+            <div class="product-content">
+              <div class="product-category">Specialized PPE</div>
+              <h3>Flame-Resistant Gloves</h3>
+              <p class="product-description">
+                NFPA 2112 certified flame-resistant gloves for welding, foundry
+                work, and high-temperature environments.
+              </p>
+              <div class="product-features">
+                <span class="feature-tag">Fire Resistant</span>
+                <span class="feature-tag">Heat Protection</span>
+                <span class="feature-tag">Durable</span>
+              </div>
+              <div class="product-price">
+                <div class="price">$34.99</div>
+                <a href="products.html#specialized" class="view-product">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card animate-on-scroll">
+            <div class="product-image">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="product-content">
+              <div class="product-category">Chemical Protection</div>
+              <h3>Chemical-Resistant Gloves</h3>
+              <p class="product-description">
+                Nitrile-coated gloves offering superior protection against
+                chemicals, oils, and solvents in laboratory and industrial
+                settings.
+              </p>
+              <div class="product-features">
+                <span class="feature-tag">Chemical Proof</span>
+                <span class="feature-tag">Oil Resistant</span>
+                <span class="feature-tag">Puncture Resistant</span>
+              </div>
+              <div class="product-price">
+                <div class="price">$29.99</div>
+                <a href="products.html#chemical" class="view-product">
+                  View Details <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Explore More Button -->
+        <div class="explore-more">
+          <a href="products.html" class="explore-button">
+            <i class="fas fa-boxes"></i>
+            Explore All Products
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="testimonials-container">
+        <div class="testimonials-header">
+          <h2 class="testimonials-title">What Our Clients Say</h2>
+          <p class="testimonials-subtitle">
+            Hear from industry professionals who trust Glorious Leather for
+            their safety needs
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="testimonial-content">
+              "We've been using Glorious Leather gloves across our construction
+              sites for 5 years. The durability is unmatched, and we've seen a
+              40% reduction in hand-related incidents since switching."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user-hard-hat"></i>
+              </div>
+              <div class="author-info">
+                <h4>Michael Rodriguez</h4>
+                <p class="author-role">
+                  Safety Manager, BuildRight Construction
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="testimonial-content">
+              "The flame-resistant gloves have performed exceptionally well in
+              our foundry. They withstand temperatures our previous gloves
+              couldn't handle, and the dexterity is impressive."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user-cog"></i>
+              </div>
+              <div class="author-info">
+                <h4>Sarah Chen</h4>
+                <p class="author-role">
+                  Operations Director, SteelTech Industries
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="testimonial-content">
+              "As an emergency services provider, we can't compromise on safety.
+              Glorious Leather jackets provide the visibility and protection our
+              teams need in all weather conditions."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <div class="author-info">
+                <h4>David Wilson</h4>
+                <p class="author-role">Chief Officer, Metro Fire Department</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New: CTA Banner -->
+    <section class="cta-banner">
+      <div class="cta-container">
+        <h2 class="cta-title">Ready to Enhance Your Safety Standards?</h2>
+        <p class="cta-description">
+          Get a free consultation with our safety experts and discover the
+          perfect PPE solutions for your specific needs.
+        </p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="cta-button-primary">
+            <i class="fas fa-calendar-check"></i>
+            Schedule Consultation
+          </a>
+          <a href="tel:+15551234567" class="cta-button-secondary">
+            <i class="fas fa-phone-alt"></i>
+            Call Now: +1 (555) 123-4567
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Excellent Footer -->
+    <footer class="footer">
+      <div class="footer-wave"></div>
+
+      <div class="container">
+        <div class="footer-content">
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="footer-logo-icon">
+                <i class="fas fa-hard-hat"></i>
+              </div>
+              <div class="footer-logo-text">Glorious Leather</div>
+            </div>
+            <p class="footer-about">
+              Manufacturing certified safety gloves and jackets for industrial,
+              construction, oil & gas, and road safety sectors with
+              uncompromising quality and international standards.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> Products</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+              <li>
+                <a href="certifications.html"
+                  ><i class="fas fa-chevron-right"></i> Certifications</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Products -->
+          <div class="footer-column">
+            <h3>Our Products</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="products.html#gloves"
+                  ><i class="fas fa-hand-paper"></i> Safety Gloves</a
+                >
+              </li>
+              <li>
+                <a href="products.html#jackets"
+                  ><i class="fas fa-vest"></i> Safety Jackets</a
+                >
+              </li>
+              <li>
+                <a href="products.html#specialized"
+                  ><i class="fas fa-fire"></i> Flame-Resistant</a
+                >
+              </li>
+              <li>
+                <a href="products.html#high-vis"
+                  ><i class="fas fa-eye"></i> High-Visibility</a
+                >
+              </li>
+              <li>
+                <a href="products.html#chemical"
+                  ><i class="fas fa-flask"></i> Chemical-Resistant</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="tel:+15551234567"
+                  ><i class="fas fa-phone"></i> +1 (555) 123-4567</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@gloriousleather.com"
+                  ><i class="fas fa-envelope"></i> sales@gloriousleather.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://maps.google.com/?q=123+Industrial+Safety+Park+Safety+City"
+                  target="_blank"
+                  ><i class="fas fa-map-marker-alt"></i> 123 Industrial Safety
+                  Park, Safety City</a
+                >
+              </li>
+              <li>
+                <a href="contact.html#hours"
+                  ><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="footer-certs">
+            <div class="cert-badge">
+              <i class="fas fa-certificate"></i>
+              ISO 9001:2015
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-shield-alt"></i>
+              ANSI/ISEA 107
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-award"></i>
+              EN ISO 20471
+            </div>
+          </div>
+
+          <div class="footer-copyright">
+            &copy; <span id="currentYear"></span> Glorious Leather Industries.
+            All rights reserved. | <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+      // Preloader
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        setTimeout(() => {
+          preloader.style.opacity = "0";
+          preloader.style.visibility = "hidden";
+        }, 1000);
+      });
+
+      // Preloader
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        const loaderText = document.querySelector(".loader-text");
+
+        // Change loading text
+        const texts = [
+          "Loading Safety Excellence",
+          "Preparing Product Catalog",
+          "Loading Quality Standards",
+          "Initializing Safety Protocols",
+        ];
+
+        let textIndex = 0;
+        const textInterval = setInterval(() => {
+          loaderText.textContent = texts[textIndex];
+          textIndex = (textIndex + 1) % texts.length;
+        }, 800);
+
+        setTimeout(() => {
+          clearInterval(textInterval);
+          preloader.style.opacity = "0";
+          preloader.style.visibility = "hidden";
+        }, 2000);
+      });
+
+      // Enhanced scroll animation for new sections
+      function checkScroll() {
+        const elements = document.querySelectorAll(".animate-on-scroll");
+        const windowHeight = window.innerHeight;
+
+        elements.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+
+          if (elementTop < windowHeight - 100) {
+            element.classList.add("visible");
+
+            // Add staggered animation for process steps
+            if (element.classList.contains("process-step")) {
+              const delay =
+                Array.from(element.parentElement.children).indexOf(element) *
+                0.2;
+              element.style.transitionDelay = `${delay}s`;
+            }
+          }
+        });
+      }
+
+      // Enhanced client logos animation
+      function animateClientLogos() {
+        const clientItems = document.querySelectorAll(".client-item");
+        clientItems.forEach((item, index) => {
+          item.style.transitionDelay = `${index * 0.1}s`;
+          item.style.animation = "fadeInUp 0.6s ease forwards";
+          item.style.opacity = "0";
+
+          setTimeout(() => {
+            item.style.opacity = "1";
+          }, index * 100);
+        });
+      }
+
+      // Initialize animations when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        checkScroll();
+        setTimeout(animateClientLogos, 500);
+
+        // Animate numbers with enhanced effect
+        animateCounter();
+
+        // Add CSS animation for fadeInUp
+        const style = document.createElement("style");
+        style.textContent = `
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `;
+        document.head.appendChild(style);
+      });
+
+      // Enhanced counter animation
+      function animateCounter() {
+        const statNumbers = document.querySelectorAll(".stat-number");
+        const statsSection = document.querySelector(".hero");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                statNumbers.forEach((stat, index) => {
+                  const originalText = stat.textContent;
+                  const target = parseInt(originalText.replace(/[^0-9]/g, ""));
+                  let current = 0;
+                  const increment = target / 30;
+                  const duration = 1500 + index * 200;
+                  const stepTime = duration / 30;
+
+                  const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                      stat.textContent = originalText;
+                      clearInterval(timer);
+                      // Add celebration effect for last number
+                      if (index === statNumbers.length - 1) {
+                        stat.style.transform = "scale(1.1)";
+                        setTimeout(() => {
+                          stat.style.transform = "scale(1)";
+                        }, 300);
+                      }
+                    } else {
+                      stat.textContent =
+                        Math.floor(current) +
+                        originalText.replace(/[0-9]/g, "");
+                    }
+                  }, stepTime);
+                });
+                observer.disconnect();
+              }
+            });
+          },
+          { threshold: 0.5 },
+        );
+
+        observer.observe(statsSection);
+      }
+
+      // Add parallax effect to hero
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector(".hero");
+        const heroContent = document.querySelector(".hero-content");
+
+        if (hero && heroContent) {
+          hero.style.backgroundPositionY = scrolled * 0.5 + "px";
+          heroContent.style.transform = `translateY(${scrolled * 0.1}px)`;
+        }
+      });
+
+      // Add hover effect to product cards
+      document.querySelectorAll(".product-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-10px) rotateX(2deg)";
+          this.style.boxShadow = "0 20px 40px rgba(0, 0, 0, 0.15)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0) rotateX(0)";
+          this.style.boxShadow = "";
+        });
+      });
+
+      // Enhanced testimonials carousel functionality
+      let testimonialIndex = 0;
+      const testimonials = document.querySelectorAll(".testimonial-card");
+
+      function rotateTestimonials() {
+        testimonials.forEach((testimonial, index) => {
+          testimonial.style.opacity = index === testimonialIndex ? "1" : "0.5";
+          testimonial.style.transform =
+            index === testimonialIndex ? "scale(1)" : "scale(0.95)";
+        });
+
+        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+      }
+
+      // Auto-rotate testimonials every 5 seconds
+      setInterval(rotateTestimonials, 5000);
+
+      // Check on scroll
+      window.addEventListener("scroll", checkScroll);
+
+      // Theme Toggle - Fixed
+      const themeToggle = document.getElementById("themeToggle");
+      const body = document.body;
+
+      // Check for saved theme preference
+      const savedTheme = localStorage.getItem("theme") || "light";
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      } else {
+        body.classList.remove("dark-mode");
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+
+        // Update icon
+        themeToggle.innerHTML = isDarkMode
+          ? '<i class="fas fa-sun"></i>'
+          : '<i class="fas fa-moon"></i>';
+
+        // Save preference
+        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+      });
+
+      // Mobile Menu Toggle - Fixed
+      const mobileToggle = document.getElementById("mobileToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      mobileToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("active");
+        const icon = mobileToggle.querySelector("i");
+        if (mobileMenu.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !mobileToggle.contains(e.target) &&
+          !mobileMenu.contains(e.target)
+        ) {
+          mobileMenu.classList.remove("active");
+          mobileToggle.querySelector("i").classList.remove("fa-times");
+          mobileToggle.querySelector("i").classList.add("fa-bars");
+        }
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".mobile-nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+          mobileToggle.querySelector("i").classList.remove("fa-times");
+          mobileToggle.querySelector("i").classList.add("fa-bars");
+        });
+      });
+
+      // Header scroll effect
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+
+        // Scroll to top button
+        const scrollToTop = document.getElementById("scrollToTop");
+        if (window.scrollY > 300) {
+          scrollToTop.classList.add("visible");
+        } else {
+          scrollToTop.classList.remove("visible");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          if (this.getAttribute("href") === "#") return;
+
+          const targetId = this.getAttribute("href");
+          if (targetId.startsWith("#")) {
+            e.preventDefault();
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          }
+        });
+      });
+
+      // Scroll to Top Button
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Set current year in footer
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+      });
+
+      // Scroll animation
+      function checkScroll() {
+        const elements = document.querySelectorAll(".animate-on-scroll");
+
+        elements.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (elementTop < windowHeight - 100) {
+            element.classList.add("visible");
+          }
+        });
+      }
+
+      // Initial check
+      checkScroll();
+
+      // Check on scroll
+      window.addEventListener("scroll", checkScroll);
+
+      // Product card hover effects
+      document.querySelectorAll(".product-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-10px)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0)";
+        });
+      });
+
+      // Animate stats counter
+      function animateCounter() {
+        const statNumbers = document.querySelectorAll(".stat-number");
+        const statsSection = document.querySelector(".hero");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                statNumbers.forEach((stat) => {
+                  const target = parseInt(stat.textContent.replace("+", ""));
+                  let current = 0;
+                  const increment = target / 50;
+                  const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                      stat.textContent = target + "+";
+                      clearInterval(timer);
+                    } else {
+                      stat.textContent = Math.floor(current) + "+";
+                    }
+                  }, 30);
+                });
+                observer.disconnect();
+              }
+            });
+          },
+          { threshold: 0.5 },
+        );
+
+        observer.observe(statsSection);
+      }
+
+      // Initialize counter animation
+      setTimeout(animateCounter, 1000);
+
+      // Fix view product links - handle clicks properly
+      document.querySelectorAll(".view-product").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href && href.includes(".html")) {
+            // Allow navigation to product page
+            return true;
+          }
+          e.preventDefault();
+        });
+      });
+
+      // Handle broken links gracefully
+      document.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (
+            href &&
+            !href.startsWith("#") &&
+            !href.startsWith("mailto:") &&
+            !href.startsWith("tel:") &&
+            !href.startsWith("http")
+          ) {
+            // If it's a relative link that might not exist, show a message
+            if (!href.includes(".html") && href !== "#") {
+              e.preventDefault();
+              alert("This page is under construction. Please check back soon!");
+            }
+          }
+        });
+      });
+
+      // Mobile responsiveness enhancements
+      function checkMobile() {
+        const isMobile = window.innerWidth <= 768;
+        const floatingElements = document.querySelectorAll(".floating-element");
+
+        if (isMobile) {
+          floatingElements.forEach((el) => (el.style.display = "none"));
+        } else {
+          floatingElements.forEach((el) => (el.style.display = "block"));
+        }
+      }
+
+      // Initial check
+      checkMobile();
+
+      // Check on resize
+      window.addEventListener("resize", checkMobile);
+    </script>
+  </body>
+</html>

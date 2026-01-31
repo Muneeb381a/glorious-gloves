@@ -1,0 +1,1785 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Privacy Policy | Glorious Leather - Premium Safety PPE Manufacturer
+    </title>
+
+    <!-- Fonts & Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Import base styles */
+      :root {
+        /* Colors */
+        --primary-dark: #0a1f44;
+        --primary-blue: #1a365d;
+        --accent-orange: #ff6b35;
+        --accent-yellow: #ffb347;
+        --accent-red: #ff3b30;
+        --accent-green: #10b981;
+        --light-bg: #f7f9fc;
+        --white: #ffffff;
+        --card-bg: #ffffff;
+        --text-dark: #2d3748;
+        --text-light: #718096;
+        --border-light: #e2e8f0;
+
+        /* Shadows */
+        --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+        --shadow-medium: 0 6px 30px rgba(0, 0, 0, 0.12);
+        --shadow-hard: 0 10px 40px rgba(0, 0, 0, 0.15);
+        --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.2);
+
+        /* Gradients */
+        --gradient-orange: linear-gradient(135deg, #ff6b35, #ffb347);
+        --gradient-blue: linear-gradient(135deg, #1a365d, #2c5282);
+        --gradient-dark: linear-gradient(135deg, #0a1f44, #1a365d);
+        --gradient-green: linear-gradient(135deg, #10b981, #34d399);
+
+        /* Spacing */
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 1.5rem;
+        --space-lg: 2rem;
+        --space-xl: 3rem;
+        --space-2xl: 5rem;
+
+        /* Border Radius */
+        --radius-sm: 0.5rem;
+        --radius-md: 1rem;
+        --radius-lg: 1.5rem;
+        --radius-xl: 2rem;
+
+        /* Transitions */
+        --transition-fast: 0.2s ease;
+        --transition-normal: 0.3s ease;
+        --transition-slow: 0.5s ease;
+      }
+
+      /* Dark Mode */
+      .dark-mode {
+        --primary-dark: #0f172a;
+        --primary-blue: #1e293b;
+        --light-bg: #0f172a;
+        --card-bg: #1e293b;
+        --text-dark: #f1f5f9;
+        --text-light: #94a3b8;
+        --border-light: #334155;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--light-bg);
+        color: var(--text-dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+        transition:
+          background-color var(--transition-normal),
+          color var(--transition-normal);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--primary-dark);
+      }
+
+      .dark-mode h1,
+      .dark-mode h2,
+      .dark-mode h3,
+      .dark-mode h4,
+      .dark-mode h5,
+      .dark-mode h6 {
+        color: var(--white);
+      }
+
+      h1 {
+        font-size: 3.75rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        color: var(--text-light);
+        font-size: 1.125rem;
+        margin-bottom: var(--space-md);
+      }
+
+      .dark-mode p {
+        color: var(--text-light);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: all var(--transition-fast);
+        cursor: pointer;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+      }
+
+      section {
+        padding: var(--space-2xl) 0;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .text-orange {
+        color: var(--accent-orange);
+      }
+      .text-gradient {
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ===== MISSING STYLES ===== */
+      .section-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        cursor: pointer;
+        z-index: 100;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all var(--transition-normal);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .scroll-to-top.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scroll-to-top:hover {
+        transform: translateY(-5px);
+      }
+
+      /* ===== PRIVACY HERO ===== */
+      .privacy-hero {
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark) 0%,
+          var(--primary-blue) 100%
+        );
+        color: var(--white);
+        margin-top: 70px;
+        text-align: center;
+      }
+
+      .privacy-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 107, 53, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 179, 71, 0.1) 0%,
+            transparent 50%
+          );
+      }
+
+      .privacy-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: var(--space-2xl) 0;
+      }
+
+      .privacy-hero h1 {
+        font-size: 3.5rem;
+        color: var(--white);
+        margin-bottom: var(--space-lg);
+      }
+
+      .privacy-hero p {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 700px;
+        margin: 0 auto var(--space-xl);
+        line-height: 1.8;
+      }
+
+      /* ===== PRIVACY CONTENT ===== */
+      .privacy-content-section {
+        background: var(--white);
+        padding: var(--space-2xl) 0;
+      }
+
+      .dark-mode .privacy-content-section {
+        background: var(--light-bg);
+      }
+
+      .privacy-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--card-bg);
+        border-radius: var(--radius-xl);
+        padding: var(--space-2xl);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .privacy-header {
+        text-align: center;
+        margin-bottom: var(--space-2xl);
+        padding-bottom: var(--space-xl);
+        border-bottom: 2px solid var(--border-light);
+      }
+
+      .last-updated {
+        color: var(--accent-orange);
+        font-weight: 600;
+        margin-top: var(--space-sm);
+        font-size: 1rem;
+      }
+
+      .privacy-section {
+        margin-bottom: var(--space-2xl);
+      }
+
+      .privacy-section h2 {
+        color: var(--primary-dark);
+        margin-bottom: var(--space-lg);
+        padding-bottom: var(--space-sm);
+        border-bottom: 3px solid var(--gradient-orange);
+        display: inline-block;
+      }
+
+      .dark-mode .privacy-section h2 {
+        color: var(--white);
+      }
+
+      .privacy-section h3 {
+        color: var(--primary-blue);
+        margin: var(--space-xl) 0 var(--space-md);
+        font-size: 1.5rem;
+      }
+
+      .dark-mode .privacy-section h3 {
+        color: var(--accent-orange);
+      }
+
+      .privacy-list {
+        margin-left: var(--space-lg);
+        margin-bottom: var(--space-md);
+      }
+
+      .privacy-list li {
+        margin-bottom: var(--space-sm);
+        color: var(--text-light);
+        line-height: 1.7;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: var(--space-lg) 0;
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .data-table th {
+        background: var(--gradient-blue);
+        color: var(--white);
+        padding: var(--space-md);
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .data-table td {
+        padding: var(--space-md);
+        border-bottom: 1px solid var(--border-light);
+        color: var(--text-dark);
+      }
+
+      .dark-mode .data-table td {
+        color: var(--white);
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .important-note {
+        background: rgba(255, 107, 53, 0.1);
+        border-left: 4px solid var(--accent-orange);
+        padding: var(--space-lg);
+        border-radius: var(--radius-md);
+        margin: var(--space-xl) 0;
+      }
+
+      .important-note h4 {
+        color: var(--accent-orange);
+        margin-bottom: var(--space-sm);
+      }
+
+      .consent-box {
+        background: var(--gradient-blue);
+        color: var(--white);
+        padding: var(--space-xl);
+        border-radius: var(--radius-lg);
+        margin-top: var(--space-xl);
+        text-align: center;
+      }
+
+      .consent-box h3 {
+        color: var(--white);
+        margin-bottom: var(--space-md);
+      }
+
+      .consent-actions {
+        display: flex;
+        gap: var(--space-md);
+        justify-content: center;
+        margin-top: var(--space-lg);
+      }
+
+      .consent-button {
+        padding: 0.75rem 2rem;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+      }
+
+      .consent-button:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .consent-button.secondary {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      /* ===== HEADER & FOOTER STYLES ===== */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all var(--transition-normal);
+        padding: 0.5rem 0;
+      }
+
+      .dark-mode .header {
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .header.scrolled {
+        box-shadow: var(--shadow-soft);
+        padding: 0.25rem 0;
+      }
+
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        position: relative;
+      }
+
+      .logo-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--gradient-orange);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateY(-10deg);
+        box-shadow: 5px 5px 20px rgba(255, 107, 53, 0.3);
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo-main {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .logo-sub {
+        font-size: 0.7rem;
+        color: var(--text-light);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .nav-main {
+        display: flex;
+        gap: var(--space-xl);
+        align-items: center;
+      }
+
+      .nav-link {
+        position: relative;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.5rem 0;
+        color: var(--text-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .dark-mode .nav-link {
+        color: var(--white);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: var(--gradient-orange);
+        border-radius: 1.5px;
+        transition: width var(--transition-normal);
+      }
+
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--accent-orange);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+      }
+
+      .theme-toggle {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        background: var(--light-bg);
+        border: 1px solid var(--border-light);
+        color: var(--text-dark);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .dark-mode .theme-toggle {
+        background: var(--card-bg);
+        border-color: var(--border-light);
+        color: var(--white);
+      }
+
+      .theme-toggle:hover {
+        background: var(--accent-orange);
+        color: var(--white);
+        transform: rotate(15deg) scale(1.1);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .theme-toggle i {
+        transition: transform 0.3s ease;
+      }
+
+      .theme-toggle:hover i {
+        transform: rotate(180deg);
+      }
+
+      .cta-button {
+        padding: 0.75rem 1.75rem;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .cta-button:hover::before {
+        left: 100%;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-glow);
+      }
+
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-dark);
+        font-size: 1.5rem;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        align-items: center;
+        justify-content: center;
+        transition: all var(--transition-fast);
+      }
+
+      .dark-mode .mobile-toggle {
+        color: var(--white);
+      }
+
+      .mobile-toggle:hover {
+        background: var(--border-light);
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: var(--space-lg);
+        border-top: 1px solid var(--border-light);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+        z-index: 999;
+        box-shadow: var(--shadow-hard);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+      }
+
+      .mobile-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+
+      .mobile-nav a {
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+        background: var(--light-bg);
+        color: var(--text-dark);
+        font-weight: 600;
+        transition: all var(--transition-fast);
+        text-align: center;
+      }
+
+      .dark-mode .mobile-nav a {
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .mobile-nav a:hover,
+      .mobile-nav a.active {
+        background: var(--gradient-orange);
+        color: var(--white);
+        transform: translateX(10px);
+      }
+
+      /* Footer Styles */
+      .footer {
+        background: var(--gradient-dark);
+        color: var(--white);
+        padding: var(--space-2xl) 0 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .footer-wave {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%230a1f44'%3E%3C/path%3E%3C/svg%3E");
+        background-size: 1200px 100px;
+      }
+
+      .dark-mode .footer-wave {
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%231e293b'%3E%3C/path%3E%3C/svg%3E");
+      }
+
+      .footer-content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: var(--space-2xl);
+        margin-bottom: var(--space-2xl);
+      }
+
+      .footer-brand {
+        max-width: 350px;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+      }
+
+      .footer-logo-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--gradient-orange);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        color: var(--white);
+      }
+
+      .footer-logo-text {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--white);
+      }
+
+      .footer-about {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.8;
+        margin-bottom: var(--space-lg);
+        font-size: 1rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: var(--space-md);
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1.125rem;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .social-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--gradient-orange);
+        opacity: 0;
+        transition: opacity var(--transition-normal);
+      }
+
+      .social-link:hover::before {
+        opacity: 1;
+      }
+
+      .social-link i {
+        position: relative;
+        z-index: 1;
+      }
+
+      .social-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+      }
+
+      .footer-column h3 {
+        color: var(--white);
+        font-size: 1.25rem;
+        margin-bottom: var(--space-lg);
+        position: relative;
+        padding-bottom: var(--space-sm);
+      }
+
+      .footer-column h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--accent-orange);
+        border-radius: 1.5px;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: var(--space-sm);
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: all var(--transition-fast);
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        font-size: 0.9375rem;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-orange);
+        transform: translateX(5px);
+      }
+
+      .footer-links i {
+        font-size: 0.75rem;
+        opacity: 0.7;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: var(--space-xl) 0;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-certs {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-lg);
+        flex-wrap: wrap;
+      }
+
+      .cert-badge {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        transition: all var(--transition-normal);
+      }
+
+      .cert-badge:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .footer-copyright {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.875rem;
+      }
+
+      .footer-copyright a {
+        color: var(--accent-yellow);
+        text-decoration: none;
+        transition: color var(--transition-fast);
+      }
+
+      .footer-copyright a:hover {
+        color: var(--white);
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .footer-content {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .privacy-container {
+          padding: var(--space-xl);
+        }
+
+        .consent-actions {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .consent-button {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+
+        .privacy-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .nav-main {
+          display: none;
+        }
+        .mobile-toggle {
+          display: flex;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+
+        .data-table {
+          display: block;
+          overflow-x: auto;
+        }
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 2.25rem;
+        }
+        h2 {
+          font-size: 1.75rem;
+        }
+
+        .privacy-hero h1 {
+          font-size: 2.25rem;
+        }
+
+        .privacy-container {
+          padding: var(--space-lg);
+        }
+
+        .scroll-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+        }
+      }
+
+      /* Animations */
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="logo-text">
+              <div class="logo-main">Glorious Leather</div>
+              <div class="logo-sub">Safety PPE Manufacturer</div>
+            </div>
+          </a>
+
+          <nav class="nav-main">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="certifications.html" class="nav-link">Certifications</a>
+          </nav>
+
+          <div class="header-actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle dark mode"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <a href="contact.html" class="cta-button">
+              <i class="fas fa-quote-left"></i>
+              Get Quote
+            </a>
+            <button
+              class="mobile-toggle"
+              id="mobileToggle"
+              aria-label="Toggle mobile menu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
+          <a href="certifications.html">Certifications</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Privacy Hero -->
+    <section class="privacy-hero">
+      <div class="container">
+        <div class="privacy-hero-content">
+          <h1>Privacy Policy</h1>
+          <p>
+            Your privacy is important to us. This policy explains how we
+            collect, use, and protect your personal information when you use our
+            website and services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="privacy-content-section">
+      <div class="container">
+        <div class="privacy-container">
+          <div class="privacy-header">
+            <h2>Glorious Leather Privacy Policy</h2>
+            <p class="section-subtitle">
+              Last Updated: <span class="last-updated">January 1, 2024</span>
+            </p>
+          </div>
+
+          <div class="privacy-section">
+            <h2>1. Introduction</h2>
+            <p>
+              Glorious Leather ("we," "our," or "us") is committed to protecting
+              your privacy. This Privacy Policy explains how we collect, use,
+              disclose, and safeguard your information when you visit our
+              website or make a purchase from us.
+            </p>
+            <p>
+              Please read this privacy policy carefully. By accessing or using
+              our website, you acknowledge that you have read, understood, and
+              agree to be bound by all the terms of this privacy policy.
+            </p>
+          </div>
+
+          <div class="privacy-section">
+            <h2>2. Information We Collect</h2>
+            <h3>2.1 Personal Information</h3>
+            <p>
+              We collect personal information that you voluntarily provide to us
+              when you:
+            </p>
+            <ul class="privacy-list">
+              <li>Register on our website</li>
+              <li>Place an order</li>
+              <li>Subscribe to our newsletter</li>
+              <li>Contact us through forms or email</li>
+              <li>Request a quote or product information</li>
+            </ul>
+
+            <h3>2.2 Automatically Collected Information</h3>
+            <p>
+              When you visit our website, we automatically collect certain
+              information about your device, including:
+            </p>
+            <ul class="privacy-list">
+              <li>IP address and location data</li>
+              <li>Browser type and version</li>
+              <li>Operating system</li>
+              <li>Referring website and pages viewed</li>
+              <li>Time and date of visit</li>
+            </ul>
+
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Type of Data</th>
+                  <th>Purpose</th>
+                  <th>Legal Basis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Contact Information</td>
+                  <td>Order processing and customer support</td>
+                  <td>Contractual necessity</td>
+                </tr>
+                <tr>
+                  <td>Payment Information</td>
+                  <td>Transaction processing</td>
+                  <td>Contractual necessity</td>
+                </tr>
+                <tr>
+                  <td>Technical Data</td>
+                  <td>Website optimization and security</td>
+                  <td>Legitimate interests</td>
+                </tr>
+                <tr>
+                  <td>Marketing Preferences</td>
+                  <td>Personalized communications</td>
+                  <td>Consent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="privacy-section">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul class="privacy-list">
+              <li>Process and fulfill your orders</li>
+              <li>Communicate with you about your orders</li>
+              <li>Provide customer support</li>
+              <li>Send marketing communications (with consent)</li>
+              <li>Improve our website and services</li>
+              <li>Prevent fraud and enhance security</li>
+              <li>Comply with legal obligations</li>
+            </ul>
+          </div>
+
+          <div class="privacy-section">
+            <h2>4. Data Sharing and Disclosure</h2>
+            <p>
+              We may share your information with third parties in the following
+              circumstances:
+            </p>
+
+            <h3>4.1 Service Providers</h3>
+            <p>
+              We engage trusted third-party service providers to perform
+              functions and provide services, including:
+            </p>
+            <ul class="privacy-list">
+              <li>Payment processing (Stripe, PayPal)</li>
+              <li>Shipping and delivery services</li>
+              <li>Email marketing platforms</li>
+              <li>Website hosting and analytics</li>
+            </ul>
+
+            <h3>4.2 Legal Requirements</h3>
+            <p>
+              We may disclose your information if required by law or if we
+              believe such action is necessary to:
+            </p>
+            <ul class="privacy-list">
+              <li>Comply with legal obligations</li>
+              <li>Protect and defend our rights or property</li>
+              <li>Prevent fraud or security issues</li>
+              <li>Protect the safety of our users or the public</li>
+            </ul>
+
+            <div class="important-note">
+              <h4>International Data Transfers</h4>
+              <p>
+                Your information may be transferred to and processed in
+                countries other than your country of residence. We ensure
+                appropriate safeguards are in place to protect your data during
+                international transfers.
+              </p>
+            </div>
+          </div>
+
+          <div class="privacy-section">
+            <h2>5. Data Security</h2>
+            <p>
+              We implement appropriate technical and organizational security
+              measures to protect your personal information against unauthorized
+              access, alteration, disclosure, or destruction. These measures
+              include:
+            </p>
+            <ul class="privacy-list">
+              <li>SSL encryption for data transmission</li>
+              <li>Secure payment processing</li>
+              <li>Regular security assessments</li>
+              <li>Access controls and authentication</li>
+              <li>Employee privacy training</li>
+            </ul>
+          </div>
+
+          <div class="privacy-section">
+            <h2>6. Your Rights and Choices</h2>
+            <p>
+              Depending on your location, you may have the following rights:
+            </p>
+
+            <h3>6.1 Access and Correction</h3>
+            <p>
+              You have the right to access the personal information we hold
+              about you and request corrections if it is inaccurate or
+              incomplete.
+            </p>
+
+            <h3>6.2 Data Deletion</h3>
+            <p>
+              You may request deletion of your personal information, subject to
+              certain legal exceptions.
+            </p>
+
+            <h3>6.3 Marketing Preferences</h3>
+            <p>
+              You can opt-out of marketing communications at any time by
+              clicking the "unsubscribe" link in our emails or contacting us
+              directly.
+            </p>
+
+            <h3>6.4 Cookie Preferences</h3>
+            <p>
+              Most web browsers accept cookies automatically, but you can
+              usually modify your browser settings to decline cookies if you
+              prefer.
+            </p>
+          </div>
+
+          <div class="privacy-section">
+            <h2>7. Cookies and Tracking Technologies</h2>
+            <p>
+              We use cookies and similar tracking technologies to enhance your
+              browsing experience, analyze website traffic, and understand user
+              preferences.
+            </p>
+
+            <h3>7.1 Types of Cookies We Use</h3>
+            <ul class="privacy-list">
+              <li>
+                <strong>Essential Cookies:</strong> Required for basic website
+                functionality
+              </li>
+              <li>
+                <strong>Performance Cookies:</strong> Help us understand how
+                visitors use our site
+              </li>
+              <li>
+                <strong>Functional Cookies:</strong> Remember your preferences
+                and settings
+              </li>
+              <li>
+                <strong>Marketing Cookies:</strong> Used to deliver relevant
+                advertisements
+              </li>
+            </ul>
+          </div>
+
+          <div class="privacy-section">
+            <h2>8. Data Retention</h2>
+            <p>
+              We retain your personal information only for as long as necessary
+              to fulfill the purposes for which it was collected, including for
+              the purposes of satisfying any legal, accounting, or reporting
+              requirements.
+            </p>
+            <p>
+              Generally, we retain customer information for 7 years after the
+              last transaction to comply with tax and accounting requirements.
+            </p>
+          </div>
+
+          <div class="privacy-section">
+            <h2>9. Children's Privacy</h2>
+            <p>
+              Our website is not intended for children under the age of 16. We
+              do not knowingly collect personal information from children under
+              16. If you are a parent or guardian and believe your child has
+              provided us with personal information, please contact us.
+            </p>
+          </div>
+
+          <div class="privacy-section">
+            <h2>10. Changes to This Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time. We will
+              notify you of any changes by posting the new Privacy Policy on
+              this page and updating the "Last Updated" date.
+            </p>
+          </div>
+
+          <div class="consent-box">
+            <h3>Your Privacy Choices</h3>
+            <p>
+              You have control over how we use your personal information. Use
+              the buttons below to manage your preferences:
+            </p>
+            <div class="consent-actions">
+              <button class="consent-button" id="updatePreferences">
+                <i class="fas fa-user-cog"></i>
+                Update Preferences
+              </button>
+              <button class="consent-button secondary" id="requestData">
+                <i class="fas fa-download"></i>
+                Request My Data
+              </button>
+            </div>
+          </div>
+
+          <div class="privacy-section">
+            <h2>11. Contact Us</h2>
+            <p>
+              If you have questions about this Privacy Policy or our data
+              practices, please contact our Data Protection Officer:
+            </p>
+            <p style="margin-top: var(--space-md)">
+              <strong>Data Protection Officer</strong><br />
+              Glorious Leather Industries<br />
+              123 Industrial Safety Park<br />
+              Safety City, SC 12345<br />
+              <strong>Email:</strong> privacy@gloriousleather.com<br />
+              <strong>Phone:</strong> +1 (555) 123-4567 ext. 3
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-wave"></div>
+
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <div class="footer-logo-icon">
+                <i class="fas fa-hard-hat"></i>
+              </div>
+              <div class="footer-logo-text">Glorious Leather</div>
+            </a>
+            <p class="footer-about">
+              Manufacturing certified safety gloves and jackets for industrial,
+              construction, oil & gas, and road safety sectors with
+              uncompromising quality and international standards.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://linkedin.com"
+                class="social-link"
+                aria-label="LinkedIn"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                class="social-link"
+                aria-label="Twitter"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://facebook.com"
+                class="social-link"
+                aria-label="Facebook"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                class="social-link"
+                aria-label="Instagram"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> Products</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+              <li>
+                <a href="certifications.html"
+                  ><i class="fas fa-chevron-right"></i> Certifications</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Our Products</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="products.html#gloves"
+                  ><i class="fas fa-hand-paper"></i> Safety Gloves</a
+                >
+              </li>
+              <li>
+                <a href="products.html#jackets"
+                  ><i class="fas fa-vest"></i> Safety Jackets</a
+                >
+              </li>
+              <li>
+                <a href="products.html#flame"
+                  ><i class="fas fa-fire"></i> Flame-Resistant</a
+                >
+              </li>
+              <li>
+                <a href="products.html#highvis"
+                  ><i class="fas fa-eye"></i> High-Visibility</a
+                >
+              </li>
+              <li>
+                <a href="products.html#chemical"
+                  ><i class="fas fa-flask"></i> Chemical-Resistant</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="tel:+15551234567"
+                  ><i class="fas fa-phone"></i> +1 (555) 123-4567</a
+                >
+              </li>
+              <li>
+                <a href="mailto:sales@gloriousleather.com"
+                  ><i class="fas fa-envelope"></i> sales@gloriousleather.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://maps.google.com/?q=123+Industrial+Safety+Park+Safety+City"
+                  target="_blank"
+                  ><i class="fas fa-map-marker-alt"></i> 123 Industrial Safety
+                  Park</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-certs">
+            <div class="cert-badge">
+              <i class="fas fa-certificate"></i> ISO 9001:2015
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-shield-alt"></i> ANSI/ISEA 107
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-award"></i> EN ISO 20471
+            </div>
+          </div>
+
+          <div class="footer-copyright">
+            &copy; <span id="currentYear"></span> Glorious Leather Industries.
+            All rights reserved. |
+            <a href="privacy.html" class="active">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+      // ===== HEADER SCROLL EFFECT =====
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+
+        const scrollToTop = document.getElementById("scrollToTop");
+        if (window.scrollY > 300) {
+          scrollToTop.classList.add("visible");
+        } else {
+          scrollToTop.classList.remove("visible");
+        }
+      });
+
+      // Theme Toggle
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = themeToggle.querySelector("i");
+      const body = document.body;
+
+      // Check for saved theme or prefer-color-scheme
+      const prefersDarkScheme = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      );
+      const savedTheme = localStorage.getItem("theme");
+
+      // Set initial theme
+      if (savedTheme === "dark" || (!savedTheme && prefersDarkScheme.matches)) {
+        body.classList.add("dark-mode");
+        themeIcon.className = "fas fa-sun";
+        localStorage.setItem("theme", "dark");
+      } else {
+        body.classList.remove("dark-mode");
+        themeIcon.className = "fas fa-moon";
+        localStorage.setItem("theme", "light");
+      }
+
+      // Theme toggle functionality
+      themeToggle.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          themeIcon.className = "fas fa-sun";
+          localStorage.setItem("theme", "dark");
+
+          // Add animation effect
+          themeToggle.style.transform = "rotate(360deg) scale(1.2)";
+          setTimeout(() => {
+            themeToggle.style.transform = "";
+          }, 300);
+        } else {
+          themeIcon.className = "fas fa-moon";
+          localStorage.setItem("theme", "light");
+
+          // Add animation effect
+          themeToggle.style.transform = "rotate(-360deg) scale(1.2)";
+          setTimeout(() => {
+            themeToggle.style.transform = "";
+          }, 300);
+        }
+      });
+
+      // ===== MOBILE MENU =====
+      const mobileToggle = document.getElementById("mobileToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileIcon = mobileToggle.querySelector("i");
+
+      mobileToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("active");
+
+        if (mobileMenu.classList.contains("active")) {
+          mobileIcon.className = "fas fa-times";
+          mobileToggle.setAttribute("aria-expanded", "true");
+        } else {
+          mobileIcon.className = "fas fa-bars";
+          mobileToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (e) {
+        if (
+          !mobileToggle.contains(e.target) &&
+          !mobileMenu.contains(e.target)
+        ) {
+          mobileMenu.classList.remove("active");
+          mobileIcon.className = "fas fa-bars";
+          mobileToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Close menu when clicking on a link
+      document.querySelectorAll(".mobile-nav a").forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+          mobileIcon.className = "fas fa-bars";
+          mobileToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // ===== SMOOTH SCROLLING =====
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+
+          // Skip if it's just "#"
+          if (href === "#") return;
+
+          const targetElement = document.querySelector(href);
+
+          if (targetElement) {
+            e.preventDefault();
+
+            // Update active nav link
+            document
+              .querySelectorAll(".nav-link, .mobile-nav a")
+              .forEach((link) => {
+                link.classList.remove("active");
+              });
+            this.classList.add("active");
+
+            // Scroll to target
+            const headerHeight = document.querySelector(".header").offsetHeight;
+            const targetPosition = targetElement.offsetTop - headerHeight - 20;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // ===== PAGE LINKS =====
+      document.querySelectorAll('a[href*=".html"]').forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+
+          // Check if it's a page link
+          if (href.includes(".html") && !href.includes("#")) {
+            // Check if the page exists (simplified check)
+            const validPages = [
+              "index.html",
+              "about.html",
+              "products.html",
+              "contact.html",
+              "certifications.html",
+              "privacy.html",
+              "terms.html",
+            ];
+
+            if (!validPages.includes(href.split("/").pop())) {
+              e.preventDefault();
+              showMessage(
+                "This page is under construction. Please check back soon!",
+              );
+            }
+            // Allow navigation for valid pages
+          }
+        });
+      });
+
+      // Scroll to Top
+      document.getElementById("scrollToTop").addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Set current year
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // ===== PRIVACY PREFERENCE FUNCTIONS =====
+      document
+        .getElementById("updatePreferences")
+        .addEventListener("click", function () {
+          alert(
+            "Privacy Preference Center\n\nIn a real application, this would open a panel where you can:\n• Manage cookie preferences\n• Update communication settings\n• View privacy options\n\nFor now, please contact privacy@gloriousleather.com to update your preferences.",
+          );
+        });
+
+      document
+        .getElementById("requestData")
+        .addEventListener("click", function () {
+          alert(
+            "Data Request Submitted\n\nWe will process your data request within 30 days as required by data protection regulations. You will receive an email with instructions to access your data.\n\nIf you don't receive an email, please contact privacy@gloriousleather.com.",
+          );
+        });
+
+      // ===== SHOW MESSAGE FUNCTION =====
+      function showMessage(text) {
+        const message = document.createElement("div");
+        message.style.cssText = `
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: var(--card-bg);
+          color: var(--text-dark);
+          padding: 2rem;
+          border-radius: var(--radius-lg);
+          text-align: center;
+          z-index: 10000;
+          box-shadow: var(--shadow-hard);
+          max-width: 400px;
+          width: 90%;
+          border: 2px solid var(--accent-orange);
+          font-family: 'Inter', sans-serif;
+        `;
+        message.innerHTML = `
+          <h3 style="color: var(--accent-orange); margin-bottom: 1rem; font-family: 'Montserrat', sans-serif;">
+            Page Under Construction
+          </h3>
+          <p style="margin-bottom: 1.5rem;">${text}</p>
+          <button onclick="this.parentElement.remove()" style="
+            margin-top: 1rem;
+            padding: 0.75rem 2rem;
+            background: var(--gradient-orange);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+          " onmouseover="this.style.transform='translateY(-2px)'" 
+             onmouseout="this.style.transform='translateY(0)'">
+            Close
+          </button>
+        `;
+        document.body.appendChild(message);
+      }
+    </script>
+  </body>
+</html>
