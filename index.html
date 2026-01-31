@@ -121,7 +121,7 @@
         box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
       }
 
-     @keyframes spin {
+      @keyframes spin {
         0% {
           transform: rotate(0deg);
         }
@@ -138,6 +138,175 @@
         50% {
           opacity: 1;
         }
+      }
+
+      .hero-carousel {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        min-height: 800px;
+        overflow: hidden;
+        margin-top: 70px;
+      }
+
+      .carousel-track {
+        display: flex;
+        height: 100%;
+        transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+
+      .carousel-slide {
+        position: relative;
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .slide-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.7);
+        transform: scale(1.1);
+        transition: transform 10s linear;
+      }
+
+      .carousel-slide.active .slide-bg {
+        transform: scale(1);
+      }
+
+      .slide-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        padding: 0 var(--space-lg);
+        text-align: center;
+        color: var(--white);
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .carousel-slide.active .slide-content {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .slide-content h1 {
+        font-size: 4.5rem;
+        margin-bottom: var(--space-lg);
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        line-height: 1.1;
+      }
+
+      .slide-content h1 span {
+        background: var(--gradient-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .slide-subtitle {
+        font-size: 1.5rem;
+        max-width: 700px;
+        margin: 0 auto var(--space-xl);
+        color: rgba(255, 255, 255, 0.95);
+        line-height: 1.6;
+      }
+
+      .carousel-controls {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: var(--space-sm);
+        z-index: 10;
+      }
+
+      .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-dot.active {
+        background: var(--accent-orange);
+        transform: scale(1.2);
+        box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+      }
+
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 var(--space-lg);
+        z-index: 10;
+      }
+
+      .carousel-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: var(--white);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-btn:hover {
+        background: var(--accent-orange);
+        transform: scale(1.1);
+      }
+
+      .carousel-stats {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: var(--space-2xl);
+        z-index: 10;
+      }
+
+      .stat-item {
+        text-align: center;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 0.8s ease forwards;
+      }
+
+      .carousel-slide.active .stat-item:nth-child(1) {
+        animation-delay: 0.5s;
+      }
+      .carousel-slide.active .stat-item:nth-child(2) {
+        animation-delay: 0.7s;
+      }
+      .carousel-slide.active .stat-item:nth-child(3) {
+        animation-delay: 0.9s;
+      }
+      .carousel-slide.active .stat-item:nth-child(4) {
+        animation-delay: 1.1s;
       }
 
       /* ===== NEW: INDUSTRY CLIENTS SECTION ===== */
@@ -235,40 +404,17 @@
 
       /* ===== NEW: TESTIMONIALS SECTION ===== */
       .testimonials-section {
-        background: linear-gradient(
-          135deg,
-          var(--primary-blue) 0%,
-          var(--primary-dark) 100%
-        );
         padding: var(--space-2xl) 0;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         position: relative;
         overflow: hidden;
-        color: var(--white);
       }
 
-      .testimonials-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background:
-          radial-gradient(
-            circle at 10% 20%,
-            rgba(255, 107, 53, 0.1) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            circle at 90% 80%,
-            rgba(255, 179, 71, 0.1) 0%,
-            transparent 50%
-          );
+      .dark-mode .testimonials-section {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       }
 
       .testimonials-container {
-        position: relative;
-        z-index: 2;
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 var(--space-lg);
@@ -280,63 +426,206 @@
       }
 
       .testimonials-title {
-        font-size: 2.5rem;
-        color: var(--white);
+        font-size: 3rem;
         margin-bottom: var(--space-md);
+        position: relative;
+        display: inline-block;
+      }
+
+      .testimonials-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: var(--gradient-orange);
+        border-radius: 2px;
       }
 
       .testimonials-subtitle {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 1.125rem;
-        max-width: 700px;
+        color: var(--text-light);
+        font-size: 1.25rem;
+        max-width: 600px;
         margin: 0 auto;
+        line-height: 1.6;
       }
 
-      .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: var(--space-xl);
+      .testimonials-carousel {
+        position: relative;
+        overflow: hidden;
+        padding: var(--space-xl) 0;
+      }
+
+      .testimonials-track {
+        display: flex;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .testimonial-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: var(--radius-lg);
-        padding: var(--space-xl);
-        position: relative;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all var(--transition-normal);
+        min-width: 100%;
+        padding: 0 var(--space-lg);
+        box-sizing: border-box;
       }
 
-      .testimonial-card:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.15);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      .testimonial-content-wrapper {
+        background: var(--card-bg);
+        border-radius: var(--radius-xl);
+        padding: var(--space-2xl);
+        box-shadow: var(--shadow-hard);
+        border: 1px solid var(--border-light);
+        position: relative;
+        overflow: hidden;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .testimonial-content-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: var(--gradient-orange);
+      }
+
+      .testimonial-quote {
+        font-size: 5rem;
+        color: var(--accent-orange);
+        opacity: 0.1;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-family: Georgia, serif;
       }
 
       .testimonial-content {
-        margin-bottom: var(--space-lg);
-        font-style: italic;
-        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.25rem;
         line-height: 1.8;
+        color: var(--text-dark);
+        margin-bottom: var(--space-xl);
+        font-style: italic;
         position: relative;
-        padding-left: var(--space-lg);
-      }
-
-      .testimonial-content::before {
-        content: "“";
-        position: absolute;
-        left: 0;
-        top: -10px;
-        font-size: 3rem;
-        color: var(--accent-orange);
-        font-family: Georgia, serif;
+        z-index: 1;
       }
 
       .testimonial-author {
         display: flex;
         align-items: center;
-        gap: var(--space-md);
+        gap: var(--space-lg);
+        padding-top: var(--space-lg);
+        border-top: 2px solid var(--border-light);
+      }
+
+      .author-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: var(--gradient-orange);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .author-avatar i {
+        font-size: 2rem;
+        color: var(--white);
+      }
+
+      .author-info {
+        flex-grow: 1;
+      }
+
+      .author-info h4 {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-xs);
+        color: var(--primary-dark);
+      }
+
+      .dark-mode .author-info h4 {
+        color: var(--white);
+      }
+
+      .author-role {
+        color: var(--accent-orange);
+        font-weight: 600;
+        margin-bottom: var(--space-xs);
+        font-size: 1rem;
+      }
+
+      .author-company {
+        color: var(--text-light);
+        font-size: 0.9375rem;
+      }
+
+      .testimonial-rating {
+        display: flex;
+        gap: var(--space-xs);
+        margin-bottom: var(--space-md);
+      }
+
+      .testimonial-rating i {
+        color: var(--accent-yellow);
+        font-size: 1.25rem;
+      }
+
+      .testimonials-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xl);
+        margin-top: var(--space-xl);
+      }
+
+      .testimonial-dots {
+        display: flex;
+        gap: var(--space-sm);
+      }
+
+      .testimonial-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--border-light);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .testimonial-dot.active {
+        background: var(--accent-orange);
+        transform: scale(1.3);
+      }
+
+      .testimonial-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--card-bg);
+        border: 2px solid var(--border-light);
+        color: var(--text-dark);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        transition: all 0.3s ease;
+      }
+
+      .dark-mode .testimonial-btn {
+        background: var(--primary-blue);
+        border-color: var(--border-light);
+        color: var(--white);
+      }
+
+      .testimonial-btn:hover {
+        background: var(--accent-orange);
+        color: var(--white);
+        border-color: var(--accent-orange);
+        transform: scale(1.1);
       }
 
       .author-avatar {
@@ -366,7 +655,7 @@
         margin-bottom: var(--space-sm);
       }
 
-       .theme-toggle {
+      .theme-toggle {
         width: 44px;
         height: 44px;
         border-radius: var(--radius-sm);
@@ -675,7 +964,7 @@
         margin-right: auto;
         line-height: 1.6;
       }
-       a {
+      a {
         text-decoration: none;
         color: inherit;
         transition: all var(--transition-fast);
@@ -696,7 +985,8 @@
         color: var(--text-light);
       }
 
-      .dark-mode a:hover:not(.cta-button):not(.view-product):not(.explore-button) {
+      .dark-mode
+        a:hover:not(.cta-button):not(.view-product):not(.explore-button) {
         color: var(--accent-orange);
       }
 
@@ -1365,6 +1655,97 @@
         }
       }
 
+      .clients-section {
+        background: var(--white);
+        padding: var(--space-2xl) 0;
+      }
+
+      .dark-mode .clients-section {
+        background: var(--light-bg);
+      }
+
+      .clients-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+      }
+
+      .clients-header {
+        text-align: center;
+        margin-bottom: var(--space-2xl);
+      }
+
+      .clients-title {
+        font-size: 2.5rem;
+        margin-bottom: var(--space-md);
+      }
+
+      .clients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--space-xl);
+        align-items: center;
+      }
+
+      .client-item {
+        background: var(--card-bg);
+        padding: var(--space-xl);
+        border-radius: var(--radius-lg);
+        text-align: center;
+        transition: all var(--transition-normal);
+        border: 1px solid var(--border-light);
+        position: relative;
+        overflow: hidden;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .client-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 107, 53, 0.1),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .client-item:hover::before {
+        left: 100%;
+      }
+
+      .client-item:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-hard);
+        border-color: var(--accent-orange);
+      }
+
+      .client-icon {
+        font-size: 3rem;
+        color: var(--accent-orange);
+        margin-bottom: var(--space-md);
+        transition: all var(--transition-normal);
+      }
+
+      .client-item:hover .client-icon {
+        transform: scale(1.2);
+        color: var(--accent-red);
+      }
+
+      .client-name {
+        font-weight: 600;
+        color: var(--text-dark);
+        font-size: 1.125rem;
+      }
       /* ===== FEATURES SECTION ===== */
       .features {
         background-color: var(--white);
@@ -2179,6 +2560,352 @@
       .scroll-to-top:hover {
         transform: translateY(-5px);
       }
+
+      /* ===== WHATSAPP BUTTON STYLES ===== */
+      .whatsapp-button {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        overflow: hidden;
+        animation: whatsappFloat 3s ease-in-out infinite;
+      }
+
+      @keyframes whatsappFloat {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-10px) scale(1.05);
+        }
+      }
+
+      .whatsapp-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+      }
+
+      .whatsapp-icon {
+        font-size: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .whatsapp-button:hover .whatsapp-icon {
+        transform: rotate(15deg);
+      }
+
+      .whatsapp-text {
+        position: absolute;
+        top: 50%;
+        right: 70px;
+        transform: translateY(-50%);
+        background: rgba(37, 211, 102, 0.95);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .whatsapp-button:hover .whatsapp-text {
+        opacity: 1;
+        visibility: visible;
+        right: 75px;
+      }
+
+      .whatsapp-pulse {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: rgba(37, 211, 102, 0.3);
+        animation: whatsappPulse 2s infinite;
+      }
+
+      @keyframes whatsappPulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+
+      /* ===== WHATSAPP MODAL ===== */
+      .whatsapp-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-modal.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .whatsapp-modal-content {
+        background: white;
+        border-radius: 20px;
+        width: 90%;
+        max-width: 400px;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .whatsapp-modal.active .whatsapp-modal-content {
+        transform: translateY(0);
+      }
+
+      .whatsapp-modal-header {
+        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+        color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .whatsapp-modal-header h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.25rem;
+        margin: 0;
+      }
+
+      .whatsapp-modal-close {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-modal-close:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: rotate(90deg);
+      }
+
+      .whatsapp-modal-body {
+        padding: 20px;
+      }
+
+      /* WhatsApp Options */
+      .whatsapp-option {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .whatsapp-option::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(37, 211, 102, 0.1),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .whatsapp-option:hover::before {
+        left: 100%;
+      }
+
+      .whatsapp-option:hover {
+        border-color: #25d366;
+        background: rgba(37, 211, 102, 0.05);
+        transform: translateX(5px);
+      }
+
+      .option-icon {
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      .option-content h4 {
+        margin: 0 0 5px 0;
+        color: #1f2937;
+        font-size: 1rem;
+      }
+
+      .option-content p {
+        margin: 0;
+        color: #6b7280;
+        font-size: 0.875rem;
+      }
+
+      /* Direct Button */
+      .whatsapp-direct {
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .whatsapp-direct-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+        color: white;
+        padding: 15px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        text-align: center;
+      }
+
+      .whatsapp-direct-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      }
+
+      /* Dark Mode Support */
+      .dark-mode .whatsapp-modal-content {
+        background: #1f2937;
+      }
+
+      .dark-mode .whatsapp-option {
+        border-color: #374151;
+        background: #374151;
+      }
+
+      .dark-mode .whatsapp-option:hover {
+        background: #4b5563;
+      }
+
+      .dark-mode .option-content h4 {
+        color: #f9fafb;
+      }
+
+      .dark-mode .option-content p {
+        color: #d1d5db;
+      }
+
+      .dark-mode .whatsapp-direct {
+        border-top-color: #374151;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .whatsapp-button {
+          bottom: 20px;
+          right: 20px;
+          width: 56px;
+          height: 56px;
+        }
+
+        .whatsapp-text {
+          display: none;
+        }
+
+        .whatsapp-modal-content {
+          width: 95%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .whatsapp-button {
+          bottom: 15px;
+          right: 15px;
+          width: 50px;
+          height: 50px;
+        }
+
+        .whatsapp-icon {
+          font-size: 1.75rem;
+        }
+      }
+
+      /* Animation for new message notification */
+      .whatsapp-notification {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        background: #ff3b30;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        animation: notificationPulse 1.5s infinite;
+      }
+
+      @keyframes notificationPulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
     </style>
   </head>
   <body>
@@ -2245,107 +2972,140 @@
     </header>
 
     <!-- Enhanced Hero Section -->
-    <section class="hero">
-      <div class="floating-element">
-        <div style="text-align: center">
-          <i
-            class="fas fa-certificate"
-            style="font-size: 1.75rem; margin-bottom: 0.5rem"
-          ></i>
-          <div style="font-size: 0.75rem; font-weight: 600">ISO 9001:2015</div>
+    <section class="hero-carousel" id="heroCarousel">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active" data-slide="1">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&quot;);
+            "
+          ></div>
+          <div class="slide-content">
+            <h1>Premium Safety <span>Gloves</span> for Maximum Protection</h1>
+            <p class="slide-subtitle">
+              Engineered with advanced cut-resistant materials and ergonomic
+              design for superior protection and comfort in hazardous
+              environments.
+            </p>
+            <div class="carousel-stats">
+              <div class="stat-item">
+                <span class="stat-number">Level 5</span>
+                <div class="stat-label">Cut Protection</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">ANSI 105</span>
+                <div class="stat-label">Certified</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">500°F</span>
+                <div class="stat-label">Heat Resistance</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2-Year</span>
+                <div class="stat-label">Warranty</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="floating-element">
-        <div style="text-align: center">
-          <i
-            class="fas fa-shield-alt"
-            style="font-size: 1.75rem; margin-bottom: 0.5rem"
-          ></i>
-          <div style="font-size: 0.75rem; font-weight: 600">ANSI Certified</div>
+        <!-- Slide 2 -->
+        <div class="carousel-slide" data-slide="2">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&quot;);
+            "
+          ></div>
+          <div class="slide-content">
+            <h1>High-Visibility <span>Safety Jackets</span></h1>
+            <p class="slide-subtitle">
+              ANSI/ISEA 107 certified jackets with 360° reflectivity for maximum
+              visibility in low-light conditions. Waterproof and breathable
+              materials.
+            </p>
+            <div class="carousel-stats">
+              <div class="stat-item">
+                <span class="stat-number">Class 3</span>
+                <div class="stat-label">ANSI Rating</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">1000+ ft</span>
+                <div class="stat-label">Visibility</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">IPX6</span>
+                <div class="stat-label">Waterproof</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">CE EN471</span>
+                <div class="stat-label">Certified</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="floating-element">
-        <div style="text-align: center">
-          <i
-            class="fas fa-award"
-            style="font-size: 1.75rem; margin-bottom: 0.5rem"
-          ></i>
-          <div style="font-size: 0.75rem; font-weight: 600">
-            Quality Assured
+        <!-- Slide 3 -->
+        <div class="carousel-slide" data-slide="3">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&quot;);
+            "
+          ></div>
+          <div class="slide-content">
+            <h1>Flame-Resistant <span>PPE Solutions</span></h1>
+            <p class="slide-subtitle">
+              NFPA 2112 certified flame-resistant gear for welding, foundry work
+              and high-temperature industrial applications.
+            </p>
+            <div class="carousel-stats">
+              <div class="stat-item">
+                <span class="stat-number">NFPA 2112</span>
+                <div class="stat-label">Certified</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">1200°F</span>
+                <div class="stat-label">Flame Resistance</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">Arc Flash</span>
+                <div class="stat-label">Protection</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">CAT 4</span>
+                <div class="stat-label">PPE Category</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="hero-content">
-          <h1>Protecting Lives with <span>Premium</span> Safety Gear</h1>
-          <p class="hero-subtitle">
-            Industry-leading safety gloves and jackets engineered for maximum
-            protection, durability, and comfort. Trusted by Fortune 500
-            companies worldwide.
-          </p>
+      <div class="carousel-nav">
+        <button class="carousel-btn prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
 
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">25+</span>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">5000+</span>
-              <div class="stat-label">Happy Clients</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">50+</span>
-              <div class="stat-label">Countries Served</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">1M+</span>
-              <div class="stat-label">Products Delivered</div>
-            </div>
-          </div>
-
-          <div class="hero-buttons">
-            <a href="#products" class="cta-button">
-              <i class="fas fa-helmet-safety"></i>
-              View Products
-            </a>
-            <a
-              href="contact.html"
-              class="cta-button"
-              style="
-                background: transparent;
-                border: 2px solid rgba(255, 255, 255, 0.3);
-              "
-            >
-              <i class="fas fa-video"></i>
-              Request Demo
-            </a>
-            <a
-              href="catalog.html"
-              class="cta-button"
-              style="
-                background: rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(10px);
-              "
-            >
-              <i class="fas fa-download"></i>
-              Download Catalog
-            </a>
-          </div>
-        </div>
+      <div class="carousel-controls">
+        <div class="carousel-dot active" data-slide="1"></div>
+        <div class="carousel-dot" data-slide="2"></div>
+        <div class="carousel-dot" data-slide="3"></div>
       </div>
     </section>
 
-    <!-- New: Industry Clients Section -->
+    <!-- Enhanced Industry Clients -->
     <section class="clients-section">
       <div class="clients-container">
         <div class="clients-header">
-          <h2 class="clients-title">Trusted By Industry Leaders</h2>
+          <h2 class="clients-title">Trusted by Industry Leaders</h2>
           <p class="section-subtitle">
-            Serving top companies across diverse sectors with premium safety
-            solutions
+            Serving Fortune 500 companies and industry leaders across diverse
+            sectors
           </p>
         </div>
         <div class="clients-grid">
@@ -2372,6 +3132,14 @@
           <div class="client-item">
             <i class="fas fa-truck client-icon"></i>
             <span class="client-name">Logistics</span>
+          </div>
+          <div class="client-item">
+            <i class="fas fa-car-battery client-icon"></i>
+            <span class="client-name">Energy</span>
+          </div>
+          <div class="client-item">
+            <i class="fas fa-ship client-icon"></i>
+            <span class="client-name">Marine</span>
           </div>
         </div>
       </div>
@@ -2623,88 +3391,165 @@
       </div>
     </section>
 
+    <!-- Excellent Testimonials Section -->
     <section class="testimonials-section">
       <div class="testimonials-container">
         <div class="testimonials-header">
-          <h2 class="testimonials-title">What Our Clients Say</h2>
+          <h2 class="testimonials-title">Client Testimonials</h2>
           <p class="testimonials-subtitle">
             Hear from industry professionals who trust Glorious Leather for
             their safety needs
           </p>
         </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card animate-on-scroll">
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <div class="testimonial-content">
-              "We've been using Glorious Leather gloves across our construction
-              sites for 5 years. The durability is unmatched, and we've seen a
-              40% reduction in hand-related incidents since switching."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user-hard-hat"></i>
-              </div>
-              <div class="author-info">
-                <h4>Michael Rodriguez</h4>
-                <p class="author-role">
-                  Safety Manager, BuildRight Construction
+
+        <div class="testimonials-carousel">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content-wrapper">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-content">
+                  "We've been using Glorious Leather safety gear across our 12
+                  construction sites for over 7 years. The durability is
+                  unmatched - our previous gloves lasted 3 months, these last
+                  over a year. More importantly, we've seen a 42% reduction in
+                  hand-related incidents since switching. Their technical team
+                  even helped us develop custom solutions for our unique
+                  challenges."
                 </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user-hard-hat"></i>
+                  </div>
+                  <div class="author-info">
+                    <h4>Michael Rodriguez</h4>
+                    <p class="author-role">Safety Manager</p>
+                    <p class="author-company">BuildRight Construction Inc.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content-wrapper">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimonial-content">
+                  "The flame-resistant gloves have been game-changers for our
+                  foundry operations. They withstand temperatures up to 1200°F
+                  that our previous gloves couldn't handle, while maintaining
+                  excellent dexterity. Our operators report much better comfort
+                  during extended shifts. The 24/7 emergency replacement service
+                  gives us peace of mind - we've never experienced downtime due
+                  to PPE issues."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user-cog"></i>
+                  </div>
+                  <div class="author-info">
+                    <h4>Sarah Chen</h4>
+                    <p class="author-role">Operations Director</p>
+                    <p class="author-company">SteelTech Industries</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content-wrapper">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-content">
+                  "As an emergency services provider, we can't compromise on
+                  safety. Glorious Leather jackets provide exceptional
+                  visibility in all weather conditions while offering superior
+                  protection. The breathable material keeps our teams
+                  comfortable during long shifts. Their quarterly safety audits
+                  and training sessions have helped us improve our safety
+                  protocols significantly."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user-md"></i>
+                  </div>
+                  <div class="author-info">
+                    <h4>David Wilson</h4>
+                    <p class="author-role">Chief Safety Officer</p>
+                    <p class="author-company">Metro Fire Department</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content-wrapper">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-content">
+                  "The chemical-resistant gloves have exceeded all our
+                  expectations. In our chemical processing plant, we deal with
+                  aggressive solvents daily. These gloves not only provide
+                  excellent protection but also maintain tactile sensitivity. We
+                  reduced our glove consumption by 60% compared to our previous
+                  supplier, saving us over $45,000 annually while improving
+                  safety."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <i class="fas fa-user-tie"></i>
+                  </div>
+                  <div class="author-info">
+                    <h4>Robert Kim</h4>
+                    <p class="author-role">Plant Manager</p>
+                    <p class="author-company">ChemiSafe Solutions</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="testimonial-card animate-on-scroll">
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
+
+          <div class="testimonials-nav">
+            <button class="testimonial-btn prev-testimonial">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="testimonial-dots">
+              <span class="testimonial-dot active" data-index="0"></span>
+              <span class="testimonial-dot" data-index="1"></span>
+              <span class="testimonial-dot" data-index="2"></span>
+              <span class="testimonial-dot" data-index="3"></span>
             </div>
-            <div class="testimonial-content">
-              "The flame-resistant gloves have performed exceptionally well in
-              our foundry. They withstand temperatures our previous gloves
-              couldn't handle, and the dexterity is impressive."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user-cog"></i>
-              </div>
-              <div class="author-info">
-                <h4>Sarah Chen</h4>
-                <p class="author-role">
-                  Operations Director, SteelTech Industries
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card animate-on-scroll">
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <div class="testimonial-content">
-              "As an emergency services provider, we can't compromise on safety.
-              Glorious Leather jackets provide the visibility and protection our
-              teams need in all weather conditions."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user-md"></i>
-              </div>
-              <div class="author-info">
-                <h4>David Wilson</h4>
-                <p class="author-role">Chief Officer, Metro Fire Department</p>
-              </div>
-            </div>
+            <button class="testimonial-btn next-testimonial">
+              <i class="fas fa-chevron-right"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -2890,6 +3735,70 @@
     <!-- Scroll to Top Button -->
     <div class="scroll-to-top" id="scrollToTop">
       <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-button" id="whatsappButton">
+      <div class="whatsapp-icon">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <span class="whatsapp-text">Chat with Us</span>
+      <div class="whatsapp-pulse"></div>
+    </div>
+
+    <!-- WhatsApp Options Modal -->
+    <div class="whatsapp-modal" id="whatsappModal">
+      <div class="whatsapp-modal-content">
+        <div class="whatsapp-modal-header">
+          <h3><i class="fab fa-whatsapp"></i> Contact via WhatsApp</h3>
+          <button class="whatsapp-modal-close" id="whatsappClose">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="whatsapp-modal-body">
+          <div class="whatsapp-option" data-template="general">
+            <div class="option-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="option-content">
+              <h4>General Inquiry</h4>
+              <p>Ask about products, pricing, or services</p>
+            </div>
+          </div>
+
+          <div class="whatsapp-option" data-template="quote">
+            <div class="option-icon">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="option-content">
+              <h4>Request Quote</h4>
+              <p>Get a customized quote for your needs</p>
+            </div>
+          </div>
+
+          <div class="whatsapp-option" data-template="support">
+            <div class="option-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="option-content">
+              <h4>Technical Support</h4>
+              <p>Get help with products or technical issues</p>
+            </div>
+          </div>
+
+          <div class="whatsapp-direct">
+            <a
+              href="https://wa.me/15551234567?text=Hello%20Glorious%20Leather%2C%20I%20would%20like%20to%20inquire%20about%20your%20products"
+              class="whatsapp-direct-btn"
+              target="_blank"
+              onclick="trackWhatsAppClick('direct')"
+            >
+              <i class="fab fa-whatsapp"></i>
+              Start Direct Chat
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -3307,6 +4216,424 @@
           floatingElements.forEach((el) => (el.style.display = "block"));
         }
       }
+
+      // Hero Carousel
+      class HeroCarousel {
+        constructor() {
+          this.carousel = document.getElementById("heroCarousel");
+          this.track = document.getElementById("carouselTrack");
+          this.slides = Array.from(
+            this.carousel.querySelectorAll(".carousel-slide"),
+          );
+          this.dots = Array.from(
+            this.carousel.querySelectorAll(".carousel-dot"),
+          );
+          this.prevBtn = this.carousel.querySelector(".prev-btn");
+          this.nextBtn = this.carousel.querySelector(".next-btn");
+          this.currentIndex = 0;
+          this.autoSlideInterval = null;
+          this.autoSlideDelay = 6000;
+
+          this.init();
+        }
+
+        init() {
+          this.setupEventListeners();
+          this.startAutoSlide();
+          this.updateSlides();
+        }
+
+        setupEventListeners() {
+          this.prevBtn.addEventListener("click", () => this.prevSlide());
+          this.nextBtn.addEventListener("click", () => this.nextSlide());
+
+          this.dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => this.goToSlide(index));
+          });
+
+          // Pause auto-slide on hover
+          this.carousel.addEventListener("mouseenter", () =>
+            this.pauseAutoSlide(),
+          );
+          this.carousel.addEventListener("mouseleave", () =>
+            this.startAutoSlide(),
+          );
+
+          // Touch support
+          let startX = 0;
+          let endX = 0;
+
+          this.carousel.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+            this.pauseAutoSlide();
+          });
+
+          this.carousel.addEventListener("touchend", (e) => {
+            endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) {
+              this.nextSlide();
+            } else if (endX - startX > 50) {
+              this.prevSlide();
+            }
+            this.startAutoSlide();
+          });
+        }
+
+        updateSlides() {
+          // Update track position
+          this.track.style.transform = `translateX(-${
+            this.currentIndex * 100
+          }%)`;
+
+          // Update slides
+          this.slides.forEach((slide, index) => {
+            if (index === this.currentIndex) {
+              slide.classList.add("active");
+              // Trigger animations
+              setTimeout(() => {
+                slide.querySelectorAll(".stat-item").forEach((stat, i) => {
+                  stat.style.animationDelay = `${i * 0.2}s`;
+                });
+              }, 100);
+            } else {
+              slide.classList.remove("active");
+            }
+          });
+
+          // Update dots
+          this.dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === this.currentIndex);
+          });
+        }
+
+        nextSlide() {
+          this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+          this.updateSlides();
+        }
+
+        prevSlide() {
+          this.currentIndex =
+            (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+          this.updateSlides();
+        }
+
+        goToSlide(index) {
+          this.currentIndex = index;
+          this.updateSlides();
+        }
+
+        startAutoSlide() {
+          this.pauseAutoSlide();
+          this.autoSlideInterval = setInterval(() => {
+            this.nextSlide();
+          }, this.autoSlideDelay);
+        }
+
+        pauseAutoSlide() {
+          if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.autoSlideInterval = null;
+          }
+        }
+      }
+
+      // Testimonials Carousel
+      class TestimonialsCarousel {
+        constructor() {
+          this.track = document.getElementById("testimonialsTrack");
+          this.cards = Array.from(
+            this.track.querySelectorAll(".testimonial-card"),
+          );
+          this.dots = Array.from(document.querySelectorAll(".testimonial-dot"));
+          this.prevBtn = document.querySelector(".prev-testimonial");
+          this.nextBtn = document.querySelector(".next-testimonial");
+          this.currentIndex = 0;
+          this.touchStartX = 0;
+
+          this.init();
+        }
+
+        init() {
+          this.setupEventListeners();
+          this.updateCarousel();
+          this.startAutoRotate();
+        }
+
+        setupEventListeners() {
+          this.prevBtn.addEventListener("click", () => this.prev());
+          this.nextBtn.addEventListener("click", () => this.next());
+
+          this.dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => this.goTo(index));
+          });
+
+          // Touch support
+          this.track.addEventListener("touchstart", (e) => {
+            this.touchStartX = e.touches[0].clientX;
+            this.pauseAutoRotate();
+          });
+
+          this.track.addEventListener("touchend", (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = this.touchStartX - touchEndX;
+
+            if (Math.abs(diff) > 50) {
+              if (diff > 0) {
+                this.next();
+              } else {
+                this.prev();
+              }
+            }
+            this.startAutoRotate();
+          });
+        }
+
+        updateCarousel() {
+          const translateX = -this.currentIndex * 100;
+          this.track.style.transform = `translateX(${translateX}%)`;
+
+          this.dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === this.currentIndex);
+          });
+
+          // Add fade in animation
+          this.cards.forEach((card, index) => {
+            if (index === this.currentIndex) {
+              card.style.opacity = "1";
+            } else {
+              card.style.opacity = "0.5";
+            }
+          });
+        }
+
+        next() {
+          this.currentIndex = (this.currentIndex + 1) % this.cards.length;
+          this.updateCarousel();
+        }
+
+        prev() {
+          this.currentIndex =
+            (this.currentIndex - 1 + this.cards.length) % this.cards.length;
+          this.updateCarousel();
+        }
+
+        goTo(index) {
+          this.currentIndex = index;
+          this.updateCarousel();
+        }
+
+        startAutoRotate() {
+          this.autoRotateInterval = setInterval(() => {
+            this.next();
+          }, 8000);
+        }
+
+        pauseAutoRotate() {
+          clearInterval(this.autoRotateInterval);
+        }
+      }
+
+      // Initialize when DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize carousels
+        const heroCarousel = new HeroCarousel();
+        const testimonialsCarousel = new TestimonialsCarousel();
+
+        // Add stats counter animation
+        function animateStats() {
+          const statsSection = document.querySelector(".hero-carousel");
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  document.querySelectorAll(".stat-number").forEach((stat) => {
+                    const original = stat.textContent;
+                    stat.textContent = "0";
+                    setTimeout(() => {
+                      stat.textContent = original;
+                      stat.style.transform = "scale(1.2)";
+                      setTimeout(() => {
+                        stat.style.transform = "scale(1)";
+                      }, 300);
+                    }, 500);
+                  });
+                }
+              });
+            },
+            { threshold: 0.5 },
+          );
+
+          observer.observe(statsSection);
+        }
+
+        animateStats();
+
+        // Add floating animation to client icons
+        document.querySelectorAll(".client-icon").forEach((icon, index) => {
+          icon.style.animation = `float 3s ease-in-out infinite`;
+          icon.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Enhanced hover effects for testimonials
+        document.querySelectorAll(".testimonial-card").forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            card.style.transform = "scale(1.02)";
+          });
+
+          card.addEventListener("mouseleave", () => {
+            card.style.transform = "scale(1)";
+          });
+        });
+      });
+
+      // WhatsApp Button Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const whatsappButton = document.getElementById("whatsappButton");
+        const whatsappModal = document.getElementById("whatsappModal");
+        const whatsappClose = document.getElementById("whatsappClose");
+        const whatsappOptions = document.querySelectorAll(".whatsapp-option");
+        const whatsappDirectBtn = document.querySelector(
+          ".whatsapp-direct-btn",
+        );
+
+        // WhatsApp phone number (replace with your actual number)
+        const whatsappNumber = "15551234567"; // Format: country code + number (no spaces or symbols)
+
+        // Message templates
+        const messageTemplates = {
+          general:
+            "Hello Glorious Leather, I'm interested in your safety products and would like more information.",
+          quote:
+            "Hello, I'd like to request a quote for safety products. Could you please provide pricing details?",
+          support:
+            "Hello, I need technical support for my safety equipment. Can you assist me with this?",
+        };
+
+        // Default message
+        const defaultMessage =
+          "Hello Glorious Leather, I would like to inquire about your products";
+
+        // Open WhatsApp with specific template
+        function openWhatsApp(template = "general") {
+          const message = encodeURIComponent(
+            messageTemplates[template] || defaultMessage,
+          );
+          const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+          // Track the click
+          trackWhatsAppClick(template);
+
+          // Open in new tab
+          window.open(whatsappURL, "_blank");
+
+          // Close modal
+          closeWhatsAppModal();
+        }
+
+        // Open modal
+        function openWhatsAppModal() {
+          whatsappModal.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+
+        // Close modal
+        function closeWhatsAppModal() {
+          whatsappModal.classList.remove("active");
+          document.body.style.overflow = "auto";
+        }
+
+        // Direct WhatsApp button
+        whatsappDirectBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultMessage)}`;
+
+        // Event Listeners
+        whatsappButton.addEventListener("click", openWhatsAppModal);
+        whatsappClose.addEventListener("click", closeWhatsAppModal);
+
+        // Close modal when clicking outside
+        whatsappModal.addEventListener("click", function (e) {
+          if (e.target === whatsappModal) {
+            closeWhatsAppModal();
+          }
+        });
+
+        // Option clicks
+        whatsappOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            const template = this.getAttribute("data-template");
+            openWhatsApp(template);
+          });
+        });
+
+        // Close with Escape key
+        document.addEventListener("keydown", function (e) {
+          if (
+            e.key === "Escape" &&
+            whatsappModal.classList.contains("active")
+          ) {
+            closeWhatsAppModal();
+          }
+        });
+
+        // Add notification dot (optional - can be triggered by other events)
+        function showWhatsAppNotification() {
+          const notification = document.createElement("div");
+          notification.className = "whatsapp-notification";
+          notification.textContent = "!";
+          whatsappButton.appendChild(notification);
+
+          // Remove after 5 seconds
+          setTimeout(() => {
+            notification.remove();
+          }, 5000);
+        }
+
+        // Example: Show notification on page load (can be removed)
+        // setTimeout(showWhatsAppNotification, 2000);
+      });
+
+      // Function to track WhatsApp clicks (for analytics)
+      function trackWhatsAppClick(type = "direct") {
+        // You can integrate with Google Analytics, Facebook Pixel, etc.
+        console.log(`WhatsApp click tracked: ${type}`);
+
+        // Example: Google Analytics event
+        if (typeof gtag !== "undefined") {
+          gtag("event", "whatsapp_click", {
+            event_category: "engagement",
+            event_label: type,
+            value: 1,
+          });
+        }
+
+        // Example: Facebook Pixel
+        if (typeof fbq !== "undefined") {
+          fbq("track", "WhatsAppClick", { type: type });
+        }
+
+        // Store in local storage for analytics
+        const clicks = JSON.parse(
+          localStorage.getItem("whatsapp_clicks") || "[]",
+        );
+        clicks.push({
+          type: type,
+          timestamp: new Date().toISOString(),
+          page: window.location.pathname,
+        });
+        localStorage.setItem("whatsapp_clicks", JSON.stringify(clicks));
+      }
+
+      // Optional: Auto-open WhatsApp button on scroll
+      window.addEventListener("scroll", function () {
+        const whatsappButton = document.getElementById("whatsappButton");
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        // Show button after 50% scroll
+        if (scrollPosition > windowHeight * 0.5) {
+          whatsappButton.style.opacity = "1";
+          whatsappButton.style.transform = "translateY(0)";
+        }
+      });
 
       // Initial check
       checkMobile();
