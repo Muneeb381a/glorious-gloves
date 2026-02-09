@@ -16,6 +16,11 @@
     />
 
     <style>
+      .full-image {
+        max-width: 100vw;
+        max-height: 100vh;
+        object-fit: contain;
+      }
       /* ===== PRELOADER ===== */
       #preloader {
         position: fixed;
@@ -140,19 +145,23 @@
         }
       }
 
+      /* ===== ENHANCED HERO CAROUSEL ===== */
       .hero-carousel {
         position: relative;
         width: 100%;
         height: 100vh;
         min-height: 800px;
+        max-height: 1200px;
         overflow: hidden;
         margin-top: 70px;
+        background: linear-gradient(135deg, #0a1f44 0%, #1a365d 100%);
       }
 
       .carousel-track {
         display: flex;
         height: 100%;
-        transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+        transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
       }
 
       .carousel-slide {
@@ -163,6 +172,12 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
       }
 
       .slide-bg {
@@ -173,13 +188,25 @@
         height: 100%;
         background-size: cover;
         background-position: center;
-        filter: brightness(0.7);
-        transform: scale(1.1);
-        transition: transform 10s linear;
+        background-repeat: no-repeat;
+        filter: brightness(0.6) contrast(1.1);
+        transform: scale(1.15);
+        transition: transform 20s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
       }
 
       .carousel-slide.active .slide-bg {
         transform: scale(1);
+        animation: subtleZoom 20s infinite alternate;
+      }
+
+      @keyframes subtleZoom {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.05);
+        }
       }
 
       .slide-content {
@@ -190,8 +217,9 @@
         text-align: center;
         color: var(--white);
         opacity: 0;
-        transform: translateY(50px);
-        transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateY(60px);
+        transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+        will-change: transform, opacity;
       }
 
       .carousel-slide.active .slide-content {
@@ -200,10 +228,29 @@
       }
 
       .slide-content h1 {
-        font-size: 4.5rem;
+        font-size: 5rem;
+        font-weight: 900;
         margin-bottom: var(--space-lg);
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        text-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
         line-height: 1.1;
+        letter-spacing: -0.5px;
+        background: linear-gradient(to right, #ffffff 0%, #f8f9fa 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: titleAppear 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+        opacity: 0;
+      }
+
+      @keyframes titleAppear {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .slide-content h1 span {
@@ -211,41 +258,128 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        position: relative;
+        display: inline-block;
+        animation: highlightPulse 3s ease-in-out infinite;
+      }
+
+      @keyframes highlightPulse {
+        0%,
+        100% {
+          transform: scale(1);
+          text-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+        }
+        50% {
+          transform: scale(1.02);
+          text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+        }
       }
 
       .slide-subtitle {
-        font-size: 1.5rem;
-        max-width: 700px;
+        font-size: 1.8rem;
+        font-weight: 400;
+        max-width: 800px;
         margin: 0 auto var(--space-xl);
         color: rgba(255, 255, 255, 0.95);
-        line-height: 1.6;
+        line-height: 1.7;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: subtitleAppear 1s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
       }
 
-      .carousel-controls {
+      @keyframes subtitleAppear {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .carousel-stats {
         position: absolute;
-        bottom: 40px;
+        bottom: 120px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: var(--space-2xl);
+        z-index: 10;
+        opacity: 0;
+        animation: statsAppear 1s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+      }
+
+      @keyframes statsAppear {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .stat-item {
+        text-align: center;
+        position: relative;
+        padding: var(--space-md) var(--space-lg);
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        min-width: 140px;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: statItemAppear 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+
+      .carousel-slide.active .stat-item:nth-child(1) {
+        animation-delay: 1.3s;
+      }
+      .carousel-slide.active .stat-item:nth-child(2) {
+        animation-delay: 1.5s;
+      }
+      .carousel-slide.active .stat-item:nth-child(3) {
+        animation-delay: 1.7s;
+      }
+      .carousel-slide.active .stat-item:nth-child(4) {
+        animation-delay: 1.9s;
+      }
+
+      @keyframes statItemAppear {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .stat-number {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: var(--accent-yellow);
+        margin-bottom: var(--space-xs);
+        display: block;
+        text-shadow: 0 2px 10px rgba(255, 179, 71, 0.3);
+        position: relative;
+      }
+
+      .stat-number::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
         left: 50%;
         transform: translateX(-50%);
-        display: flex;
-        gap: var(--space-sm);
-        z-index: 10;
+        width: 40px;
+        height: 3px;
+        background: var(--gradient-orange);
+        border-radius: 2px;
       }
 
-      .carousel-dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        cursor: pointer;
-        transition: all 0.3s ease;
+      .stat-label {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        margin-top: var(--space-xs);
       }
 
-      .carousel-dot.active {
-        background: var(--accent-orange);
-        transform: scale(1.2);
-        box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
-      }
-
+      /* Enhanced Navigation */
       .carousel-nav {
         position: absolute;
         top: 50%;
@@ -253,60 +387,308 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 0 var(--space-lg);
+        padding: 0 var(--space-xl);
         z-index: 10;
+        opacity: 0;
+        animation: navAppear 1s cubic-bezier(0.4, 0, 0.2, 1) 1.5s forwards;
+      }
+
+      @keyframes navAppear {
+        to {
+          opacity: 1;
+        }
       }
 
       .carousel-btn {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(20px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
         color: var(--white);
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
-        transition: all 0.3s ease;
+        font-size: 1.8rem;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0.8;
       }
 
       .carousel-btn:hover {
-        background: var(--accent-orange);
-        transform: scale(1.1);
+        background: var(--gradient-orange);
+        transform: scale(1.15);
+        opacity: 1;
+        border-color: transparent;
+        box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
       }
 
-      .carousel-stats {
+      .carousel-controls {
         position: absolute;
-        bottom: 100px;
-        left: 0;
-        right: 0;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
-        justify-content: center;
-        gap: var(--space-2xl);
+        gap: var(--space-md);
         z-index: 10;
-      }
-
-      .stat-item {
-        text-align: center;
         opacity: 0;
-        transform: translateY(30px);
-        animation: fadeUp 0.8s ease forwards;
+        animation: controlsAppear 1s cubic-bezier(0.4, 0, 0.2, 1) 1.8s forwards;
       }
 
-      .carousel-slide.active .stat-item:nth-child(1) {
-        animation-delay: 0.5s;
+      @keyframes controlsAppear {
+        to {
+          opacity: 1;
+        }
       }
-      .carousel-slide.active .stat-item:nth-child(2) {
-        animation-delay: 0.7s;
+
+      .carousel-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
       }
-      .carousel-slide.active .stat-item:nth-child(3) {
-        animation-delay: 0.9s;
+
+      .carousel-dot::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-orange);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
-      .carousel-slide.active .stat-item:nth-child(4) {
-        animation-delay: 1.1s;
+
+      .carousel-dot.active::before {
+        transform: scale(1);
+      }
+
+      .carousel-dot.active {
+        transform: scale(1.3);
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+      }
+
+      /* Hero CTA Button */
+      .hero-cta {
+        margin-top: var(--space-xl);
+        opacity: 0;
+        animation: ctaAppear 1s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+      }
+
+      @keyframes ctaAppear {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .hero-cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-md);
+        padding: 1.2rem 3rem;
+        background: var(--gradient-orange);
+        color: var(--white);
+        border-radius: var(--radius-xl);
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+      }
+
+      .hero-cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .hero-cta-button:hover::before {
+        left: 100%;
+      }
+
+      .hero-cta-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
+      }
+      /* Enhanced slide transition effects */
+      @keyframes slideOut {
+        from {
+          opacity: 1;
+          transform: scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: scale(1.05);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      /* Responsive improvements */
+      @media (max-width: 1200px) {
+        .slide-content h1 {
+          font-size: 4rem;
+        }
+
+        .slide-subtitle {
+          font-size: 1.5rem;
+          max-width: 700px;
+        }
+
+        .carousel-stats {
+          gap: var(--space-xl);
+          bottom: 100px;
+        }
+
+        .stat-item {
+          min-width: 120px;
+          padding: var(--space-sm) var(--space-md);
+        }
+
+        .stat-number {
+          font-size: 2.2rem;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .hero-carousel {
+          min-height: 700px;
+        }
+
+        .slide-content h1 {
+          font-size: 3.2rem;
+        }
+
+        .slide-subtitle {
+          font-size: 1.3rem;
+        }
+
+        .carousel-stats {
+          flex-wrap: wrap;
+          gap: var(--space-lg);
+          bottom: 80px;
+        }
+
+        .stat-item {
+          min-width: 140px;
+          flex: 0 0 calc(50% - var(--space-lg));
+          margin-bottom: var(--space-md);
+        }
+
+        .carousel-btn {
+          width: 60px;
+          height: 60px;
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-carousel {
+          min-height: 600px;
+          margin-top: 60px;
+        }
+
+        .slide-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .slide-subtitle {
+          font-size: 1.1rem;
+          padding: 0 var(--space-md);
+        }
+
+        .carousel-stats {
+          bottom: 60px;
+          gap: var(--space-md);
+        }
+
+        .stat-item {
+          min-width: 120px;
+          padding: var(--space-sm);
+        }
+
+        .stat-number {
+          font-size: 1.8rem;
+        }
+
+        .stat-label {
+          font-size: 0.9rem;
+        }
+
+        .carousel-btn {
+          width: 50px;
+          height: 50px;
+          font-size: 1.2rem;
+        }
+
+        .carousel-dot {
+          width: 10px;
+          height: 10px;
+        }
+
+        .hero-cta-button {
+          padding: 1rem 2rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .slide-content h1 {
+          font-size: 2rem;
+        }
+
+        .slide-subtitle {
+          font-size: 1rem;
+        }
+
+        .carousel-stats {
+          position: relative;
+          bottom: auto;
+          margin-top: var(--space-xl);
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .stat-item {
+          width: 100%;
+          max-width: 200px;
+        }
+
+        .carousel-nav {
+          padding: 0 var(--space-md);
+        }
+
+        .carousel-controls {
+          bottom: 40px;
+        }
       }
 
       /* ===== NEW: INDUSTRY CLIENTS SECTION ===== */
@@ -2464,6 +2846,10 @@
         }
       }
 
+      .logo {
+        width: 50px;
+      }
+
       /* Mobile Menu */
       .mobile-menu {
         position: fixed;
@@ -2926,10 +3312,14 @@
           <!-- Logo with 3D Effect -->
           <a href="index.html" class="logo">
             <div class="logo-icon">
-              <i class="fas fa-hard-hat"></i>
+              <img
+                src="assets/logo-leather-removebg-preview.png"
+                class="logo"
+                alt=""
+              />
             </div>
             <div class="logo-text">
-              <div class="logo-main">Glorious Leather</div>
+              <div class="logo-main"></div>
               <div class="logo-sub">Safety PPE Manufacturer</div>
             </div>
           </a>
@@ -2978,34 +3368,21 @@
         <div class="carousel-slide active" data-slide="1">
           <div
             class="slide-bg"
-            style="
-              background-image: url(&quot;https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&quot;);
-            "
+            style="background-image: url(assets/hero.jpg)"
           ></div>
           <div class="slide-content">
             <h1>Premium Safety <span>Gloves</span> for Maximum Protection</h1>
-            <p class="slide-subtitle">
+            <!-- <p class="slide-subtitle">
               Engineered with advanced cut-resistant materials and ergonomic
               design for superior protection and comfort in hazardous
               environments.
-            </p>
-            <div class="carousel-stats">
-              <div class="stat-item">
-                <span class="stat-number">Level 5</span>
-                <div class="stat-label">Cut Protection</div>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">ANSI 105</span>
-                <div class="stat-label">Certified</div>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">500°F</span>
-                <div class="stat-label">Heat Resistance</div>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">2-Year</span>
-                <div class="stat-label">Warranty</div>
-              </div>
+            </p> -->
+            <div class="hero-cta">
+              <a href="products.html" class="hero-cta-button">
+                <i class="fas fa-shield-alt"></i>
+                Explore Premium Safety Gear
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -3014,18 +3391,16 @@
         <div class="carousel-slide" data-slide="2">
           <div
             class="slide-bg"
-            style="
-              background-image: url(&quot;https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&quot;);
-            "
+            style="background-image: url(assets/image.jpg)"
           ></div>
           <div class="slide-content">
             <h1>High-Visibility <span>Safety Jackets</span></h1>
-            <p class="slide-subtitle">
+            <!-- <p class="slide-subtitle">
               ANSI/ISEA 107 certified jackets with 360° reflectivity for maximum
               visibility in low-light conditions. Waterproof and breathable
               materials.
-            </p>
-            <div class="carousel-stats">
+            </p> -->
+            <!-- <div class="carousel-stats">
               <div class="stat-item">
                 <span class="stat-number">Class 3</span>
                 <div class="stat-label">ANSI Rating</div>
@@ -3042,7 +3417,7 @@
                 <span class="stat-number">CE EN471</span>
                 <div class="stat-label">Certified</div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -3050,17 +3425,15 @@
         <div class="carousel-slide" data-slide="3">
           <div
             class="slide-bg"
-            style="
-              background-image: url(&quot;https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&quot;);
-            "
+            style="background-image: url(assets/image\ \(1\).jpg)"
           ></div>
           <div class="slide-content">
             <h1>Flame-Resistant <span>PPE Solutions</span></h1>
-            <p class="slide-subtitle">
+            <!-- <p class="slide-subtitle">
               NFPA 2112 certified flame-resistant gear for welding, foundry work
               and high-temperature industrial applications.
-            </p>
-            <div class="carousel-stats">
+            </p> -->
+            <!-- <div class="carousel-stats">
               <div class="stat-item">
                 <span class="stat-number">NFPA 2112</span>
                 <div class="stat-label">Certified</div>
@@ -3077,7 +3450,7 @@
                 <span class="stat-number">CAT 4</span>
                 <div class="stat-label">PPE Category</div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -3275,7 +3648,11 @@
           <!-- Product 1 -->
           <div class="product-card animate-on-scroll">
             <div class="product-image">
-              <i class="fas fa-hand-paper"></i>
+              <img
+                src="assets/Gemini_Generated_Image_81zqmr81zqmr81zq.png"
+                alt=""
+                class="full-image"
+              />
               <div class="product-badge">Best Seller</div>
             </div>
             <div class="product-content">
@@ -3302,7 +3679,7 @@
           <!-- Product 2 -->
           <div class="product-card animate-on-scroll">
             <div class="product-image">
-              <i class="fas fa-vest"></i>
+              <img src="assets/product-2.png" class="full-image" alt="" />
               <div class="product-badge">New</div>
             </div>
             <div class="product-content">
@@ -3586,7 +3963,11 @@
           <div class="footer-brand">
             <div class="footer-logo">
               <div class="footer-logo-icon">
-                <i class="fas fa-hard-hat"></i>
+                <img
+                  src="assets/logo-leather-removebg-preview.png"
+                  class="logo"
+                  alt=""
+                />
               </div>
               <div class="footer-logo-text">Glorious Leather</div>
             </div>
